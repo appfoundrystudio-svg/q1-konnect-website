@@ -28,17 +28,16 @@ export const Footer: React.FC<FooterProps> = ({
           
           {/* Brand Info */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="space-y-3">
               <img 
                 src="/assets/logo/Q1_Official_Logo.png" 
                 alt="Q1 Konnect Logo" 
-                className="h-10 w-auto object-contain bg-white rounded-lg p-1"
+                className="h-20 sm:h-24 w-auto object-contain bg-white rounded-2xl p-2.5 shadow-md"
               />
               <div>
-                <span className="text-xl font-bold tracking-tight text-white font-heading">
-                  Q1 <span className="text-sky-400">Konnect</span>
+                <span className="text-xs uppercase font-bold tracking-widest text-sky-400">
+                  Healthcare Workforce Network
                 </span>
-                <p className="text-[11px] text-slate-400">Healthcare Workforce Platform</p>
               </div>
             </div>
 

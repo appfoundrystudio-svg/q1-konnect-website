@@ -72,11 +72,11 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <img 
                   src="/assets/logo/Q1_Official_Logo.png" 
                   alt="Q1 Konnect Official Logo" 
-                  className="h-10 w-auto object-contain group-hover:scale-105 transition-transform" 
+                  className="h-16 sm:h-18 md:h-20 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-xs" 
                 />
                 <div className="hidden sm:flex flex-col">
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-sky-600 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200 w-fit">
-                    Healthcare Workforce
+                  <span className="text-[10px] uppercase font-black tracking-wider text-sky-700 bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200/80 w-fit">
+                    Healthcare Workforce Network
                   </span>
                 </div>
               </a>
