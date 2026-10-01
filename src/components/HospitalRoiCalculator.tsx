@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { 
   Calculator, 
-  TrendingUp, 
   Clock, 
   DollarSign, 
   Calendar, 
@@ -50,20 +49,20 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-50 text-teal-800 border border-teal-200">
-            <Calculator className="w-3.5 h-3.5 text-teal-600" />
-            <span>Interactive Hospital Cost Analysis</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-50 text-sky-800 border border-sky-200">
+            <Calculator className="w-3.5 h-3.5 text-sky-600" />
+            <span>Projected Staffing Economics</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
-            Calculate Your Staffing Overhead & Overtime Savings.
+            Benchmark Your Projected Agency & Overtime Savings.
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            Traditional agencies quietly mark up shift rates by 30% to 50%. See how much your facility 
-            recovers every month by switching to Q1 Konnect's transparent model.
+            Traditional agencies quietly mark up shift rates by 35% to 50%. See how much your facility 
+            can recover by adopting Q1 Konnect's transparent technology fee model upon launch.
           </p>
         </div>
 
-        <div className="bg-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-800 text-white grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-slate-950 rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-800 text-white grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Controls Column */}
           <div className="lg:col-span-6 space-y-6">
@@ -87,10 +86,10 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
                       if (tier.id === 'secondary') setMonthlyShifts(45);
                       if (tier.id === 'primary') setMonthlyShifts(20);
                     }}
-                    className={`py-2 px-3 rounded-xl text-xs font-semibold transition-all border ${
+                    className={`py-2 px-3 rounded-xl text-xs font-semibold transition-all border cursor-pointer ${
                       facilityTier === tier.id
-                        ? 'bg-teal-700 text-white border-teal-500 shadow-md'
-                        : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:bg-slate-750'
+                        ? 'bg-sky-500 text-white border-sky-400 shadow-md'
+                        : 'bg-slate-900 text-slate-300 border-slate-800 hover:bg-slate-800'
                     }`}
                   >
                     {tier.label}
@@ -100,12 +99,12 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
             </div>
 
             {/* Slider 1: Monthly Open Shifts */}
-            <div className="space-y-2 bg-slate-800/60 p-4 rounded-2xl border border-slate-700/60">
+            <div className="space-y-2 bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
               <div className="flex justify-between items-center">
                 <label className="text-sm font-medium text-slate-300">
-                  Monthly Open or Reliever Shifts Needed:
+                  Estimated Monthly Open or Reliever Shifts:
                 </label>
-                <span className="text-lg font-black text-teal-400 font-heading">
+                <span className="text-lg font-black text-sky-400 font-heading">
                   {monthlyShifts} shifts / mo
                 </span>
               </div>
@@ -116,7 +115,7 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
                 step="5"
                 value={monthlyShifts}
                 onChange={(e) => setMonthlyShifts(Number(e.target.value))}
-                className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
               />
               <div className="flex justify-between text-[11px] text-slate-400">
                 <span>5 shifts (Clinic)</span>
@@ -126,12 +125,12 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
             </div>
 
             {/* Slider 2: Shift Rate */}
-            <div className="space-y-2 bg-slate-800/60 p-4 rounded-2xl border border-slate-700/60">
+            <div className="space-y-2 bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
               <div className="flex justify-between items-center">
                 <label className="text-sm font-medium text-slate-300">
-                  Estimated Average Rate Per 8-Hr Shift:
+                  Estimated Average Rate Per 8-Hr Bedside Shift:
                 </label>
-                <span className="text-lg font-black text-teal-400 font-heading">
+                <span className="text-lg font-black text-sky-400 font-heading">
                   ₱{shiftRate.toLocaleString()}
                 </span>
               </div>
@@ -142,7 +141,7 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
                 step="100"
                 value={shiftRate}
                 onChange={(e) => setShiftRate(Number(e.target.value))}
-                className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
               />
               <div className="flex justify-between text-[11px] text-slate-400">
                 <span>₱1,600 (Ward)</span>
@@ -153,15 +152,15 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
 
             <div className="text-xs text-slate-400 flex items-center gap-2">
               <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>Estimates reflect real Philippine healthcare market benchmarks and verified clinical rates.</span>
+              <span>Financial estimates modeled on standard Philippine healthcare per-diem benchmarks.</span>
             </div>
 
           </div>
 
           {/* Results Column */}
-          <div className="lg:col-span-6 bg-gradient-to-br from-slate-800 to-slate-850 p-6 sm:p-8 rounded-2xl border border-slate-700 relative">
+          <div className="lg:col-span-6 bg-gradient-to-br from-slate-900 to-slate-850 p-6 sm:p-8 rounded-2xl border border-slate-800 relative">
             <div className="absolute top-4 right-4">
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">
                 <Sparkles className="w-3 h-3" />
                 PROJECTED RECOVERY
               </span>
@@ -171,32 +170,32 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
               
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                  Annual Budget Savings
+                  Projected Annual Cost Recovery
                 </p>
-                <div className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-sky-400 font-heading mt-1">
+                <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-white font-heading mt-1">
                   ₱{Math.round(calculations.annualNetSavings).toLocaleString()}
                 </div>
                 <p className="text-xs text-slate-400 mt-1">
-                  Or ~₱{Math.round(calculations.monthlyNetSavings).toLocaleString()} saved in agency markups every month.
+                  Potential recovery of ~₱{Math.round(calculations.monthlyNetSavings).toLocaleString()}/month in agency markups.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-700/80">
-                <div className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+                <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
-                    <Clock className="w-3.5 h-3.5 text-teal-400" />
+                    <Clock className="w-3.5 h-3.5 text-sky-400" />
                     <span>Admin Hours Saved</span>
                   </div>
                   <div className="text-xl font-bold text-white">
                     {calculations.adminHoursSaved} hrs / mo
                   </div>
-                  <div className="text-[10px] text-slate-500">Automated dispatch & timecards</div>
+                  <div className="text-[10px] text-slate-500">Eliminating phone chains & paper timecards</div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
                     <DollarSign className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Markup Avoidance</span>
+                    <span>Projected Margin</span>
                   </div>
                   <div className="text-xl font-bold text-emerald-400">
                     25% Net Margin
@@ -208,10 +207,10 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
               <div className="pt-2">
                 <button
                   onClick={onOpenScheduleModal}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-500 hover:to-teal-600 shadow-lg shadow-teal-900/40 transition-all cursor-pointer transform hover:-translate-y-0.5"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-sm font-bold text-slate-900 bg-sky-400 hover:bg-sky-300 shadow-lg shadow-sky-500/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
                 >
-                  <Calendar className="w-4 h-4 text-teal-200" />
-                  <span>Lock In These Savings — Schedule Demo Call</span>
+                  <Calendar className="w-4 h-4 text-slate-900" />
+                  <span>Discuss Staffing Model at PHAPi Exhibit</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

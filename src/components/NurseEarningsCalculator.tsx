@@ -6,7 +6,6 @@ import {
   Sparkles, 
   UserPlus, 
   ArrowRight,
-  ShieldCheck,
   CheckCircle2
 } from 'lucide-react';
 
@@ -60,8 +59,8 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
             Estimate Your Monthly Take-Home from Flexible Shifts.
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            Whether you want to pick up 1 shift on your day off or take on regular per-diem hospital blocks, 
-            see how much you can earn with zero middlemen cuts.
+            Whether you plan to pick up 1 shift on your scheduled day off or take on regular per-diem 
+            hospital blocks, see how much you can earn with zero middleman cuts.
           </p>
         </div>
 
@@ -80,7 +79,7 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
                   <button
                     key={spec.id}
                     onClick={() => setSelectedSpecialty(spec.id)}
-                    className={`p-3 rounded-xl text-left text-xs font-semibold transition-all border ${
+                    className={`p-3 rounded-xl text-left text-xs font-semibold transition-all border cursor-pointer ${
                       selectedSpecialty === spec.id
                         ? 'bg-sky-50 text-sky-900 border-sky-400 ring-2 ring-sky-400/20 shadow-sm'
                         : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -99,9 +98,9 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
             <div className="space-y-2 bg-slate-50 p-4 rounded-2xl border border-slate-200">
               <div className="flex justify-between items-center">
                 <label className="text-sm font-medium text-slate-700">
-                  Reliever Shifts You Wish to Work Per Week:
+                  Target Reliever Shifts Per Week:
                 </label>
-                <span className="text-xl font-black text-sky-700 font-heading">
+                <span className="text-xl font-black text-sky-600 font-heading">
                   {shiftsPerWeek} {shiftsPerWeek === 1 ? 'shift' : 'shifts'} / wk
                 </span>
               </div>
@@ -112,7 +111,7 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
                 step="1"
                 value={shiftsPerWeek}
                 onChange={(e) => setShiftsPerWeek(Number(e.target.value))}
-                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600"
+                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500"
               />
               <div className="flex justify-between text-[11px] text-slate-500">
                 <span>1 Shift (Casual)</span>
@@ -125,39 +124,39 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
             <div className="space-y-2 pt-2 text-xs text-slate-600">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Instant payout directly to GCash, Maya, or Philippine bank account</span>
+                <span>Fast payout directly to GCash, Maya, or any Philippine bank account</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Night differential & hazard pay bonuses included in rate breakdown</span>
+                <span>Shift compensation shown upfront with zero surprise deductions</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Zero deduction or platform commission taken from nurse wages</span>
+                <span>Priority notification access for pre-registered nurses upon launch</span>
               </div>
             </div>
 
           </div>
 
           {/* Result Card */}
-          <div className="lg:col-span-6 bg-gradient-to-br from-slate-900 to-slate-850 p-6 sm:p-8 rounded-2xl border border-slate-800 text-white relative">
+          <div className="lg:col-span-6 bg-gradient-to-br from-slate-950 to-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-800 text-white relative">
             <div className="space-y-6">
               
               <div>
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">
                   <Sparkles className="w-3 h-3" />
-                  PROJECTED MONTHLY EXTRA
+                  PROJECTED MONTHLY SUPPLEMENTAL
                 </span>
-                <div className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-teal-300 font-heading mt-2">
+                <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-white font-heading mt-2">
                   ₱{calculations.monthlyEarnings.toLocaleString()}
                 </div>
                 <p className="text-xs text-slate-400 mt-1">
-                  Based on {shiftsPerWeek} {activeSpecialty.name} shifts per week @ ₱{calculations.rate.toLocaleString()} / shift.
+                  Based on {shiftsPerWeek} {activeSpecialty.name} shifts/week @ ₱{calculations.rate.toLocaleString()} benchmark.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-                <div className="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/80">
+                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
                     <Wallet className="w-3.5 h-3.5 text-sky-400" />
                     <span>Weekly Take-Home</span>
@@ -165,28 +164,28 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
                   <div className="text-xl font-bold text-white">
                     ₱{calculations.weeklyEarnings.toLocaleString()}
                   </div>
-                  <div className="text-[10px] text-slate-400">Paid out weekly</div>
+                  <div className="text-[10px] text-slate-400">Paid out directly</div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/80">
+                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
                     <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Annual Supplemental</span>
+                    <span>Annual Potential</span>
                   </div>
                   <div className="text-xl font-bold text-emerald-400">
                     ₱{calculations.annualEarnings.toLocaleString()}
                   </div>
-                  <div className="text-[10px] text-slate-400">Debt-free extra savings</div>
+                  <div className="text-[10px] text-slate-400">Supplemental earnings</div>
                 </div>
               </div>
 
               <div className="pt-2">
                 <button
                   onClick={onOpenNurseModal}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-sm font-bold text-slate-900 bg-gradient-to-r from-sky-400 to-teal-300 hover:from-sky-300 hover:to-teal-200 shadow-lg transition-all cursor-pointer transform hover:-translate-y-0.5"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-sm font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 shadow-lg shadow-sky-500/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
                 >
-                  <UserPlus className="w-4 h-4 text-slate-900" />
-                  <span>Join Nurse Pool & Start Claiming Shifts</span>
+                  <UserPlus className="w-4 h-4 text-slate-950" />
+                  <span>Pre-Register to Claim Shifts at Launch</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

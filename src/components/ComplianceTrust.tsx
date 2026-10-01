@@ -1,26 +1,26 @@
 import React from 'react';
-import { ShieldCheck, Lock, FileCheck, CheckCircle2, Award, Building } from 'lucide-react';
+import { ShieldCheck, Lock, FileCheck, Award } from 'lucide-react';
 
 export const ComplianceTrust: React.FC = () => {
   const trustPoints = [
     {
-      title: 'PRC License Cross-Check',
-      desc: 'All registered nurses must pass automated and manual PRC license verification before gaining access to hospital shift claiming.',
+      title: 'PRC License Cross-Verification',
+      desc: 'All registered nurses undergo automated PRC license validity checks before gaining eligibility to claim open hospital shifts.',
       icon: ShieldCheck,
     },
     {
       title: 'RA 10173 Data Privacy Act Compliant',
-      desc: 'Institutional data encryption safeguards nurse personal data and hospital operational schedules in full adherence to Philippine law.',
+      desc: 'Institutional encryption safeguards nurse personal documentation and hospital operational rosters in strict adherence to Philippine law.',
       icon: Lock,
     },
     {
-      title: 'NBI & Background Verification',
-      desc: 'Background clearance documentation is archived and available for audit prior to on-site shift deployments.',
+      title: 'NBI & Background Clearances',
+      desc: 'Criminal background documentation and employment certificates are archived and available for hospital audit review prior to shift deployment.',
       icon: FileCheck,
     },
     {
       title: 'Standardized Clinical Onboarding',
-      desc: 'Skills validation across BLS, ACLS, IV therapy, and bedside clinical specialty certifications.',
+      desc: 'Specialty qualification tracking across BLS, ACLS, IV therapy, and verified bedside tenure across tertiary and secondary institutions.',
       icon: Award,
     },
   ];
@@ -40,8 +40,8 @@ export const ComplianceTrust: React.FC = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600">
-            We operate with the rigorous standards required by Philippine hospital boards, 
-            clinical accreditors, and health governance bodies.
+            Engineered to adhere to the rigorous governance standards expected by Philippine 
+            hospital boards, medical directors, and healthcare regulatory bodies.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export const ComplianceTrust: React.FC = () => {
                 key={item.title} 
                 className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow space-y-3"
               >
-                <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
                   <IconComponent className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-slate-900 font-heading">
@@ -70,19 +70,19 @@ export const ComplianceTrust: React.FC = () => {
         {/* Banner */}
         <div className="mt-12 bg-white rounded-2xl p-6 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-800 font-bold shrink-0">
+            <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-bold shrink-0">
               ✓
             </div>
             <div>
-              <h4 className="text-sm font-bold text-slate-900">Are you a Hospital Chief Nurse or Medical Director?</h4>
-              <p className="text-xs text-slate-500">We offer custom compliance audits and Memorandum of Agreement (MOA) reviews.</p>
+              <h4 className="text-sm font-bold text-slate-900">Hospital Chief Nurse Officer or Medical Director?</h4>
+              <p className="text-xs text-slate-500">We offer custom institutional reviews and Memorandum of Agreement (MOA) briefings at PHAPi.</p>
             </div>
           </div>
           <a
-            href="#schedule-meeting"
-            className="text-xs font-bold text-teal-700 hover:text-teal-800 underline underline-offset-4 whitespace-nowrap"
+            href="#phapi-exhibit"
+            className="text-xs font-bold text-sky-600 hover:text-sky-700 underline underline-offset-4 whitespace-nowrap"
           >
-            Review Partnership Guidelines →
+            Review Founding Partner Guidelines →
           </a>
         </div>
 

@@ -5,7 +5,6 @@ import {
   FileText, 
   UserCheck, 
   CheckCircle2, 
-  QrCode, 
   Wallet, 
   BellRing, 
   ShieldCheck, 
@@ -52,10 +51,10 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
   const nurseSteps = [
     {
       step: '01',
-      title: 'Fast-Track PRC Profile Onboarding',
-      desc: 'Sign up, enter your PRC license number, upload your credentials (BLS, ACLS, certifications), and set your preferred hospital areas and travel radius.',
+      title: 'Pre-Register Your PRC Profile',
+      desc: 'Sign up, enter your PRC license number, upload your credentials (BLS, ACLS, certifications), and set your preferred hospital zones and travel radius.',
       icon: ShieldCheck,
-      detail: 'Our clinical team validates your credentials within hours.'
+      detail: 'Our clinical compliance desk validates credentials upon submission.'
     },
     {
       step: '02',
@@ -82,13 +81,13 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-800 border border-slate-200">
-            Streamlined Workflow
+            Streamlined Operational Workflow
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
             How Q1 Konnect Works in 3 Simple Steps.
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            A seamless bridge between healthcare facilities and clinical professionals, 
+            A friction-free bridge between healthcare facilities and clinical professionals, 
             eliminating endless phone calls, paper logs, and staffing anxiety.
           </p>
 
@@ -97,20 +96,20 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
             <div className="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200">
               <button
                 onClick={() => setActiveTab('hospital')}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   activeTab === 'hospital'
-                    ? 'bg-teal-700 text-white shadow-md'
+                    ? 'bg-slate-950 text-white shadow-md'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                <Building2 className="w-4 h-4" />
+                <Building2 className="w-4 h-4 text-sky-400" />
                 <span>For Hospital Partners</span>
               </button>
               <button
                 onClick={() => setActiveTab('nurse')}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   activeTab === 'nurse'
-                    ? 'bg-sky-600 text-white shadow-md'
+                    ? 'bg-sky-500 text-white shadow-md shadow-sky-500/25'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -123,19 +122,19 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
 
         {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {steps.map((item, index) => {
+          {steps.map((item) => {
             const IconComponent = item.icon;
             return (
               <div 
                 key={item.step}
-                className="bg-slate-50 rounded-3xl p-8 border border-slate-200/90 hover:border-teal-500/50 hover:bg-white hover:shadow-xl transition-all duration-300 relative group flex flex-col justify-between"
+                className="bg-slate-50 rounded-3xl p-8 border border-slate-200/90 hover:border-sky-500/50 hover:bg-white hover:shadow-xl transition-all duration-300 relative group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-3xl font-black text-slate-300 font-heading group-hover:text-teal-600 transition-colors">
+                    <span className="text-3xl font-black text-slate-300 font-heading group-hover:text-sky-600 transition-colors">
                       {item.step}
                     </span>
-                    <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center text-teal-700 group-hover:bg-teal-700 group-hover:text-white transition-all">
+                    <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-all">
                       <IconComponent className="w-6 h-6" />
                     </div>
                   </div>
@@ -163,17 +162,18 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
           {activeTab === 'hospital' ? (
             <button
               onClick={onOpenScheduleModal}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-white bg-teal-700 hover:bg-teal-800 shadow-lg shadow-teal-900/20 transition-all cursor-pointer transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-lg shadow-slate-900/20 transition-all cursor-pointer transform hover:-translate-y-0.5 border border-slate-800"
             >
-              <span>Schedule a 20-Min Hospital Walkthrough</span>
+              <CalendarCheck2 className="w-4 h-4 text-sky-400" />
+              <span>Schedule a 20-Min Hospital Walkthrough / PHAPi Meeting</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           ) : (
             <button
               onClick={onOpenNurseModal}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-600 hover:bg-sky-700 shadow-lg shadow-sky-900/20 transition-all cursor-pointer transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-bold text-white bg-sky-500 hover:bg-sky-400 shadow-lg shadow-sky-500/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
             >
-              <span>Start Your Nurse Application Now</span>
+              <span>Pre-Register for the Nurse Pool</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           )}

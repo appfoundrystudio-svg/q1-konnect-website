@@ -5,11 +5,9 @@ import {
   Stethoscope, 
   Download, 
   Trash2, 
-  Calendar, 
   Phone, 
   Mail, 
-  ShieldCheck,
-  FileSpreadsheet
+  ShieldCheck
 } from 'lucide-react';
 import { getHospitalLeads, getNurseLeads, downloadIcsCalendar } from '../services/leadStorage';
 import { HospitalMeetingRequest, NurseSignupRequest } from '../types/landing';
@@ -56,13 +54,13 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden bg-slate-900/60 backdrop-blur-xs flex justify-end animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 overflow-hidden bg-slate-950/60 backdrop-blur-xs flex justify-end animate-in fade-in duration-200">
       <div className="bg-white w-full max-w-xl h-full shadow-2xl flex flex-col border-l border-slate-200 animate-in slide-in-from-right duration-300">
         
         {/* Drawer Header */}
-        <div className="p-6 bg-slate-900 text-white flex items-center justify-between">
+        <div className="p-6 bg-slate-950 text-white flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-teal-500/20 text-teal-400">
+            <div className="p-2 rounded-xl bg-sky-500/20 text-sky-400">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
@@ -72,7 +70,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -84,11 +82,11 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
             onClick={() => setActiveTab('hospitals')}
             className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               activeTab === 'hospitals'
-                ? 'bg-white text-teal-800 shadow-sm border border-slate-200'
+                ? 'bg-white text-slate-950 shadow-sm border border-slate-200'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            <Building2 className="w-4 h-4 text-teal-700" />
+            <Building2 className="w-4 h-4 text-sky-600" />
             <span>Hospital Meetings ({hospitalLeads.length})</span>
           </button>
           <button
@@ -99,7 +97,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            <Stethoscope className="w-4 h-4 text-sky-700" />
+            <Stethoscope className="w-4 h-4 text-sky-600" />
             <span>Nurse Applications ({nurseLeads.length})</span>
           </button>
         </div>
@@ -110,8 +108,8 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
             hospitalLeads.length === 0 ? (
               <div className="text-center py-16 text-slate-400 space-y-2">
                 <Building2 className="w-12 h-12 mx-auto stroke-1 text-slate-300" />
-                <p className="text-sm font-medium">No hospital meetings scheduled yet.</p>
-                <p className="text-xs">Use the "Book Hospital Demo" button to test the flow.</p>
+                <p className="text-sm font-medium">No hospital consultations scheduled yet.</p>
+                <p className="text-xs">Use the "Book Hospital Consultation" button to test the flow.</p>
               </div>
             ) : (
               hospitalLeads.map((lead) => (
@@ -124,7 +122,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
                       <h4 className="font-bold text-sm text-slate-900">{lead.facilityName}</h4>
                       <p className="text-slate-500">{lead.city}, {lead.province} • {lead.facilityType}</p>
                     </div>
-                    <span className="px-2 py-0.5 rounded-md font-mono text-[10px] bg-teal-100 text-teal-800 font-bold">
+                    <span className="px-2 py-0.5 rounded-md font-mono text-[10px] bg-sky-100 text-sky-900 font-bold">
                       {lead.id}
                     </span>
                   </div>
@@ -142,11 +140,11 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
 
                   <div className="space-y-1 text-slate-600 pt-1 border-t border-slate-200/60">
                     <p className="flex items-center gap-1.5">
-                      <Mail className="w-3.5 h-3.5 text-teal-600 shrink-0" />
+                      <Mail className="w-3.5 h-3.5 text-sky-600 shrink-0" />
                       <span>{lead.email}</span>
                     </p>
                     <p className="flex items-center gap-1.5">
-                      <Phone className="w-3.5 h-3.5 text-teal-600 shrink-0" />
+                      <Phone className="w-3.5 h-3.5 text-sky-600 shrink-0" />
                       <span>{lead.phone}</span>
                     </p>
                   </div>
@@ -162,7 +160,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
                   <div className="pt-2 flex justify-end">
                     <button
                       onClick={() => downloadIcsCalendar(lead)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-700 hover:bg-teal-800 text-white text-[11px] font-semibold transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 hover:bg-black text-white text-[11px] font-semibold transition-colors cursor-pointer"
                     >
                       <Download className="w-3.5 h-3.5" />
                       <span>Download .ics</span>
@@ -175,8 +173,8 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
             nurseLeads.length === 0 ? (
               <div className="text-center py-16 text-slate-400 space-y-2">
                 <Stethoscope className="w-12 h-12 mx-auto stroke-1 text-slate-300" />
-                <p className="text-sm font-medium">No nurse applications submitted yet.</p>
-                <p className="text-xs">Use the "Join Nurse Pool" button to test the flow.</p>
+                <p className="text-sm font-medium">No nurse pre-registrations submitted yet.</p>
+                <p className="text-xs">Use the "Pre-Register Nurse Pool" button to test the flow.</p>
               </div>
             ) : (
               nurseLeads.map((nurse) => (
@@ -223,7 +221,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
                       </span>
                     ))}
                     {nurse.certifications.map((c) => (
-                      <span key={c} className="px-2 py-0.5 rounded bg-teal-50 border border-teal-200 text-[10px] text-teal-800 font-semibold">
+                      <span key={c} className="px-2 py-0.5 rounded bg-sky-50 border border-sky-200 text-[10px] text-sky-900 font-semibold">
                         {c}
                       </span>
                     ))}
@@ -238,7 +236,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
         <div className="p-4 bg-slate-100 border-t border-slate-200 flex items-center justify-between">
           <button
             onClick={handleClearAll}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-rose-700 hover:bg-rose-50 border border-rose-200 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-rose-700 hover:bg-rose-50 border border-rose-200 transition-colors cursor-pointer"
           >
             <Trash2 className="w-3.5 h-3.5" />
             <span>Clear Leads</span>
@@ -246,7 +244,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
 
           <button
             onClick={exportAllJson}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 shadow-sm transition-colors"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-slate-950 hover:bg-black shadow-sm transition-colors cursor-pointer"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Export Leads (JSON)</span>

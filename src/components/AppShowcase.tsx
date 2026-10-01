@@ -4,53 +4,46 @@ import {
   Monitor, 
   Sparkles, 
   CheckCircle, 
-  MapPin, 
   Clock, 
   QrCode, 
-  ShieldCheck, 
-  TrendingUp, 
-  Users, 
-  Calendar, 
-  Bell, 
-  WifiOff,
-  Filter
+  WifiOff
 } from 'lucide-react';
 
 export const AppShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hospital_portal' | 'nurse_mobile'>('hospital_portal');
 
   return (
-    <section id="app-showcase" className="py-24 bg-slate-900 text-white relative overflow-hidden">
-      {/* Background Glows */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+    <section id="app-showcase" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
+      {/* Background Lighting */}
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-500/20 text-teal-300 border border-teal-500/30">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-500/20 text-sky-400 border border-sky-500/30">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Platform Capabilities</span>
+            <span>Interactive MVP Architecture</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight font-heading">
             A Dual Engine Built for Reliability & Speed.
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-300">
-            Experience the technology powering healthcare staffing across hospitals and clinical teams. 
-            Tightly integrated, mobile-ready, and audit-compliant.
+          <p className="text-base sm:text-lg text-slate-400">
+            Preview the working technology behind Q1 Konnect. Built as a unified platform 
+            connecting facility staffing supervisors with mobile clinical professionals.
           </p>
 
           {/* Toggle Buttons */}
           <div className="pt-4 flex justify-center">
-            <div className="inline-flex p-1.5 rounded-2xl bg-slate-800 border border-slate-700 shadow-xl">
+            <div className="inline-flex p-1.5 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl">
               <button
                 onClick={() => setActiveTab('hospital_portal')}
                 className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${
                   activeTab === 'hospital_portal'
-                    ? 'bg-teal-600 text-white shadow-lg shadow-teal-900/40'
+                    ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/25'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -61,7 +54,7 @@ export const AppShowcase: React.FC = () => {
                 onClick={() => setActiveTab('nurse_mobile')}
                 className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${
                   activeTab === 'nurse_mobile'
-                    ? 'bg-sky-600 text-white shadow-lg shadow-sky-900/40'
+                    ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/25'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -78,8 +71,8 @@ export const AppShowcase: React.FC = () => {
             
             {/* Features Description */}
             <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-teal-400">
-                Hospital Command Center
+              <span className="text-xs font-bold uppercase tracking-widest text-sky-400">
+                Hospital Command Portal
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
                 Total Control Over Shifts, Rosters & Credential Verifications.
@@ -94,23 +87,23 @@ export const AppShowcase: React.FC = () => {
                 {[
                   {
                     title: 'One-Click Urgent Dispatch',
-                    desc: 'Publish urgent relief shifts with immediate mobile push notifications sent to certified nurses within 15 km.',
+                    desc: 'Publish urgent relief shifts with immediate push alerts sent to verified nurses within your target hospital radius.',
                   },
                   {
                     title: 'Candidate Match Scoring',
-                    desc: 'Review applicants instantly scored on clinical years, specialty certifications (BLS/ACLS), and hospital punctuality record.',
+                    desc: 'Review applicants scored objectively on clinical bedside years, active certifications (BLS/ACLS), and verified credentials.',
                   },
                   {
                     title: 'Live QR Shift Attendance',
                     desc: 'Real-time clock-in logs verified via department QR scans and GPS coordinates. Zero paper logbook discrepancies.',
                   },
                   {
-                    title: 'Direct Invoice Reconciliation',
-                    desc: 'Itemized, transparent shift billing generated automatically at the end of each pay period.',
+                    title: 'Automated Timesheet Invoicing',
+                    desc: 'Itemized, transparent shift billing generated automatically at the end of each shift without agency markups.',
                   },
                 ].map((feat) => (
                   <div key={feat.title} className="flex items-start gap-3.5">
-                    <div className="p-1 rounded-full bg-teal-500/20 text-teal-400 mt-0.5">
+                    <div className="p-1 rounded-full bg-sky-500/20 text-sky-400 mt-0.5">
                       <CheckCircle className="w-4 h-4" />
                     </div>
                     <div>
@@ -124,35 +117,35 @@ export const AppShowcase: React.FC = () => {
 
             {/* UI Preview Card for Hospital */}
             <div className="lg:col-span-7">
-              <div className="rounded-3xl bg-slate-800/90 border border-slate-700 p-6 shadow-2xl space-y-5">
+              <div className="rounded-3xl bg-slate-900 border border-slate-800 p-6 shadow-2xl space-y-5">
                 
                 {/* Simulated Portal Topbar */}
-                <div className="flex items-center justify-between pb-4 border-b border-slate-700">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-800">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-teal-700 flex items-center justify-center font-bold text-white text-xs">
+                    <div className="w-9 h-9 rounded-xl bg-sky-500 flex items-center justify-center font-bold text-slate-950 text-xs">
                       QK
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-white">Metropolitan Medical Center</p>
-                      <p className="text-[11px] text-teal-400">Department: Intensive Care Unit (ICU)</p>
+                      <p className="text-xs font-bold text-white">Private Hospital Demo Account</p>
+                      <p className="text-[11px] text-sky-400">Department: Intensive Care Unit (ICU)</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30">
-                      ✓ System Live
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                      ● Prototype Mode
                     </span>
                   </div>
                 </div>
 
-                {/* Active Shift List Simulated */}
+                {/* Shift Posting Simulation */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span className="font-semibold uppercase tracking-wider">Active Shift Postings</span>
-                    <span>3 Urgent Vacancies</span>
+                    <span className="font-semibold uppercase tracking-wider">Shift Roster Preview</span>
+                    <span>Urgent Call-Out Simulation</span>
                   </div>
 
                   {/* Shift Item 1 */}
-                  <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-700/80 space-y-3">
+                  <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-3">
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="flex items-center gap-2">
@@ -167,15 +160,15 @@ export const AppShowcase: React.FC = () => {
                         </p>
                       </div>
                       <div className="text-right">
-                        <span className="text-base font-extrabold text-teal-300">₱2,800</span>
-                        <p className="text-[10px] text-slate-400">Guaranteed Rate</p>
+                        <span className="text-base font-extrabold text-sky-400">₱2,800</span>
+                        <p className="text-[10px] text-slate-400">Direct Shift Rate</p>
                       </div>
                     </div>
 
                     {/* Matched Candidates Preview */}
-                    <div className="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60 flex items-center justify-between">
+                    <div className="p-3 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xs">
+                        <div className="w-8 h-8 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center text-xs">
                           MR
                         </div>
                         <div>
@@ -187,7 +180,7 @@ export const AppShowcase: React.FC = () => {
                         <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                           98% Match
                         </span>
-                        <span className="px-2.5 py-1 rounded bg-teal-600 text-white text-xs font-semibold">
+                        <span className="px-2.5 py-1 rounded bg-sky-500 text-slate-950 text-xs font-bold">
                           Assigned
                         </span>
                       </div>
@@ -195,7 +188,7 @@ export const AppShowcase: React.FC = () => {
                   </div>
 
                   {/* Shift Item 2 */}
-                  <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-700/80 flex items-center justify-between">
+                  <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between">
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
@@ -206,16 +199,16 @@ export const AppShowcase: React.FC = () => {
                       <p className="text-xs text-slate-400 mt-1">Tomorrow: 7:00 AM – 3:00 PM • ER Triage</p>
                     </div>
                     <div className="text-right">
-                      <span className="text-xs font-bold text-teal-400">2 Applicants Reviewing</span>
+                      <span className="text-xs font-bold text-sky-400">Automated Broadcast</span>
                     </div>
                   </div>
 
                 </div>
 
                 {/* Bottom Quick Metric */}
-                <div className="pt-2 flex items-center justify-between text-xs text-slate-400 border-t border-slate-700">
-                  <span>Shift Fill Status: <strong className="text-emerald-400">98.4% On-Target</strong></span>
-                  <span>Supervisor Sign-Off: <strong className="text-white">Dr. R. Santos, MD</strong></span>
+                <div className="pt-2 flex items-center justify-between text-xs text-slate-400 border-t border-slate-800">
+                  <span>Attendance Verification: <strong className="text-sky-400">Geofenced Station QR</strong></span>
+                  <span>Supervisor Sign-Off: <strong className="text-white">Digital One-Tap</strong></span>
                 </div>
 
               </div>
@@ -273,10 +266,10 @@ export const AppShowcase: React.FC = () => {
 
             {/* Mobile Mockup for Nurse */}
             <div className="lg:col-span-7 flex justify-center">
-              <div className="w-full max-w-sm rounded-[36px] bg-slate-950 p-4 border-4 border-slate-700 shadow-2xl relative">
+              <div className="w-full max-w-sm rounded-[36px] bg-slate-950 p-4 border-4 border-slate-800 shadow-2xl relative">
                 
-                {/* Notch / Speaker */}
-                <div className="w-32 h-4 bg-slate-800 rounded-full mx-auto mb-3" />
+                {/* Speaker Notch */}
+                <div className="w-32 h-4 bg-slate-900 rounded-full mx-auto mb-3" />
 
                 {/* Mobile Screen Content */}
                 <div className="bg-slate-900 rounded-[28px] p-4 text-white space-y-4 border border-slate-800">
@@ -284,40 +277,40 @@ export const AppShowcase: React.FC = () => {
                   {/* Top Bar */}
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-[10px] text-slate-400">Good Morning,</p>
-                      <h5 className="text-sm font-bold text-white">Nurse Sarah G., RN</h5>
+                      <p className="text-[10px] text-slate-400">Welcome,</p>
+                      <h5 className="text-sm font-bold text-white">Nurse Juan Dela Cruz, RN</h5>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-sky-600 flex items-center justify-center text-xs font-bold">
-                      SG
+                    <div className="w-8 h-8 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center text-xs font-bold">
+                      JD
                     </div>
                   </div>
 
                   {/* Digital Wallet Card */}
-                  <div className="p-4 rounded-2xl bg-gradient-to-r from-teal-800 to-sky-700 text-white space-y-2">
-                    <p className="text-[11px] text-teal-100 flex items-center justify-between">
+                  <div className="p-4 rounded-2xl bg-gradient-to-r from-slate-950 to-slate-900 border border-sky-500/30 text-white space-y-2">
+                    <p className="text-[11px] text-sky-300 flex items-center justify-between">
                       <span>Available Earnings</span>
-                      <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded">Ready to Payout</span>
+                      <span className="text-[10px] bg-sky-500/20 px-2 py-0.5 rounded text-sky-300">Ready to Payout</span>
                     </p>
-                    <div className="text-2xl font-extrabold font-heading">
+                    <div className="text-2xl font-extrabold font-heading text-white">
                       ₱14,800.00
                     </div>
-                    <div className="flex items-center justify-between text-[11px] text-teal-100 pt-1 border-t border-white/20">
-                      <span>5 Shifts Completed this Month</span>
-                      <span className="font-semibold text-white">GCash / Maya</span>
+                    <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-800">
+                      <span>5 Shifts Completed</span>
+                      <span className="font-semibold text-sky-400">GCash / Maya</span>
                     </div>
                   </div>
 
-                  {/* Upcoming / Active Shift */}
-                  <div className="p-3.5 rounded-xl bg-slate-800/90 border border-slate-700 space-y-2.5">
+                  {/* Active Shift Card */}
+                  <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5">
                     <div className="flex items-center justify-between">
-                      <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-teal-500/20 text-teal-300">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-sky-500/20 text-sky-300">
                         NEXT SHIFT TODAY
                       </span>
                       <span className="text-xs font-bold text-sky-400">₱3,000 / shift</span>
                     </div>
 
                     <div>
-                      <h6 className="text-xs font-bold text-white">St. Luke's Medical Center</h6>
+                      <h6 className="text-xs font-bold text-white">Partner Medical Center</h6>
                       <p className="text-[11px] text-slate-400 flex items-center gap-1 mt-0.5">
                         <Clock className="w-3 h-3 text-slate-400" />
                         3:00 PM – 11:00 PM • Hemodialysis Unit
@@ -325,7 +318,7 @@ export const AppShowcase: React.FC = () => {
                     </div>
 
                     <div className="flex items-center gap-2 pt-1">
-                      <button className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold transition-colors">
+                      <button className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-bold transition-colors cursor-pointer">
                         <QrCode className="w-3.5 h-3.5" />
                         <span>Scan Station QR</span>
                       </button>
@@ -333,9 +326,9 @@ export const AppShowcase: React.FC = () => {
                   </div>
 
                   {/* Status Indicator */}
-                  <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-800/50 border border-slate-800 text-[11px] text-slate-400">
+                  <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-[11px] text-slate-400">
                     <span className="flex items-center gap-1.5">
-                      <WifiOff className="w-3.5 h-3.5 text-teal-400" />
+                      <WifiOff className="w-3.5 h-3.5 text-sky-400" />
                       Offline Mode Ready
                     </span>
                     <span className="text-emerald-400 font-semibold">PRC Verified</span>

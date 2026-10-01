@@ -2,16 +2,13 @@ import React from 'react';
 import { 
   Stethoscope, 
   UserPlus, 
-  CheckCircle, 
   Wallet, 
   CalendarRange, 
-  Sparkles, 
   Award, 
   Plane, 
   QrCode, 
   ShieldCheck, 
   ArrowRight,
-  TrendingUp,
   HeartHandshake
 } from 'lucide-react';
 
@@ -23,60 +20,60 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
   const nursePerks = [
     {
       title: 'Full Shift Sovereignty',
-      desc: 'Work on your schedule. Choose morning, afternoon, night, or weekend reliever shifts around your family, studies, or primary job.',
+      desc: 'Work on your schedule. Choose morning, afternoon, night, or weekend reliever shifts around your family, masteral studies, or primary hospital rotation.',
       icon: CalendarRange,
       tag: 'Zero Burnout',
     },
     {
       title: 'Competitive, Guaranteed Pay',
-      desc: 'Transparent per-shift compensation visible before you accept. No delayed salaries or bureaucratic paperwork.',
+      desc: 'Transparent per-shift compensation visible before you accept. No delayed salaries or predatory commission deductions.',
       icon: Wallet,
       tag: 'Fast Payouts',
     },
     {
       title: 'Digital Credential Passport',
-      desc: 'Your verified PRC license, BLS, ACLS, IV therapy, and clinical hours saved securely in one profile recognized by top hospitals.',
+      desc: 'Your verified PRC license, BLS, ACLS, IV therapy, and bedside hours saved securely in one profile recognized by accredited facilities.',
       icon: ShieldCheck,
       tag: 'PRC Integrated',
     },
     {
       title: 'Tap & Go QR Check-In',
-      desc: 'Arrive at the hospital, scan the department QR code, and start your shift. Your hours are digitally recorded with zero disputes.',
+      desc: 'Arrive at the medical center, scan the department QR code, and start your shift. Your hours are recorded with zero paperwork disputes.',
       icon: QrCode,
       tag: 'Digital Timesheet',
     },
     {
       title: 'Earn Badges & Clinical Trust',
-      desc: 'Accumulate punctuality streaks, hospital supervisor commendations, and higher match priority for premium-rate shifts.',
+      desc: 'Accumulate punctuality streaks, hospital supervisor commendations, and priority match status for premium specialty shifts upon launch.',
       icon: Award,
       tag: 'Prestige & Rating',
     },
     {
       title: 'Stepping Stone to Overseas Careers',
-      desc: 'Log certified bedside hours in accredited hospitals to strengthen your credential evaluation for NCLEX, UK NMC, or Middle East licenses.',
+      desc: 'Log certified bedside hours in accredited hospitals to strengthen your documentation for NCLEX, UK NMC, or Middle East credentials.',
       icon: Plane,
       tag: 'Global Mobility',
     },
   ];
 
   return (
-    <section id="nurses" className="py-24 bg-gradient-to-b from-slate-50 via-teal-50/30 to-white border-t border-slate-200/80">
+    <section id="nurses" className="py-24 bg-gradient-to-b from-slate-50 via-sky-50/20 to-white border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-100 text-sky-900 border border-sky-200">
-            <Stethoscope className="w-3.5 h-3.5 text-sky-700" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-50 text-sky-800 border border-sky-200">
+            <Stethoscope className="w-3.5 h-3.5 text-sky-600" />
             <span>For Registered Nurses & Healthcare Professionals</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight font-heading">
             Your Hard-Earned License. Your Rules. Higher Earnings.
           </h2>
 
-          <p className="text-lg text-slate-600">
-            Join the modern nurse community. Gain access to premium per-diem and reliever shifts 
-            at accredited hospitals, earn on your terms, and take pride in your clinical impact.
+          <p className="text-base sm:text-lg text-slate-600">
+            Be part of the inaugural nurse cohort launching alongside the PHAPi convention in November. 
+            Pre-register to unlock priority access to high-paying per-diem and reliever shifts.
           </p>
         </div>
 
@@ -91,7 +88,7 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center group-hover:bg-sky-500 group-hover:text-white transition-colors">
                       <IconComponent className="w-6 h-6" />
                     </div>
                     <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
@@ -108,8 +105,8 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center text-xs font-bold text-sky-700 group-hover:text-sky-800">
-                  <span>Explore opportunities</span>
+                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center text-xs font-bold text-sky-600 group-hover:text-sky-700">
+                  <span>Learn how shifts work</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -117,28 +114,28 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
           })}
         </div>
 
-        {/* Free for Nurses Banner */}
-        <div className="bg-gradient-to-r from-teal-800 via-teal-700 to-sky-700 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+        {/* 100% Free Banner */}
+        <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-sky-950 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-slate-800">
           <div className="max-w-3xl space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white border border-white/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30">
               <HeartHandshake className="w-3.5 h-3.5" />
               100% Free For All Healthcare Professionals
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
-              No Registration Fees. No Deductions from Your Shift Earnings.
+              No Sign-Up Fees. No Hidden Commission Deductions.
             </h3>
-            <p className="text-sm sm:text-base text-teal-100 leading-relaxed">
-              We believe nurses are the foundation of healthcare. When a hospital posts a ₱2,800 shift, 
-              that entire rate belongs to you. No hidden surprise cuts.
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+              We believe bedside nurses are the heartbeat of healthcare. When a hospital posts an approved 
+              ₱2,800 shift, that advertised rate goes straight to you upon completion. Zero agency take-home cuts.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <button
                 onClick={onOpenNurseModal}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-teal-900 bg-white hover:bg-slate-100 transition-colors shadow-lg cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-slate-900 bg-sky-400 hover:bg-sky-300 transition-colors shadow-lg cursor-pointer"
               >
-                <UserPlus className="w-4 h-4 text-teal-700" />
-                <span>Join Nurse Talent Pool Now</span>
+                <UserPlus className="w-4 h-4 text-slate-900" />
+                <span>Pre-Register for Nurse Pool (Free)</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

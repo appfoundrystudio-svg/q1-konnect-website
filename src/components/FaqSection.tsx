@@ -8,24 +8,24 @@ export const FaqSection: React.FC = () => {
 
   const hospitalFaqs = [
     {
+      q: 'When is Q1 Konnect officially launching?',
+      a: 'We are officially launching at the Private Hospitals Association of the Philippines (PHAPi) Annual National Convention this November 2026. Healthcare facilities that pre-register now join our Founding Hospital Partner cohort with zero onboarding fees and priority clinical pool allocation.',
+    },
+    {
       q: 'How does Q1 Konnect verify nurse licenses and clinical credentials?',
       a: 'Every registered nurse must submit their official Professional Regulation Commission (PRC) license number, which undergoes real-time validation. We also verify secondary certifications (BLS, ACLS, IV Therapy, NCLEX) and NBI background clearances before any nurse is permitted to accept hospital shifts.',
     },
     {
-      q: 'How fast can an emergency shift vacancy be filled?',
-      a: 'For urgent call-outs, our automated matching engine broadcasts the vacancy immediately to qualified nurses within your facility’s target radius. On average, urgent shifts are confirmed and accepted in under 20 to 30 minutes.',
+      q: 'Can our hospital leadership meet your team in person?',
+      a: 'Yes! You can meet our founders and clinical architects in person at our PHAPi exhibit booth this November, or book an executive online consultation with our partnerships team today.',
+    },
+    {
+      q: 'Are we locked into expensive long-term retainer contracts?',
+      a: 'No. Unlike traditional staffing agencies that demand rigid monthly retainers and 35-50% markups, Q1 Konnect operates on a transparent, pay-as-you-use platform model. You only pay a modest tech fee when shifts are successfully completed.',
     },
     {
       q: 'How does attendance tracking and timesheet reconciliation work?',
       a: 'We eliminate disputed paper timecards. When a nurse arrives on-site, they scan a unique department QR code verified against your hospital’s geofenced GPS coordinates. When the shift concludes, the supervisor digitally signs off, and an itemized invoice is automatically updated.',
-    },
-    {
-      q: 'Are we locked into expensive long-term retainer contracts?',
-      a: 'No. Unlike traditional staffing agencies that demand rigid monthly retainers and 35-50% markups, Q1 Konnect operates with transparent, pay-as-you-use platform pricing. You only pay a modest tech fee when shifts are successfully completed.',
-    },
-    {
-      q: 'Can we manage our internal hospital float pool on Q1 Konnect?',
-      a: 'Yes! Q1 Konnect supports a hybrid workforce model. You can first broadcast vacancies to your internal staff float pool. If the shift remains open after a designated window, it can automatically cascade to the verified external nurse network.',
     },
   ];
 
@@ -35,20 +35,20 @@ export const FaqSection: React.FC = () => {
       a: 'No. Q1 Konnect is 100% free for nurses and healthcare professionals. We never charge registration fees, subscription costs, or take deductions from your advertised shift compensation.',
     },
     {
+      q: 'When will shifts become available for pre-registered nurses?',
+      a: 'Shift matching officially goes live alongside our launch at the PHAPi convention in November 2026. Pre-registering today ensures your PRC credentials are pre-verified so you receive immediate first-access notifications the moment hospital shifts are posted.',
+    },
+    {
       q: 'How quickly do I receive my shift earnings?',
       a: 'Once your shift supervisor signs off on your completed hours via QR, your earnings are credited to your in-app digital wallet. You can withdraw directly to GCash, Maya, or your Philippine bank account.',
     },
     {
       q: 'Can I accept reliever shifts if I already work a full-time hospital job?',
-      a: 'Absolutely. Many nurses on Q1 Konnect maintain full-time appointments and utilize our platform to pick up flexible reliever shifts during their off days or scheduled leaves to boost their income.',
+      a: 'Absolutely. Many nurses use Q1 Konnect to pick up flexible reliever shifts during their off days or scheduled leaves to boost their income without taking on another rigid full-time commitment.',
     },
     {
-      q: 'What certifications and documents do I need to register?',
-      a: 'You will need an active PRC Registered Nurse license, valid government ID, and your nursing diploma. Relevant specialty certificates (such as BLS, ACLS, IV therapy, or hospital employment certificates) will qualify you for higher-tier shifts.',
-    },
-    {
-      q: 'Will my shifts count toward international clinical experience requirements?',
-      a: 'Yes. All completed shifts are logged in your verified digital credential passport with hospital name, ward, and supervised hours, providing a documented clinical audit trail valuable for foreign credential assessments (e.g. CGFNS, NCLEX, UK NMC).',
+      q: 'What certifications and documents do I need to pre-register?',
+      a: 'You will need an active PRC Registered Nurse license number and contact details to get started. Relevant specialty certificates (such as BLS, ACLS, IV therapy, or hospital employment records) can be attached to qualify for higher-tier shifts.',
     },
   ];
 
@@ -70,7 +70,7 @@ export const FaqSection: React.FC = () => {
           </h2>
 
           <p className="text-slate-600">
-            Learn more about our verification protocols, operational logistics, and terms.
+            Learn more about our verification protocols, November PHAPi launch, and operational logistics.
           </p>
 
           {/* Toggle */}
@@ -81,13 +81,13 @@ export const FaqSection: React.FC = () => {
                   setActiveTab('hospital');
                   setOpenIndex(0);
                 }}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   activeTab === 'hospital'
-                    ? 'bg-teal-700 text-white shadow-md'
+                    ? 'bg-slate-950 text-white shadow-md'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                <Building2 className="w-4 h-4" />
+                <Building2 className="w-4 h-4 text-sky-400" />
                 <span>For Hospitals</span>
               </button>
               <button
@@ -95,9 +95,9 @@ export const FaqSection: React.FC = () => {
                   setActiveTab('nurse');
                   setOpenIndex(0);
                 }}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   activeTab === 'nurse'
-                    ? 'bg-sky-600 text-white shadow-md'
+                    ? 'bg-sky-500 text-white shadow-md shadow-sky-500/25'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -119,12 +119,12 @@ export const FaqSection: React.FC = () => {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-slate-900 hover:text-teal-700 transition-colors cursor-pointer"
+                  className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 font-heading font-bold text-slate-900 hover:text-sky-600 transition-colors cursor-pointer"
                 >
                   <span className="text-base sm:text-lg">{faq.q}</span>
                   <ChevronDown
                     className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-teal-600' : ''
+                      isOpen ? 'rotate-180 text-sky-600' : ''
                     }`}
                   />
                 </button>

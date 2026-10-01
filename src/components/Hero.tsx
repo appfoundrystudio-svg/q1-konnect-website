@@ -5,15 +5,13 @@ import {
   Stethoscope, 
   Calendar, 
   UserPlus, 
-  ShieldCheck, 
   ArrowRight, 
   CheckCircle2, 
-  Clock, 
-  TrendingUp, 
   Sparkles,
-  MapPin,
-  QrCode,
-  Award
+  Play,
+  Award,
+  Clock,
+  QrCode
 } from 'lucide-react';
 
 interface HeroProps {
@@ -30,38 +28,38 @@ export const Hero: React.FC<HeroProps> = ({
   onOpenNurseModal
 }) => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-teal-50/60 via-white to-slate-50">
-      {/* Decorative Background Elements */}
+    <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-sky-50/50 via-white to-slate-50">
+      {/* Background Decor */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-40 bg-grid-pattern [mask-image:radial-gradient(ellipse_at_center,white,transparent_75%)]" />
-      <div className="absolute top-20 right-10 w-96 h-96 bg-teal-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-40 left-10 w-80 h-80 bg-sky-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-20 right-10 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-40 left-10 w-80 h-80 bg-blue-100/50 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
-        {/* Audience Pill Selector */}
+        {/* Audience Toggle */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex p-1.5 rounded-2xl bg-white shadow-lg shadow-slate-200/60 border border-slate-200/80">
+          <div className="inline-flex p-1.5 rounded-2xl bg-white shadow-xl shadow-slate-200/60 border border-slate-200/80">
             <button
               onClick={() => onAudienceChange('hospital')}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 currentAudience === 'hospital'
-                  ? 'bg-gradient-to-r from-teal-700 to-teal-800 text-white shadow-md shadow-teal-900/20'
+                  ? 'bg-slate-950 text-white shadow-md'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >
-              <Building2 className={`w-4 h-4 ${currentAudience === 'hospital' ? 'text-teal-200' : 'text-slate-400'}`} />
-              <span>I am a Hospital / Clinic</span>
+              <Building2 className={`w-4 h-4 ${currentAudience === 'hospital' ? 'text-sky-400' : 'text-slate-400'}`} />
+              <span>For Hospital & Clinic Partners</span>
             </button>
             <button
               onClick={() => onAudienceChange('nurse')}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 currentAudience === 'nurse'
-                  ? 'bg-gradient-to-r from-sky-600 to-teal-700 text-white shadow-md shadow-sky-900/20'
+                  ? 'bg-sky-500 text-white shadow-md shadow-sky-500/25'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >
-              <Stethoscope className={`w-4 h-4 ${currentAudience === 'nurse' ? 'text-sky-200' : 'text-slate-400'}`} />
-              <span>I am a Registered Nurse</span>
+              <Stethoscope className={`w-4 h-4 ${currentAudience === 'nurse' ? 'text-white' : 'text-slate-400'}`} />
+              <span>For Registered Nurses</span>
             </button>
           </div>
         </div>
@@ -69,323 +67,287 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Hero Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Headline & Value Proposition */}
+          {/* Left Column */}
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             
-            {/* Tag / Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-100/70 text-teal-800 border border-teal-200">
-              <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+            {/* Stage Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200">
+              <Award className="w-3.5 h-3.5 text-sky-600" />
               <span>
                 {currentAudience === 'hospital' 
-                  ? 'Next-Gen Clinical Workforce Solution' 
-                  : 'Flexible Healthcare Career & Reliever Shifts'}
+                  ? 'PHAPi Annual Convention Exhibitor • November 2026' 
+                  : 'Inaugural Nurse Pool Pre-Registration Open'}
               </span>
             </div>
 
             {/* Dynamic Headline */}
             {currentAudience === 'hospital' ? (
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] font-heading">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12] font-heading">
                 End Clinical Shortages.{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-700 via-teal-600 to-sky-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-600 to-blue-700">
                   Fill Hospital Shifts
                 </span>{' '}
-                with Verified Nurses in Minutes.
+                Without Legacy Agency Markups.
               </h1>
             ) : (
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] font-heading">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12] font-heading">
                 Take Charge of Your Shifts.{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-teal-600 to-teal-800">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-600 to-slate-900">
                   Work When You Want
                 </span>{' '}
                 & Earn What You Deserve.
               </h1>
             )}
 
-            {/* Subheading */}
-            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
               {currentAudience === 'hospital' ? (
                 <>
                   Connect directly with pre-screened, <strong>PRC-licensed Registered Nurses</strong>. 
-                  Broadcast emergency relief shifts, manage internal & external float pools, and automate 
-                  compliance without predatory agency commissions.
+                  Q1 Konnect is engineered to broadcast urgent reliever shifts, automate credentials compliance, 
+                  and record geofenced QR attendance without third-party commission overheads. 
+                  Launching at the <strong>PHAPi National Convention this November</strong>.
                 </>
               ) : (
                 <>
-                  Join the Philippines' smartest nursing network. Unlock high-paying reliever shifts at top 
-                  accredited medical facilities, track earnings with instant payouts, and maintain your 
-                  PRC-verified digital career passport.
+                  Join the Philippines' upcoming intelligent nursing network. Pre-register for early access 
+                  to flexible reliever shifts at accredited hospitals, track hours with instant QR check-in, 
+                  and preserve your verified PRC career passport. <strong>100% free for nurses.</strong>
                 </>
               )}
             </p>
 
-            {/* Quick Benefits Bullet Points */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-700 max-w-xl mx-auto lg:mx-0">
+            {/* True Value Bullets */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-slate-700 max-w-xl mx-auto lg:mx-0">
               {currentAudience === 'hospital' ? (
                 <>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
-                    <span>Instant PRC & Credential Verification</span>
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <span>Real-time PRC License Verification Workflow</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
-                    <span>Geo-fenced QR Attendance & Timesheets</span>
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <span>Geofenced QR-Based Clock-In Attendance</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
-                    <span>98.4% Average Shift Fill Rate</span>
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <span>Designed to Eliminate 35–40% Agency Markups</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
-                    <span>Zero Long-Term Lock-in or Retainers</span>
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <span>Founding Hospital Partner Cohort Now Open</span>
                   </div>
                 </>
               ) : (
                 <>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Flexible shifts (ICU, ER, Ward, Dialysis)</span>
+                    <span>Flexible shifts (ICU, ER, General Ward, Dialysis)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Fast digital wallet payouts & earnings tracking</span>
+                    <span>Zero agency deductions from your shift pay</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Accredited partner hospitals & clinics</span>
+                    <span>Direct digital wallet payouts (GCash/Maya/Bank)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>100% Free for Nurses — zero fees</span>
+                    <span>Priority launch status for pre-registered nurses</span>
                   </div>
                 </>
               )}
             </div>
 
-            {/* Primary Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-4">
               {currentAudience === 'hospital' ? (
                 <>
                   <button
                     onClick={onOpenScheduleModal}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-base font-bold text-white bg-gradient-to-r from-teal-700 to-teal-800 hover:from-teal-800 hover:to-teal-900 shadow-xl shadow-teal-900/25 hover:shadow-2xl transition-all cursor-pointer transform hover:-translate-y-0.5"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-xl shadow-slate-900/25 transition-all cursor-pointer transform hover:-translate-y-0.5 border border-slate-800"
                   >
-                    <Calendar className="w-5 h-5 text-teal-200" />
-                    <span>Schedule Hospital Discovery Meeting</span>
+                    <Calendar className="w-4 h-4 text-sky-400" />
+                    <span>Schedule PHAPi Exhibit Meeting / Demo</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <a
-                    href="#hospital-roi"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 shadow-sm transition-all"
+                    href="#video-explainer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-all shadow-sm"
                   >
-                    <span>Calculate Staffing Savings</span>
+                    <Play className="w-4 h-4 text-sky-500 fill-sky-500" />
+                    <span>Watch Hospital Explainer</span>
                   </a>
                 </>
               ) : (
                 <>
                   <button
                     onClick={onOpenNurseModal}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-base font-bold text-white bg-gradient-to-r from-sky-600 to-teal-700 hover:from-sky-700 hover:to-teal-800 shadow-xl shadow-sky-900/25 hover:shadow-2xl transition-all cursor-pointer transform hover:-translate-y-0.5"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-sky-500 hover:bg-sky-400 shadow-xl shadow-sky-500/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
                   >
-                    <UserPlus className="w-5 h-5 text-sky-200" />
-                    <span>Sign Up for Nurse Talent Pool</span>
+                    <UserPlus className="w-4 h-4" />
+                    <span>Pre-Register for Nurse Talent Pool</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <a
-                    href="#nurse-earnings"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 shadow-sm transition-all"
+                    href="#video-explainer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-all shadow-sm"
                   >
-                    <span>Calculate Monthly Earnings</span>
+                    <Play className="w-4 h-4 text-sky-500 fill-sky-500" />
+                    <span>Watch Nurse Explainer</span>
                   </a>
                 </>
               )}
             </div>
 
-            {/* Social Trust Proof */}
-            <div className="pt-4 flex items-center justify-center lg:justify-start gap-4 text-xs text-slate-500">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center border-2 border-white text-xs">RN</div>
-                <div className="w-8 h-8 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center border-2 border-white text-xs">MD</div>
-                <div className="w-8 h-8 rounded-full bg-slate-700 text-white font-bold flex items-center justify-center border-2 border-white text-xs">CNO</div>
-              </div>
-              <div>
-                <p className="font-semibold text-slate-700">Trusted across Philippine healthcare</p>
-                <p>Private hospitals, specialty clinics & medical centers</p>
-              </div>
+            {/* Credibility statement */}
+            <div className="pt-2 text-xs text-slate-500 flex items-center justify-center lg:justify-start gap-2">
+              <span className="w-2 h-2 rounded-full bg-sky-500" />
+              <span>Developed in the Philippines for Philippine Private & Public Healthcare Facilities.</span>
             </div>
 
           </div>
 
-          {/* Right Column: Live Interactive Device / Platform Preview Card */}
+          {/* Right Column: Platform Prototype Card */}
           <div className="lg:col-span-5 relative">
-            
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-sky-500/20 rounded-3xl blur-2xl -z-10" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/20 to-blue-500/20 rounded-3xl blur-2xl -z-10" />
 
-            <div className="relative rounded-3xl bg-slate-900 p-6 shadow-2xl border border-slate-800 text-white">
+            <div className="relative rounded-3xl bg-slate-950 p-6 shadow-2xl border border-slate-800 text-white">
               
-              {/* Card Header */}
+              {/* Window Header */}
               <div className="flex items-center justify-between pb-4 border-b border-slate-800">
                 <div className="flex items-center gap-2.5">
                   <div className="w-3 h-3 rounded-full bg-rose-500" />
                   <div className="w-3 h-3 rounded-full bg-amber-500" />
                   <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="text-xs font-mono text-slate-400 ml-2">q1-konnect://live-dispatch</span>
+                  <span className="text-xs font-mono text-slate-400 ml-2">q1-konnect://prototype-mvp</span>
                 </div>
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  LIVE NETWORK
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30">
+                  <Sparkles className="w-3 h-3" />
+                  MVP IN DEVELOPMENT
                 </span>
               </div>
 
-              {/* Card Body - Content changes depending on toggle */}
+              {/* Dynamic View based on toggle */}
               {currentAudience === 'hospital' ? (
                 <div className="py-4 space-y-4">
                   <div className="flex items-center justify-between">
                     <div>
                       <h4 className="text-sm font-bold text-white">Hospital Staffing Command</h4>
-                      <p className="text-xs text-slate-400">Metro Manila • Tertiary Medical Center</p>
+                      <p className="text-xs text-slate-400">Department of Nursing Service</p>
                     </div>
-                    <span className="text-xs font-bold text-teal-400 bg-teal-950/80 px-2.5 py-1 rounded-lg border border-teal-800/50">
-                      Active Shift Surge
+                    <span className="text-xs font-bold text-sky-400 bg-sky-950/80 px-2.5 py-1 rounded-lg border border-sky-800/50">
+                      Surge Reliever Dispatch
                     </span>
                   </div>
 
-                  {/* Active Shift Card */}
-                  <div className="p-3.5 rounded-xl bg-slate-800/90 border border-slate-700 space-y-3">
+                  {/* Prototype Shift Card */}
+                  <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
                     <div className="flex items-start justify-between">
                       <div>
                         <span className="inline-block px-2 py-0.5 text-[10px] font-bold rounded bg-rose-500/20 text-rose-400 mb-1 border border-rose-500/30">
-                          URGENT RELIEF
+                          URGENT RELIEF DEMO
                         </span>
                         <h5 className="text-sm font-semibold text-white">ICU Staff Nurse (Night Shift)</h5>
-                        <p className="text-xs text-slate-400">11:00 PM – 7:00 AM • Critical Care Unit</p>
+                        <p className="text-xs text-slate-400">Critical Care Unit • 11:00 PM – 7:00 AM</p>
                       </div>
                       <div className="text-right">
-                        <span className="text-sm font-bold text-teal-300">₱2,800</span>
-                        <p className="text-[10px] text-slate-400">Per Shift Rate</p>
+                        <span className="text-sm font-bold text-sky-400">₱2,800</span>
+                        <p className="text-[10px] text-slate-400">Fixed Shift Rate</p>
                       </div>
                     </div>
 
-                    {/* Matched Candidates Mini List */}
-                    <div className="pt-2 border-t border-slate-700/60 space-y-2">
-                      <p className="text-[11px] font-medium text-slate-300 flex items-center justify-between">
-                        <span>Matched Candidates (3 available)</span>
-                        <span className="text-teal-400">AI Match: 98%</span>
+                    <div className="pt-2 border-t border-slate-800 text-xs space-y-2">
+                      <p className="text-slate-400 flex justify-between">
+                        <span>Candidate PRC Verification:</span>
+                        <span className="text-emerald-400 font-bold">100% Automated Check</span>
                       </p>
-                      
-                      <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800 text-xs">
-                        <div className="flex items-center gap-2">
-                          <div className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold flex items-center justify-center text-[11px]">
-                            MC
-                          </div>
-                          <div>
-                            <p className="font-semibold text-slate-200">Maria C., RN</p>
-                            <p className="text-[10px] text-slate-400">PRC #089421 • 5 yrs ICU Bedside</p>
-                          </div>
-                        </div>
-                        <button 
-                          onClick={onOpenScheduleModal}
-                          className="px-2.5 py-1 bg-teal-600 hover:bg-teal-500 text-white rounded text-[11px] font-semibold transition-colors cursor-pointer"
-                        >
-                          Confirm
-                        </button>
-                      </div>
+                      <p className="text-slate-400 flex justify-between">
+                        <span>Shift Attendance Mode:</span>
+                        <span className="text-sky-300 font-bold">Geofenced Station QR</span>
+                      </p>
+                      <p className="text-slate-400 flex justify-between">
+                        <span>Legacy Agency Fee:</span>
+                        <span className="text-emerald-400 font-bold">₱0.00 (Zero Markup)</span>
+                      </p>
                     </div>
                   </div>
 
-                  {/* Real-time metrics mini strip */}
-                  <div className="grid grid-cols-3 gap-2 text-center pt-1">
-                    <div className="p-2 rounded-lg bg-slate-800/50 border border-slate-800">
-                      <p className="text-xs font-bold text-white">12 mins</p>
-                      <p className="text-[10px] text-slate-400">Avg. Fill Time</p>
-                    </div>
-                    <div className="p-2 rounded-lg bg-slate-800/50 border border-slate-800">
-                      <p className="text-xs font-bold text-emerald-400">100%</p>
-                      <p className="text-[10px] text-slate-400">PRC Verified</p>
-                    </div>
-                    <div className="p-2 rounded-lg bg-slate-800/50 border border-slate-800">
-                      <p className="text-xs font-bold text-sky-400">QR Geo</p>
-                      <p className="text-[10px] text-slate-400">Auto Timecard</p>
-                    </div>
+                  <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-300 flex items-center justify-between">
+                    <span>Interested in an executive demo?</span>
+                    <button
+                      onClick={onOpenScheduleModal}
+                      className="text-xs font-bold text-sky-400 hover:text-sky-300 underline"
+                    >
+                      Book PHAPi Slot →
+                    </button>
                   </div>
-
                 </div>
               ) : (
                 <div className="py-4 space-y-4">
                   <div className="flex items-center justify-between">
                     <div>
                       <h4 className="text-sm font-bold text-white">Nurse Shift Companion</h4>
-                      <p className="text-xs text-slate-400">Welcome, Nurse Juan • PRC #091244</p>
+                      <p className="text-xs text-slate-400">Digital Career & Shift Wallet</p>
                     </div>
                     <span className="text-xs font-bold text-sky-400 bg-sky-950/80 px-2.5 py-1 rounded-lg border border-sky-800/50">
-                      Available for Shifts
+                      Early Access Preview
                     </span>
                   </div>
 
-                  {/* Available Shift Card for Nurses */}
-                  <div className="p-3.5 rounded-xl bg-slate-800/90 border border-slate-700 space-y-3">
+                  {/* Nurse App Mock Card */}
+                  <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
                     <div className="flex items-start justify-between">
                       <div>
-                        <span className="inline-block px-2 py-0.5 text-[10px] font-bold rounded bg-teal-500/20 text-teal-300 mb-1 border border-teal-500/30">
-                          IMMEDIATE CLAIM
+                        <span className="inline-block px-2 py-0.5 text-[10px] font-bold rounded bg-sky-500/20 text-sky-300 mb-1 border border-sky-500/30">
+                          PRE-REGISTERED SHIFT PERK
                         </span>
-                        <h5 className="text-sm font-semibold text-white">Emergency Room (ER) Staff Nurse</h5>
+                        <h5 className="text-sm font-semibold text-white">Emergency Room (ER) Reliever</h5>
                         <p className="text-xs text-slate-400 flex items-center gap-1 mt-0.5">
-                          <MapPin className="w-3 h-3 text-rose-400" />
-                          St. Luke's Area • 7:00 AM – 3:00 PM
+                          <Clock className="w-3.5 h-3.5 text-slate-500" />
+                          7:00 AM – 3:00 PM • Tertiary Hospital
                         </p>
                       </div>
                       <div className="text-right">
-                        <span className="text-base font-extrabold text-sky-400">₱2,400</span>
-                        <p className="text-[10px] text-slate-400">+ Hazard pay incl.</p>
+                        <span className="text-base font-extrabold text-sky-400">₱2,500</span>
+                        <p className="text-[10px] text-slate-400">Direct Take-Home</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between pt-2 border-t border-slate-700/60 text-xs">
-                      <div className="flex items-center gap-1.5 text-slate-300">
-                        <QrCode className="w-4 h-4 text-teal-400" />
-                        <span>Instant QR Clock-in</span>
-                      </div>
-                      <button 
-                        onClick={onOpenNurseModal}
-                        className="px-3 py-1.5 bg-gradient-to-r from-sky-500 to-teal-600 hover:from-sky-400 hover:to-teal-500 text-white rounded-lg text-xs font-bold transition-all cursor-pointer shadow-md"
-                      >
-                        Claim Shift
-                      </button>
+                    <div className="pt-2 border-t border-slate-800 text-xs space-y-1.5">
+                      <p className="text-slate-300 flex items-center gap-2">
+                        <QrCode className="w-3.5 h-3.5 text-sky-400" />
+                        <span>Instant QR check-in on hospital arrival</span>
+                      </p>
+                      <p className="text-slate-300 flex items-center gap-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                        <span>No agency commission deducted from nurse pay</span>
+                      </p>
                     </div>
                   </div>
 
-                  {/* Earnings summary strip */}
-                  <div className="p-2.5 rounded-xl bg-gradient-to-r from-slate-800 to-slate-850 border border-slate-700 flex items-center justify-between text-xs">
-                    <div className="flex items-center gap-2">
-                      <div className="p-1.5 rounded-lg bg-teal-600/30 text-teal-300">
-                        <TrendingUp className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <p className="text-[10px] text-slate-400">Weekly Projected Extra</p>
-                        <p className="font-bold text-white">₱9,600 (3 Shifts)</p>
-                      </div>
-                    </div>
-                    <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">
-                      Direct Payout
-                    </span>
+                  <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-300 flex items-center justify-between">
+                    <span>Pre-register your PRC credentials:</span>
+                    <button
+                      onClick={onOpenNurseModal}
+                      className="text-xs font-bold text-sky-400 hover:text-sky-300 underline"
+                    >
+                      Sign Up Now →
+                    </button>
                   </div>
-
                 </div>
               )}
 
-              {/* Floating Testimonial Snippet inside Mockup */}
-              <div className="mt-2 p-2.5 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center gap-3 text-xs">
+              {/* Convention Banner on Card */}
+              <div className="mt-2 p-2.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3 text-xs">
                 <Award className="w-5 h-5 text-amber-400 shrink-0" />
                 <p className="text-slate-300 text-[11px] leading-tight">
-                  {currentAudience === 'hospital'
-                    ? '"Q1 Konnect cut our staffing lead time from 3 days to under 30 minutes."'
-                    : '"I chose my shifts between family duties and doubled my monthly income."'}
+                  Presenting the working MVP at the <strong>PHAPi National Convention (November 2026)</strong>.
                 </p>
               </div>
 
             </div>
-
           </div>
 
         </div>
