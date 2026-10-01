@@ -3,6 +3,7 @@ import { Audience } from './types/landing';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { StatsBanner } from './components/StatsBanner';
+import { NetworkRoadmap } from './components/NetworkRoadmap';
 import { VideoExplainer } from './components/VideoExplainer';
 import { HospitalSection } from './components/HospitalSection';
 import { HospitalRoiCalculator } from './components/HospitalRoiCalculator';
@@ -69,6 +70,12 @@ export const App: React.FC = () => {
           onOpenNurseModal={() => setNurseModalOpen(true)}
         />
 
+        {/* Phased Marketplace Strategy Roadmap */}
+        <NetworkRoadmap
+          onOpenScheduleModal={() => setScheduleModalOpen(true)}
+          onOpenNurseModal={() => setNurseModalOpen(true)}
+        />
+
         {/* Audience-prioritized view */}
         {currentAudience === 'hospital' ? (
           <>
@@ -116,7 +123,7 @@ export const App: React.FC = () => {
           
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-500/20 text-sky-300 border border-sky-500/30">
-              Inaugural Launch • November 2026
+              Industry Showcase • November 2026
             </span>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight text-white">
@@ -134,7 +141,7 @@ export const App: React.FC = () => {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 shadow-xl transition-all cursor-pointer transform hover:-translate-y-0.5"
               >
                 <Building2 className="w-5 h-5 text-slate-950" />
-                <span>Hospital: Schedule PHAPi Consultation</span>
+                <span>Hospital: Connect With Founding Team</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 

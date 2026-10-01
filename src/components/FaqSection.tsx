@@ -8,24 +8,24 @@ export const FaqSection: React.FC = () => {
 
   const hospitalFaqs = [
     {
-      q: 'When is Q1 Konnect officially launching?',
-      a: 'We are officially launching at the Private Hospitals Association of the Philippines (PHAPi) Annual National Convention this November 2026. Healthcare facilities that pre-register now join our Founding Hospital Partner cohort with zero onboarding fees and priority clinical pool allocation.',
+      q: 'Is Q1 Konnect currently live, and what is the rollout timeline?',
+      a: 'The full interactive prototype is completed, and the production MVP is actively being engineered. To ensure a thriving marketplace, we are currently seeding both sides: securing Pioneer Hospital Partner agreements to map shift demand, while pre-registering licensed nurses. We will be exhibiting our live prototype at the PHAPi National Convention this November 2026, followed by controlled pilot shift rollouts in designated hospital units.',
+    },
+    {
+      q: 'Do we need to schedule an appointment to see Q1 Konnect at the PHAPi convention?',
+      a: 'No prior appointment is needed! All convention delegates are welcome to walk into our exhibit booth anytime during exhibit hours for a live, interactive prototype demo and to meet our founding team. However, if your hospital executive team prefers a dedicated private briefing (online, at your hospital, or at the booth), you may submit a partnership inquiry here.',
     },
     {
       q: 'How does Q1 Konnect verify nurse licenses and clinical credentials?',
-      a: 'Every registered nurse must submit their official Professional Regulation Commission (PRC) license number, which undergoes real-time validation. We also verify secondary certifications (BLS, ACLS, IV Therapy, NCLEX) and NBI background clearances before any nurse is permitted to accept hospital shifts.',
+      a: 'Every registered nurse must submit their official Professional Regulation Commission (PRC) license number, which undergoes verification against official databases. We also verify secondary certifications (BLS, ACLS, IV Therapy) and clinical tenure before any nurse is permitted to accept shifts once matching goes live.',
     },
     {
-      q: 'Can our hospital leadership meet your team in person?',
-      a: 'Yes! You can meet our founders and clinical architects in person at our PHAPi exhibit booth this November, or book an executive online consultation with our partnerships team today.',
-    },
-    {
-      q: 'Are we locked into expensive long-term retainer contracts?',
-      a: 'No. Unlike traditional staffing agencies that demand rigid monthly retainers and 35-50% markups, Q1 Konnect operates on a transparent, pay-as-you-use platform model. You only pay a modest tech fee when shifts are successfully completed.',
+      q: 'What are the benefits of joining as a Pioneer Hospital Partner now?',
+      a: 'Founding hospital partners receive zero setup fees, direct input into shift workflow and unit specialization features, priority access to our pre-registered nurse talent pool during pilot rollout, and dedicated onboarding support.',
     },
     {
       q: 'How does attendance tracking and timesheet reconciliation work?',
-      a: 'We eliminate disputed paper timecards. When a nurse arrives on-site, they scan a unique department QR code verified against your hospital’s geofenced GPS coordinates. When the shift concludes, the supervisor digitally signs off, and an itemized invoice is automatically updated.',
+      a: 'We eliminate disputed paper timecards. When a nurse arrives on-site, they scan a unique department QR code verified against your hospital’s geofenced GPS coordinates. When the shift concludes, the supervisor digitally signs off, and an itemized invoice is automatically updated with zero agency markups.',
     },
   ];
 
@@ -35,20 +35,20 @@ export const FaqSection: React.FC = () => {
       a: 'No. Q1 Konnect is 100% free for nurses and healthcare professionals. We never charge registration fees, subscription costs, or take deductions from your advertised shift compensation.',
     },
     {
-      q: 'When will shifts become available for pre-registered nurses?',
-      a: 'Shift matching officially goes live alongside our launch at the PHAPi convention in November 2026. Pre-registering today ensures your PRC credentials are pre-verified so you receive immediate first-access notifications the moment hospital shifts are posted.',
+      q: 'When will hospital shifts become available for nurses?',
+      a: 'For any staffing app to work, partner hospitals must first define shift requirements, and a verified pool of nurses must be ready. We are exhibiting at the PHAPi convention in November 2026 to sign pioneer hospital partnerships. Pre-registering today ensures your PRC credentials are pre-verified so you receive immediate priority access as pilot shifts open.',
     },
     {
-      q: 'How quickly do I receive my shift earnings?',
-      a: 'Once your shift supervisor signs off on your completed hours via QR, your earnings are credited to your in-app digital wallet. You can withdraw directly to GCash, Maya, or your Philippine bank account.',
+      q: 'How does shift pay work once live?',
+      a: 'Once your hospital supervisor signs off on your completed hours via QR, your earnings are credited directly to your digital wallet with zero agency deductions. You can transfer funds directly to GCash, Maya, or any Philippine bank account.',
     },
     {
       q: 'Can I accept reliever shifts if I already work a full-time hospital job?',
-      a: 'Absolutely. Many nurses use Q1 Konnect to pick up flexible reliever shifts during their off days or scheduled leaves to boost their income without taking on another rigid full-time commitment.',
+      a: 'Yes! Q1 Konnect is designed to provide shift autonomy. Many nurses plan to take occasional relief shifts on their scheduled off-days or leaves to earn supplemental income without committing to another rigid contract.',
     },
     {
-      q: 'What certifications and documents do I need to pre-register?',
-      a: 'You will need an active PRC Registered Nurse license number and contact details to get started. Relevant specialty certificates (such as BLS, ACLS, IV therapy, or hospital employment records) can be attached to qualify for higher-tier shifts.',
+      q: 'What documents do I need to pre-register today?',
+      a: 'You only need an active PRC Registered Nurse license number and contact details to join the inaugural registry. You can also specify your clinical specialties (ICU, ER, OR, Ward, Hemodialysis) so we prioritize matching your skillset.',
     },
   ];
 

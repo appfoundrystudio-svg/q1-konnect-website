@@ -11,7 +11,8 @@ import {
   Play,
   Award,
   Clock,
-  QrCode
+  QrCode,
+  Users2
 } from 'lucide-react';
 
 interface HeroProps {
@@ -72,30 +73,30 @@ export const Hero: React.FC<HeroProps> = ({
             
             {/* Stage Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200">
-              <Award className="w-3.5 h-3.5 text-sky-600" />
+              <Users2 className="w-3.5 h-3.5 text-sky-600" />
               <span>
                 {currentAudience === 'hospital' 
-                  ? 'PHAPi Annual Convention Exhibitor • November 2026' 
-                  : 'Inaugural Nurse Pool Pre-Registration Open'}
+                  ? 'Pioneer Hospital Partner Program • Pre-Launch Phase' 
+                  : 'Inaugural Nurse Registry Pre-Registration'}
               </span>
             </div>
 
             {/* Dynamic Headline */}
             {currentAudience === 'hospital' ? (
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12] font-heading">
-                End Clinical Shortages.{' '}
+                Building the Future of{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-600 to-blue-700">
-                  Fill Hospital Shifts
+                  Hospital Nursing Workforce
                 </span>{' '}
-                Without Legacy Agency Markups.
+                in the Philippines.
               </h1>
             ) : (
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12] font-heading">
-                Take Charge of Your Shifts.{' '}
+                Join the Pioneer Registry of{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-600 to-slate-900">
-                  Work When You Want
+                  Registered Nurses
                 </span>{' '}
-                & Earn What You Deserve.
+                Preparing for Launch.
               </h1>
             )}
 
@@ -103,46 +104,51 @@ export const Hero: React.FC<HeroProps> = ({
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
               {currentAudience === 'hospital' ? (
                 <>
-                  Connect directly with pre-screened, <strong>PRC-licensed Registered Nurses</strong>. 
-                  Q1 Konnect is engineered to broadcast urgent reliever shifts, automate credentials compliance, 
-                  and record geofenced QR attendance without third-party commission overheads. 
-                  Launching at the <strong>PHAPi National Convention this November</strong>.
+                  We are currently establishing our <strong>Pioneer Hospital Partner Network</strong> and 
+                  pre-vetting licensed nurses before commercial shift rollout. 
+                  Collaborate with us to design custom staffing workflows, eliminate 35–40% agency markups, 
+                  and visit our exhibit booth at the <strong>PHAPi National Convention in November</strong>.
                 </>
               ) : (
                 <>
-                  Join the Philippines' upcoming intelligent nursing network. Pre-register for early access 
-                  to flexible reliever shifts at accredited hospitals, track hours with instant QR check-in, 
-                  and preserve your verified PRC career passport. <strong>100% free for nurses.</strong>
+                  We are building a pre-vetted talent pool of registered nurses ahead of hospital deployment. 
+                  Pre-register your PRC license today to get pre-verified, earn priority shift access, 
+                  and help us design a healthcare platform that truly respects bedside nurses. 
+                  <strong>100% free with zero wage deductions.</strong>
                 </>
               )}
             </p>
 
-            {/* True Value Bullets */}
+            {/* Real Pre-Launch Objectives */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-slate-700 max-w-xl mx-auto lg:mx-0">
               {currentAudience === 'hospital' ? (
                 <>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Real-time PRC License Verification Workflow</span>
+                    <span>Shape shift criteria for your specialized units</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Geofenced QR-Based Clock-In Attendance</span>
+                    <span>Live walk-in prototype demo at PHAPi (Nov 2026)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Designed to Eliminate 35–40% Agency Markups</span>
+                    <span>Zero onboarding fees for pioneer medical centers</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Founding Hospital Partner Cohort Now Open</span>
+                    <span>Guaranteed priority pool allocation at pilot launch</span>
                   </div>
                 </>
               ) : (
                 <>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Flexible shifts (ICU, ER, General Ward, Dialysis)</span>
+                    <span>Pre-verify your PRC license ahead of launch</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <span>Priority notification for ICU, ER, OR & Ward shifts</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
@@ -151,10 +157,6 @@ export const Hero: React.FC<HeroProps> = ({
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
                     <span>Direct digital wallet payouts (GCash/Maya/Bank)</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Priority launch status for pre-registered nurses</span>
                   </div>
                 </>
               )}
@@ -168,8 +170,8 @@ export const Hero: React.FC<HeroProps> = ({
                     onClick={onOpenScheduleModal}
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-xl shadow-slate-900/25 transition-all cursor-pointer transform hover:-translate-y-0.5 border border-slate-800"
                   >
-                    <Calendar className="w-4 h-4 text-sky-400" />
-                    <span>Schedule PHAPi Exhibit Meeting / Demo</span>
+                    <Building2 className="w-4 h-4 text-sky-400" />
+                    <span>Connect With Our Founding Team</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <a
@@ -177,7 +179,7 @@ export const Hero: React.FC<HeroProps> = ({
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-all shadow-sm"
                   >
                     <Play className="w-4 h-4 text-sky-500 fill-sky-500" />
-                    <span>Watch Hospital Explainer</span>
+                    <span>Watch Prototype Demo</span>
                   </a>
                 </>
               ) : (
@@ -187,7 +189,7 @@ export const Hero: React.FC<HeroProps> = ({
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-sky-500 hover:bg-sky-400 shadow-xl shadow-sky-500/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
                   >
                     <UserPlus className="w-4 h-4" />
-                    <span>Pre-Register for Nurse Talent Pool</span>
+                    <span>Pre-Register in Pioneer Nurse Pool</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <a
@@ -195,16 +197,16 @@ export const Hero: React.FC<HeroProps> = ({
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-all shadow-sm"
                   >
                     <Play className="w-4 h-4 text-sky-500 fill-sky-500" />
-                    <span>Watch Nurse Explainer</span>
+                    <span>Watch Nurse App Demo</span>
                   </a>
                 </>
               )}
             </div>
 
-            {/* Credibility statement */}
+            {/* Convention Note */}
             <div className="pt-2 text-xs text-slate-500 flex items-center justify-center lg:justify-start gap-2">
-              <span className="w-2 h-2 rounded-full bg-sky-500" />
-              <span>Developed in the Philippines for Philippine Private & Public Healthcare Facilities.</span>
+              <Award className="w-4 h-4 text-amber-500 shrink-0" />
+              <span>Attending PHAPi this November? Drop by our booth for an interactive prototype demo!</span>
             </div>
 
           </div>
@@ -225,7 +227,7 @@ export const Hero: React.FC<HeroProps> = ({
                 </div>
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30">
                   <Sparkles className="w-3 h-3" />
-                  MVP IN DEVELOPMENT
+                  PROTOTYPE COMPLETED
                 </span>
               </div>
 
@@ -238,7 +240,7 @@ export const Hero: React.FC<HeroProps> = ({
                       <p className="text-xs text-slate-400">Department of Nursing Service</p>
                     </div>
                     <span className="text-xs font-bold text-sky-400 bg-sky-950/80 px-2.5 py-1 rounded-lg border border-sky-800/50">
-                      Surge Reliever Dispatch
+                      Pioneer Partner View
                     </span>
                   </div>
 
@@ -246,25 +248,25 @@ export const Hero: React.FC<HeroProps> = ({
                   <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
                     <div className="flex items-start justify-between">
                       <div>
-                        <span className="inline-block px-2 py-0.5 text-[10px] font-bold rounded bg-rose-500/20 text-rose-400 mb-1 border border-rose-500/30">
-                          URGENT RELIEF DEMO
+                        <span className="inline-block px-2 py-0.5 text-[10px] font-bold rounded bg-sky-500/20 text-sky-300 mb-1 border border-sky-500/30">
+                          PROTOTYPE SIMULATION
                         </span>
                         <h5 className="text-sm font-semibold text-white">ICU Staff Nurse (Night Shift)</h5>
                         <p className="text-xs text-slate-400">Critical Care Unit • 11:00 PM – 7:00 AM</p>
                       </div>
                       <div className="text-right">
                         <span className="text-sm font-bold text-sky-400">₱2,800</span>
-                        <p className="text-[10px] text-slate-400">Fixed Shift Rate</p>
+                        <p className="text-[10px] text-slate-400">Direct Shift Rate</p>
                       </div>
                     </div>
 
                     <div className="pt-2 border-t border-slate-800 text-xs space-y-2">
                       <p className="text-slate-400 flex justify-between">
                         <span>Candidate PRC Verification:</span>
-                        <span className="text-emerald-400 font-bold">100% Automated Check</span>
+                        <span className="text-emerald-400 font-bold">Automated Database Check</span>
                       </p>
                       <p className="text-slate-400 flex justify-between">
-                        <span>Shift Attendance Mode:</span>
+                        <span>Attendance Verification:</span>
                         <span className="text-sky-300 font-bold">Geofenced Station QR</span>
                       </p>
                       <p className="text-slate-400 flex justify-between">
@@ -275,12 +277,12 @@ export const Hero: React.FC<HeroProps> = ({
                   </div>
 
                   <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-300 flex items-center justify-between">
-                    <span>Interested in an executive demo?</span>
+                    <span>Interested in an executive discussion?</span>
                     <button
                       onClick={onOpenScheduleModal}
-                      className="text-xs font-bold text-sky-400 hover:text-sky-300 underline"
+                      className="text-xs font-bold text-sky-400 hover:text-sky-300 underline cursor-pointer"
                     >
-                      Book PHAPi Slot →
+                      Connect With Us →
                     </button>
                   </div>
                 </div>
@@ -292,7 +294,7 @@ export const Hero: React.FC<HeroProps> = ({
                       <p className="text-xs text-slate-400">Digital Career & Shift Wallet</p>
                     </div>
                     <span className="text-xs font-bold text-sky-400 bg-sky-950/80 px-2.5 py-1 rounded-lg border border-sky-800/50">
-                      Early Access Preview
+                      Pioneer Pool Preview
                     </span>
                   </div>
 
@@ -301,12 +303,12 @@ export const Hero: React.FC<HeroProps> = ({
                     <div className="flex items-start justify-between">
                       <div>
                         <span className="inline-block px-2 py-0.5 text-[10px] font-bold rounded bg-sky-500/20 text-sky-300 mb-1 border border-sky-500/30">
-                          PRE-REGISTERED SHIFT PERK
+                          PRE-REGISTRATION BENEFIT
                         </span>
                         <h5 className="text-sm font-semibold text-white">Emergency Room (ER) Reliever</h5>
                         <p className="text-xs text-slate-400 flex items-center gap-1 mt-0.5">
                           <Clock className="w-3.5 h-3.5 text-slate-500" />
-                          7:00 AM – 3:00 PM • Tertiary Hospital
+                          7:00 AM – 3:00 PM • Partner Hospital
                         </p>
                       </div>
                       <div className="text-right">
@@ -322,7 +324,7 @@ export const Hero: React.FC<HeroProps> = ({
                       </p>
                       <p className="text-slate-300 flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                        <span>No agency commission deducted from nurse pay</span>
+                        <span>Zero commission deducted from nurse pay</span>
                       </p>
                     </div>
                   </div>
@@ -331,7 +333,7 @@ export const Hero: React.FC<HeroProps> = ({
                     <span>Pre-register your PRC credentials:</span>
                     <button
                       onClick={onOpenNurseModal}
-                      className="text-xs font-bold text-sky-400 hover:text-sky-300 underline"
+                      className="text-xs font-bold text-sky-400 hover:text-sky-300 underline cursor-pointer"
                     >
                       Sign Up Now →
                     </button>
@@ -343,7 +345,7 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="mt-2 p-2.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3 text-xs">
                 <Award className="w-5 h-5 text-amber-400 shrink-0" />
                 <p className="text-slate-300 text-[11px] leading-tight">
-                  Presenting the working MVP at the <strong>PHAPi National Convention (November 2026)</strong>.
+                  Exhibiting live prototype demos at the <strong>PHAPi Annual Convention (November 2026)</strong>.
                 </p>
               </div>
 

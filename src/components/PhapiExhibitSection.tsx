@@ -1,14 +1,13 @@
 import React from 'react';
 import { 
   Building2, 
-  Calendar, 
   MapPin, 
   Sparkles, 
   ArrowRight, 
-  ShieldCheck, 
   Award, 
   Users2,
-  CheckCircle2
+  CheckCircle2,
+  Tv2
 } from 'lucide-react';
 
 interface PhapiExhibitSectionProps {
@@ -32,46 +31,46 @@ export const PhapiExhibitSection: React.FC<PhapiExhibitSectionProps> = ({ onOpen
             <div className="lg:col-span-7 space-y-6">
               
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-500/20 text-sky-300 border border-sky-500/40">
-                <Calendar className="w-3.5 h-3.5 text-sky-400" />
-                <span>Upcoming National Launch • November 2026</span>
+                <Award className="w-3.5 h-3.5 text-sky-400" />
+                <span>Industry Convention Showcase • November 2026</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
-                Official Exhibit at the{' '}
+                Attending the{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-white">
-                  Private Hospitals Association
-                </span>{' '}
-                of the Philippines (PHAPi).
+                  PHAPi Annual Convention
+                </span>?{' '}
+                Visit Our Exhibit Booth.
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                As the Philippine healthcare system battles critical nursing shortages and unprecedented turnover, 
-                Q1 Konnect is introducing an ethical, tech-enabled workforce network. 
-                We are presenting our completed prototype and MVP this November to private hospital leadership.
+                As Philippine hospitals navigate unprecedented nurse migration and staffing friction, 
+                Q1 Konnect is presenting our prototype to hospital owners, medical directors, and Chief Nursing Officers. 
+                Drop by our booth during exhibit hours for a hands-on live prototype walkthrough.
               </p>
 
-              {/* Founding Partner Perks List */}
+              {/* What to Expect at the Booth */}
               <div className="space-y-3 pt-2">
                 <p className="text-xs font-bold uppercase tracking-wider text-sky-400">
-                  Benefits of Joining Our Founding Hospital Partner Cohort:
+                  What to Explore at the Q1 Konnect Booth:
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
-                    <span>Exclusive zero onboarding setup fee</span>
+                    <Tv2 className="w-4 h-4 text-sky-400 shrink-0" />
+                    <span>Live interactive prototype & MVP demo</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
-                    <span>Priority clinical pool allocation</span>
+                    <span>Pick up our Pioneer Hospital Partner Prospectus</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
-                    <span>Direct advisory input on product roadmap</span>
+                    <span>Review standard MoA and compliance guidelines</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
-                    <span>Dedicated VIP facility support desk</span>
+                    <Users2 className="w-4 h-4 text-sky-400 shrink-0" />
+                    <span>Meet our founding executive & clinical team</span>
                   </div>
                 </div>
               </div>
@@ -82,20 +81,20 @@ export const PhapiExhibitSection: React.FC<PhapiExhibitSectionProps> = ({ onOpen
                   onClick={onOpenScheduleModal}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-slate-900 bg-sky-400 hover:bg-sky-300 transition-colors shadow-lg cursor-pointer transform hover:-translate-y-0.5"
                 >
-                  <Building2 className="w-4 h-4" />
-                  <span>Reserve a Consultation at PHAPi</span>
+                  <Building2 className="w-4 h-4 text-slate-900" />
+                  <span>Can't Attend PHAPi? Connect With Us</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
                 <div className="text-xs text-slate-400 flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-sky-400" />
-                  <span>Booth Meetings & Online Previews Available</span>
+                  <span>Walk-ins welcome during all exhibit hall hours</span>
                 </div>
               </div>
 
             </div>
 
-            {/* Right Card: Event Badge & Trust Frame */}
+            {/* Right Card: Event Info & Walk-In Invitation */}
             <div className="lg:col-span-5">
               <div className="p-6 sm:p-8 rounded-2xl bg-slate-950/80 border border-slate-700/80 space-y-5 text-center sm:text-left">
                 
@@ -105,9 +104,9 @@ export const PhapiExhibitSection: React.FC<PhapiExhibitSectionProps> = ({ onOpen
                   </div>
                   <div>
                     <span className="text-[11px] font-semibold text-sky-400 uppercase tracking-wider block">
-                      Industry Convention
+                      Exhibition Showcase
                     </span>
-                    <h4 className="text-base font-bold text-white">PHAPi Annual Exhibit</h4>
+                    <h4 className="text-base font-bold text-white">PHAPi National Convention</h4>
                   </div>
                 </div>
 
@@ -118,16 +117,20 @@ export const PhapiExhibitSection: React.FC<PhapiExhibitSectionProps> = ({ onOpen
 
                 <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2 text-xs">
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Launch Timeline:</span>
+                    <span className="text-slate-400">Date:</span>
                     <strong className="text-white">November 2026</strong>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Current Phase:</span>
-                    <strong className="text-emerald-400">Prototype Completed • MVP in Testing</strong>
+                    <span className="text-slate-400">Booth Format:</span>
+                    <strong className="text-sky-300">Open Walk-In Demonstrations</strong>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Partner Program:</span>
-                    <strong className="text-sky-400">Inaugural Cohort Open</strong>
+                    <span className="text-slate-400">Target Audience:</span>
+                    <strong className="text-white">Private Hospital Leadership</strong>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-400">Current Phase:</span>
+                    <strong className="text-emerald-400">Pre-Launch • Network Seeding</strong>
                   </div>
                 </div>
 

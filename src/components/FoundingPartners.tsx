@@ -25,7 +25,7 @@ export const FoundingPartners: React.FC<FoundingPartnersProps> = ({
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
             We are collaborating with forward-thinking hospital directors and registered nurses 
-            to shape the future of healthcare staffing in the Philippines before our official November rollout.
+            to shape the future of healthcare staffing in the Philippines as we seed our network.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export const FoundingPartners: React.FC<FoundingPartnersProps> = ({
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                  <span><strong>In-Person Briefing at PHAPi</strong> — Dedicated executive session with our founding team.</span>
+                  <span><strong>Walk-In or Executive Briefing at PHAPi</strong> — Connect directly with our founding leadership at our booth.</span>
                 </div>
               </div>
             </div>
@@ -102,8 +102,8 @@ export const FoundingPartners: React.FC<FoundingPartnersProps> = ({
               </h3>
 
               <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                Nurses who pre-register today gain verified status ahead of our November launch, 
-                putting you first in line when partner hospitals begin broadcasting shifts.
+                Nurses who pre-register today gain verified status ahead of pilot shift deployment, 
+                putting you first in line as partner hospitals begin broadcasting shifts.
               </p>
 
               <div className="space-y-3 pt-2 text-xs text-slate-700">

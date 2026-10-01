@@ -82,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
                 <button onClick={onOpenScheduleModal} className="hover:text-white transition-colors cursor-pointer text-left">
-                  Schedule PHAPi Exhibit Meeting / Demo
+                  Hospital Partner Inquiry / Briefing
                 </button>
               </li>
               <li>

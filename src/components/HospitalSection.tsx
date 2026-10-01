@@ -85,7 +85,7 @@ export const HospitalSection: React.FC<HospitalSectionProps> = ({ onOpenSchedule
           
           <p className="text-base sm:text-lg text-slate-600">
             Engineered specifically for Chief Nursing Officers, Medical Directors, and Hospital HR Leaders 
-            preparing for our formal launch at the <strong>PHAPi National Convention in November</strong>.
+            collaborating with us ahead of our showcase at the <strong>PHAPi National Convention in November</strong>.
           </p>
         </div>
 
@@ -151,7 +151,7 @@ export const HospitalSection: React.FC<HospitalSectionProps> = ({ onOpenSchedule
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-slate-900 bg-sky-400 hover:bg-sky-300 transition-colors shadow-lg cursor-pointer"
                 >
                   <Calendar className="w-4 h-4" />
-                  <span>Reserve a PHAPi Consultation / Demo</span>
+                  <span>Connect With Our Team / Hospital Inquiry</span>
                 </button>
               </div>
             </div>

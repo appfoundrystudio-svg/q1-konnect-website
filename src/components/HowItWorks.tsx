@@ -165,7 +165,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-lg shadow-slate-900/20 transition-all cursor-pointer transform hover:-translate-y-0.5 border border-slate-800"
             >
               <CalendarCheck2 className="w-4 h-4 text-sky-400" />
-              <span>Schedule a 20-Min Hospital Walkthrough / PHAPi Meeting</span>
+              <span>Connect With Our Team / Hospital Inquiry</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           ) : (

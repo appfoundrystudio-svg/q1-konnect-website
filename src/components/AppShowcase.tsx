@@ -288,8 +288,8 @@ export const AppShowcase: React.FC = () => {
                   {/* Digital Wallet Card */}
                   <div className="p-4 rounded-2xl bg-gradient-to-r from-slate-950 to-slate-900 border border-sky-500/30 text-white space-y-2">
                     <p className="text-[11px] text-sky-300 flex items-center justify-between">
-                      <span>Available Earnings</span>
-                      <span className="text-[10px] bg-sky-500/20 px-2 py-0.5 rounded text-sky-300">Ready to Payout</span>
+                      <span>Simulated Shift Earnings</span>
+                      <span className="text-[10px] bg-sky-500/20 px-2 py-0.5 rounded text-sky-300">Prototype Demo</span>
                     </p>
                     <div className="text-2xl font-extrabold font-heading text-white">
                       ₱14,800.00

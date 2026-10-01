@@ -31,10 +31,10 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
     contactRole: 'Chief Nursing Officer (CNO)',
     email: '',
     phone: '',
-    urgency: 'phapi_exhibit_meeting',
+    urgency: 'online_briefing',
     openShiftCountPerMonth: '20-50',
     specialtiesNeeded: ['ICU / CCU', 'Emergency Room (ER)'],
-    preferredDate: '2026-11-12',
+    preferredDate: '2026-10-20',
     preferredTime: '10:00 AM',
     notes: '',
   });
@@ -81,8 +81,14 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
       onLeadSubmitted();
       setErrorMessage('');
     } catch {
-      setErrorMessage('Failed to save booking. Please try again.');
+      setErrorMessage('Failed to save inquiry. Please try again.');
     }
+  };
+
+  const formatPreferenceText = (val: string) => {
+    if (val === 'phapi_booth') return 'Meeting at PHAPi Exhibit Booth (November)';
+    if (val === 'hospital_visit') return 'Executive Visit at Hospital Premises';
+    return 'Online Video Briefing (Google Meet / Zoom)';
   };
 
   return (
@@ -100,14 +106,15 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-400 mb-3 border border-sky-500/30">
             <Building2 className="w-3.5 h-3.5" />
-            <span>Hospital Partnership Consultation</span>
+            <span>Pioneer Hospital Partner Program</span>
           </div>
 
           <h3 className="text-2xl sm:text-3xl font-black font-heading text-white">
-            Schedule an Executive Consultation
+            Hospital Partnership Inquiry
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-lg">
-            Meet our founding team at the <strong>PHAPi National Convention in November</strong> or schedule a private online prototype demonstration.
+            Connect with our founding team to discuss custom hospital staffing parameters, review our 
+            pre-launch roadmap, or coordinate at the <strong>PHAPi National Convention in November</strong>.
           </p>
         </div>
 
@@ -120,26 +127,24 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
 
             <div className="space-y-2">
               <h4 className="text-2xl font-bold text-slate-900 font-heading">
-                Consultation Request Received for {submittedMeeting.facilityName}!
+                Partnership Inquiry Received for {submittedMeeting.facilityName}!
               </h4>
               <p className="text-sm text-slate-600 max-w-md mx-auto">
-                Thank you, <strong>{submittedMeeting.contactPerson}</strong>. Our Partnerships Director will confirm your session details via email shortly.
+                Thank you, <strong>{submittedMeeting.contactPerson}</strong>. Our Partnerships Director will contact you to confirm details and share our Pioneer Hospital Prospectus.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-left max-w-md mx-auto space-y-2 text-xs text-slate-700">
               <div className="flex justify-between">
-                <span className="font-semibold text-slate-500">Meeting Format:</span>
-                <span className="font-bold text-sky-700">
-                  {submittedMeeting.urgency === 'phapi_exhibit_meeting' ? 'In-Person at PHAPi Exhibit (November)' : 'Online Video Demo'}
-                </span>
+                <span className="font-semibold text-slate-500">Discussion Format:</span>
+                <span className="font-bold text-sky-700">{formatPreferenceText(submittedMeeting.urgency)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-semibold text-slate-500">Scheduled Date:</span>
+                <span className="font-semibold text-slate-500">Target Date:</span>
                 <span className="font-bold text-slate-900">{submittedMeeting.preferredDate}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-semibold text-slate-500">Reserved Time Slot:</span>
+                <span className="font-semibold text-slate-500">Preferred Time:</span>
                 <span className="font-bold text-slate-900">{submittedMeeting.preferredTime}</span>
               </div>
               <div className="flex justify-between">
@@ -168,7 +173,7 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
             </div>
           </div>
         ) : (
-          /* Booking Form */
+          /* Inquiry Form */
           <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-6">
             
             {errorMessage && (
@@ -178,43 +183,49 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
               </div>
             )}
 
-            {/* Meeting Type Selection */}
+            {/* Discussion Preference */}
             <div className="space-y-2">
               <label className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                Meeting Preference
+                How would you prefer to connect?
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 <button
                   type="button"
-                  onClick={() => setFormData({ ...formData, urgency: 'phapi_exhibit_meeting' })}
+                  onClick={() => setFormData({ ...formData, urgency: 'online_briefing' })}
                   className={`p-3 rounded-xl text-left text-xs font-semibold transition-all border cursor-pointer ${
-                    formData.urgency === 'phapi_exhibit_meeting'
+                    formData.urgency === 'online_briefing'
                       ? 'bg-sky-50 text-sky-950 border-sky-400 ring-2 ring-sky-400/20'
                       : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                   }`}
                 >
-                  <div className="font-bold flex items-center gap-1.5">
-                    <span>In-Person at PHAPi Exhibit</span>
-                    <span className="text-[10px] bg-sky-200 text-sky-800 px-1.5 py-0.2 rounded font-bold">Nov 2026</span>
-                  </div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">
-                    Meet our team at our convention booth
-                  </div>
+                  <div className="font-bold">Online Briefing</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">Google Meet / Zoom</div>
                 </button>
 
                 <button
                   type="button"
-                  onClick={() => setFormData({ ...formData, urgency: 'online_demo' })}
+                  onClick={() => setFormData({ ...formData, urgency: 'hospital_visit' })}
                   className={`p-3 rounded-xl text-left text-xs font-semibold transition-all border cursor-pointer ${
-                    formData.urgency === 'online_demo'
+                    formData.urgency === 'hospital_visit'
                       ? 'bg-sky-50 text-sky-950 border-sky-400 ring-2 ring-sky-400/20'
                       : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                   }`}
                 >
-                  <div className="font-bold">Online Video Demo</div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">
-                    Virtual prototype walkthrough (Google Meet)
-                  </div>
+                  <div className="font-bold">Hospital Visit</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">In-person meeting</div>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setFormData({ ...formData, urgency: 'phapi_booth' })}
+                  className={`p-3 rounded-xl text-left text-xs font-semibold transition-all border cursor-pointer ${
+                    formData.urgency === 'phapi_booth'
+                      ? 'bg-sky-50 text-sky-950 border-sky-400 ring-2 ring-sky-400/20'
+                      : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                  }`}
+                >
+                  <div className="font-bold">PHAPi Exhibit</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">Booth chat in Nov</div>
                 </button>
               </div>
             </div>
@@ -319,7 +330,7 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
                     type="text"
                     value={formData.contactRole}
                     onChange={(e) => setFormData({ ...formData, contactRole: e.target.value })}
-                    placeholder="e.g. Chief Nursing Officer, HR Director"
+                    placeholder="e.g. Chief Nursing Officer, Medical Director"
                     className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
                   />
                 </div>
@@ -359,7 +370,7 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
             {/* Clinical Specialties */}
             <div className="space-y-3 pt-2 border-t border-slate-100">
               <label className="block text-xs font-medium text-slate-700">
-                Primary Specialty Needs (Select all that apply):
+                Wards Most in Need of Relief Staff:
               </label>
               <div className="flex flex-wrap gap-2">
                 {availableSpecialties.map((spec) => {
@@ -387,7 +398,7 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
             <div className="space-y-4 pt-2 border-t border-slate-100">
               <h5 className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
                 <Calendar className="w-4 h-4 text-sky-600" />
-                <span>Preferred Consultation Slot</span>
+                <span>Preferred Date & Time for Discussion</span>
               </h5>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -437,7 +448,7 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
                 className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-md cursor-pointer border border-slate-800"
               >
                 <Calendar className="w-4 h-4 text-sky-400" />
-                <span>Confirm & Reserve Consultation</span>
+                <span>Submit Partnership Inquiry</span>
               </button>
             </div>
 

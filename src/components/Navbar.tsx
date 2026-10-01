@@ -42,16 +42,16 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <>
-      {/* Top Pre-Launch & PHAPi Exhibit Announcement Bar */}
+      {/* Top Convention Announcement Bar */}
       <div className="bg-slate-950 text-white text-[11px] font-medium py-1.5 px-4 text-center border-b border-slate-800 z-50 relative">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-sky-400 animate-ping" />
+          <span className="inline-block w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
           <span>
-            <strong className="text-sky-400 font-bold">Upcoming Launch:</strong> Official Exhibitor at the 
+            <strong className="text-sky-400 font-bold">Industry Showcase:</strong> Official Exhibitor at the 
             <strong> Private Hospitals Association of the Philippines (PHAPi)</strong> Annual Convention — November 2026.
           </span>
           <a href="#phapi-exhibit" className="underline text-sky-300 hover:text-white ml-1 hidden sm:inline">
-            Learn more →
+            Visit our booth →
           </a>
         </div>
       </div>
@@ -59,14 +59,14 @@ export const Navbar: React.FC<NavbarProps> = ({
       <header 
         className={`fixed top-7 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-sm py-2.5 border-b border-slate-200/80' 
-            : 'bg-transparent py-4'
+            ? 'bg-white/95 backdrop-blur-md shadow-sm py-2 border-b border-slate-200/80' 
+            : 'bg-transparent py-3.5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             
-            {/* Official Brand Logo */}
+            {/* Prominent Official Brand Logo */}
             <div className="flex items-center gap-3">
               <a href="#" className="flex items-center gap-3 group">
                 <img 
@@ -88,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => onAudienceChange('hospital')}
                 className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                   currentAudience === 'hospital'
-                    ? 'bg-slate-900 text-white shadow-sm'
+                    ? 'bg-slate-950 text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
                 }`}
               >
@@ -110,15 +110,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* Navigation Anchors */}
             <div className="hidden xl:flex items-center gap-5 text-xs font-semibold text-slate-600">
+              <a href="#network-roadmap" className="hover:text-sky-600 transition-colors">Our Roadmap</a>
               <a href="#video-explainer" className="hover:text-sky-600 transition-colors flex items-center gap-1">
                 <Play className="w-3 h-3 text-sky-500" />
-                Video Tour
+                App Demo
               </a>
-              <a href="#how-it-works" className="hover:text-sky-600 transition-colors">How It Works</a>
-              <a href="#app-showcase" className="hover:text-sky-600 transition-colors">App Features</a>
               <a href="#phapi-exhibit" className="hover:text-sky-600 transition-colors flex items-center gap-1">
                 <Award className="w-3 h-3 text-amber-500" />
-                PHAPi Exhibit
+                PHAPi Booth
               </a>
               <a href="#faq" className="hover:text-sky-600 transition-colors">FAQ</a>
             </div>
@@ -135,10 +134,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <button
                 onClick={onOpenScheduleModal}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-slate-900 hover:bg-black shadow-md transition-all cursor-pointer border border-slate-800"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-slate-950 hover:bg-black shadow-md transition-all cursor-pointer border border-slate-800"
               >
                 <Calendar className="w-3.5 h-3.5 text-sky-400" />
-                <span>Book Hospital Consultation</span>
+                <span>Hospital Partner Inquiry</span>
               </button>
 
               {leadCount > 0 && (
@@ -179,7 +178,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }}
                 className={`flex-1 py-2 rounded-lg text-xs font-bold text-center transition-all ${
                   currentAudience === 'hospital'
-                    ? 'bg-slate-900 text-white shadow-sm'
+                    ? 'bg-slate-950 text-white shadow-sm'
                     : 'text-slate-600'
                 }`}
               >
@@ -202,32 +201,32 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <div className="grid grid-cols-2 gap-2 text-xs font-medium text-slate-700 pt-2 border-t border-slate-100">
               <a 
+                href="#network-roadmap" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2 px-3 rounded-lg hover:bg-slate-50"
+              >
+                Our Roadmap
+              </a>
+              <a 
                 href="#video-explainer" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2 px-3 rounded-lg hover:bg-slate-50"
               >
-                Video Tour
-              </a>
-              <a 
-                href="#how-it-works" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2 px-3 rounded-lg hover:bg-slate-50"
-              >
-                How It Works
-              </a>
-              <a 
-                href="#app-showcase" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2 px-3 rounded-lg hover:bg-slate-50"
-              >
-                App Features
+                App Demo
               </a>
               <a 
                 href="#phapi-exhibit" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2 px-3 rounded-lg hover:bg-slate-50 text-sky-700 font-bold"
               >
-                PHAPi Exhibit
+                PHAPi Booth
+              </a>
+              <a 
+                href="#faq" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2 px-3 rounded-lg hover:bg-slate-50"
+              >
+                FAQ
               </a>
             </div>
 
@@ -237,10 +236,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setMobileMenuOpen(false);
                   onOpenScheduleModal();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-white bg-slate-900 hover:bg-black shadow-md"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-white bg-slate-950 hover:bg-black shadow-md"
               >
                 <Calendar className="w-4 h-4 text-sky-400" />
-                Schedule Hospital Consultation / PHAPi
+                Hospital Partnership Inquiry
               </button>
               <button
                 onClick={() => {

@@ -72,8 +72,8 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600">
-            Be part of the inaugural nurse cohort launching alongside the PHAPi convention in November. 
-            Pre-register to unlock priority access to high-paying per-diem and reliever shifts.
+            Be part of the pioneer nurse registry being established ahead of hospital deployment. 
+            Pre-register your PRC credentials today to unlock priority access to shifts as partner hospitals come online.
           </p>
         </div>
 
