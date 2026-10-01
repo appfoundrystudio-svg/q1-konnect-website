@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="494.843" height="401.573" viewBox="0 0 494.843 401.573">
+  <!-- Brand-compliant geometry re-aligned via transform translate to fit within strict 494.843x401.573px bounds -->
+  <path 
+    id="path1" 
+    transform="translate(-36.00 -205.53)"
+    fill="none" 
+    stroke="#000000" 
+    stroke-width="2.85" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    d="M283.302,215.778c-98.3,0-178,79.7-178,178s79.7,178,178,178c35.4,0,68.4-10.4,96-28.3l62.2,62.2l20.2-20.2l-61.1-61.1c24.6-32.3,39.1-72.2,39.1-115.6C461.302,295.478,381.602,215.778,283.302,215.778z M283.302,519.778c-70.1,0-127-56.9-127-127s56.9-127,127-127s127,56.9,127,127S353.402,519.778,283.302,519.778z" 
+  />
+  <path 
+    id="path8" 
+    transform="translate(-36.00 -205.53)"
+    fill="#00BFFF" 
+    d="M256.302,305.778h40v140h-40V305.778z M246.302,325.778l30-40l30,40H246.302z" 
+  />
+</svg>
