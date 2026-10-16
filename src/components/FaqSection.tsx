@@ -12,6 +12,10 @@ export const FaqSection: React.FC = () => {
       a: 'The full interactive prototype is completed, and the production MVP is actively being engineered. To ensure a thriving marketplace, we are currently seeding both sides: securing Pioneer Hospital Partner agreements to map shift demand, while pre-registering licensed nurses. We will be exhibiting our live prototype at the PHAPi National Convention this November 2026, followed by controlled pilot shift rollouts in designated hospital units.',
     },
     {
+      q: 'Does Q1 Konnect replace our existing hospital nursing staff?',
+      a: 'No, absolutely not. Q1 Konnect is engineered as an on-demand surge and relief buffer. It is designed to support your permanent clinical staff when patient bed occupancy surges (such as flu or dengue seasons), during unexpected sick leaves, or for planned emergency relief. You retain full control over your internal team, and only activate community relief when census exceeds your core staff’s capacity.',
+    },
+    {
       q: 'Do we need to schedule an appointment to see Q1 Konnect at the PHAPi convention?',
       a: 'No prior appointment is needed! All convention delegates are welcome to walk into our exhibit booth anytime during exhibit hours for a live, interactive prototype demo and to meet our founding team. However, if your hospital executive team prefers a dedicated private briefing (online, at your hospital, or at the booth), you may submit a partnership inquiry here.',
     },

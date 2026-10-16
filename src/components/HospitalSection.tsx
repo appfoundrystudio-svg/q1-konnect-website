@@ -85,7 +85,7 @@ export const HospitalSection: React.FC<HospitalSectionProps> = ({ onOpenSchedule
           
           <p className="text-base sm:text-lg text-slate-600">
             Engineered specifically for Chief Nursing Officers, Medical Directors, and Hospital HR Leaders 
-            collaborating with us ahead of our showcase at the <strong>PHAPi National Convention in November</strong>.
+            seeking an elastic staffing buffer during patient census surges ahead of our showcase at the <strong>PHAPi National Convention in November</strong>.
           </p>
         </div>
 

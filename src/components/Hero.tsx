@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <>
                   We are currently establishing our <strong>Pioneer Hospital Partner Network</strong> and 
                   pre-vetting licensed nurses before commercial shift rollout. 
-                  Collaborate with us to deploy direct hospital-to-nurse staffing with transparent shift rates, 
+                  Collaborate with us to deploy an on-demand surge buffer for bed occupancy peaks with transparent shift rates, 
                   and visit our exhibit booth at the <strong>PHAPi National Convention in November</strong>.
                 </>
               ) : (
@@ -124,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Shape shift criteria for your specialized units</span>
+                    <span>Shape surge shift criteria for your specialized units</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
