@@ -98,17 +98,17 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
           {type === 'hospital' && (
             <div className="space-y-6">
               <div className="p-4 rounded-2xl bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs leading-relaxed">
-                <strong>Pioneer Hospital Partner Program:</strong> We are currently onboarding forward-thinking private medical centers and specialty clinics in Metro Manila and key regions to map clinical shift demand prior to commercial rollout.
+                <strong>Elastic Surge & Relief Buffer:</strong> Q1 Konnect is engineered to support—not replace—your permanent clinical team. Activate verified per-diem nurses when patient bed occupancy surges, during seasonal census spikes, or for sudden leaves. Your facility carries zero fixed overhead when your core staff handles normal census.
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
                   <div className="flex items-center gap-2 text-white font-bold">
                     <Clock className="w-4 h-4 text-sky-400" />
-                    <span>60-Second Shift Broadcasting</span>
+                    <span>60-Second Surge Broadcasting</span>
                   </div>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    Post unexpected shift gaps (ICU call-outs, surge census) in seconds. Our matching engine alerts verified nurses within your target hospital radius.
+                    Post unexpected shift gaps (bed occupancy surges, sudden leaves) in seconds. Our matching engine alerts verified nurses within your target hospital radius.
                   </p>
                 </div>
 

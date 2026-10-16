@@ -39,8 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal, onOpenDrawer }) => {
           </h1>
 
           <p className="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-            Direct hospital-to-nurse shift broadcasting with verified PRC credentials, instant dispatch, 
-            and transparent shift rates. Built from the ground up for Philippine healthcare.
+            On-demand surge relief for bed occupancy peaks and unexpected shift gaps. Direct hospital-to-nurse broadcasting with verified PRC credentials and transparent shift rates.
           </p>
         </div>
 
