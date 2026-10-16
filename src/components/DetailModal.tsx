@@ -75,7 +75,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
               </h3>
               <p className="text-xs text-slate-400">
                 {type === 'hospital' && 'Precision staffing engineered for Chief Nursing Officers & Medical Directors'}
-                {type === 'nurse' && 'Flexible per-diem shifts with zero deductions & direct wallet pay'}
+                {type === 'nurse' && 'Flexible per-diem shifts with transparent agreed rates & direct digital wallet pay'}
                 {type === 'video' && 'Official prototype walk-through videos for hospital executives and bedside nurses'}
                 {type === 'roadmap' && 'How we seed both hospital MoAs and nurse talent pool before pilot launch'}
                 {type === 'phapi' && 'Open walk-in interactive prototype demos at our exhibit booth this November'}
@@ -164,17 +164,17 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
           {type === 'nurse' && (
             <div className="space-y-6">
               <div className="p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-sky-300 text-xs leading-relaxed">
-                <strong>Inaugural Nurse Talent Pool:</strong> Pre-register your PRC license today to get pre-verified. When our partner hospitals begin broadcasting pilot shifts, you get first-priority notifications with zero agency cuts.
+                <strong>Inaugural Nurse Talent Pool:</strong> Pre-register your PRC license today to get pre-verified. When our partner hospitals begin broadcasting pilot shifts, you get first-priority notifications with clear, upfront compensation.
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
                   <div className="flex items-center gap-2 text-white font-bold">
                     <Wallet className="w-4 h-4 text-emerald-400" />
-                    <span>100% Free & Zero Deductions</span>
+                    <span>Upfront Pay Transparency</span>
                   </div>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    We never take a cut from your shift compensation. If a hospital posts an approved ₱2,800 shift, that entire amount is deposited straight into your digital wallet.
+                    We believe in complete compensation transparency. When a hospital broadcasts an approved shift, the exact pay rate is visible upfront before you claim it, deposited promptly to your digital wallet.
                   </p>
                 </div>
 

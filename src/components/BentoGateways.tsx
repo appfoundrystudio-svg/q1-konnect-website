@@ -59,11 +59,11 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
 
               <div>
                 <h3 className="text-2xl sm:text-3xl font-bold font-display text-white group-hover:text-sky-300 transition-colors">
-                  Eliminate 35–40% Agency Drag.
+                  On-Demand Clinical Workforce Infrastructure.
                 </h3>
                 <p className="text-sm sm:text-base text-slate-400 mt-2 leading-relaxed max-w-xl">
                   Broadcast urgent or scheduled shifts across ICU, ER, OR, and Hemodialysis units in under 60 seconds. 
-                  Pre-screened against PRC registries with geofenced QR timesheet verification.
+                  Directly connect with pre-screened PRC registered nurses with geofenced QR timesheet verification.
                 </p>
               </div>
 
@@ -89,7 +89,7 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
 
             <div className="pt-8 mt-6 border-t border-slate-800/80 flex items-center justify-between">
               <span className="text-xs font-bold text-sky-400 group-hover:underline flex items-center gap-1.5">
-                <span>View hospital capabilities & savings model</span>
+                <span>View hospital capabilities & shift workflow</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
               <button
@@ -123,11 +123,11 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
 
               <div>
                 <h3 className="text-2xl sm:text-3xl font-bold font-display text-white group-hover:text-sky-300 transition-colors">
-                  Zero Deductions. Full Autonomy.
+                  Direct Hospital-to-Nurse Staffing. Transparent Shift Rates.
                 </h3>
                 <p className="text-sm text-slate-400 mt-2 leading-relaxed">
                   Pick shifts on your off-days. Carry a digital credential passport, scan station QR on arrival, 
-                  and receive guaranteed direct digital wallet payouts (GCash/Maya/Bank).
+                  and receive prompt digital wallet payouts (GCash/Maya/Bank) with clear, upfront compensation.
                 </p>
               </div>
 
@@ -136,13 +136,13 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
                   <Wallet className="w-4 h-4 text-emerald-400" />
                   <span className="text-slate-300 font-medium">Shift Earnings:</span>
                 </div>
-                <span className="font-bold text-sky-400">100% Direct Payout</span>
+                <span className="font-bold text-sky-400">Upfront Pay Transparency</span>
               </div>
             </div>
 
             <div className="pt-8 mt-6 border-t border-slate-800/80 flex items-center justify-between">
               <span className="text-xs font-bold text-sky-400 group-hover:underline flex items-center gap-1.5">
-                <span>View nurse benefits</span>
+                <span>View nurse benefits & shift workflow</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
               <button

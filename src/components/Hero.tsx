@@ -39,8 +39,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal, onOpenDrawer }) => {
           </h1>
 
           <p className="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-            Eliminating 35–40% agency markups with verified PRC credentials, instant shift dispatch, 
-            and zero-commission nurse payouts. Built from the ground up for Philippine healthcare.
+            Direct hospital-to-nurse shift broadcasting with verified PRC credentials, instant dispatch, 
+            and transparent shift rates. Built from the ground up for Philippine healthcare.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal, onOpenDrawer }) => {
           </div>
           <div className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-sky-400" />
-            <span>Zero Nurse Commission Cuts</span>
+            <span>Transparent Agreed Shift Pay</span>
           </div>
         </div>
 

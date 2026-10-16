@@ -4,10 +4,10 @@ import { DollarSign, ShieldCheck, Zap, HeartHandshake } from 'lucide-react';
 export const StatTicker: React.FC = () => {
   const metrics = [
     {
-      value: '35–40%',
-      label: 'Agency Markup Eliminated',
-      desc: 'Direct hospital-to-nurse shift economy',
-      icon: DollarSign,
+      value: 'Direct Connect',
+      label: 'Hospital-to-Nurse Network',
+      desc: 'Broadcast shifts in 60s without middleman delays',
+      icon: Zap,
       color: 'text-sky-400',
     },
     {
@@ -21,13 +21,13 @@ export const StatTicker: React.FC = () => {
       value: '< 20 Mins',
       label: 'Urgent Dispatch Target',
       desc: 'Push notifications to verified bedside radius',
-      icon: Zap,
+      icon: DollarSign,
       color: 'text-amber-400',
     },
     {
-      value: '0%',
-      label: 'Nurse Fee Deductions',
-      desc: 'Advertised shift pay goes 100% to the nurse',
+      value: 'Transparent',
+      label: 'Agreed Shift Compensation',
+      desc: 'Upfront rates visible before shifts are accepted',
       icon: HeartHandshake,
       color: 'text-blue-400',
     },

@@ -66,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal, onOpenDrawer }) => 
                   onClick={() => onOpenModal('nurse')} 
                   className="hover:text-white transition-colors cursor-pointer text-left"
                 >
-                  Nurse Privileges & Zero Deductions
+                  Nurse Shift Privileges & Upfront Pay
                 </button>
               </li>
               <li>
