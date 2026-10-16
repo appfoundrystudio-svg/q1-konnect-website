@@ -15,11 +15,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal, onOpenDrawer }) => 
           
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="bg-white/95 rounded-2xl p-2 shadow-sm border border-white/20 group-hover:scale-105 transition-transform duration-300">
+            <div className="bg-white/95 rounded-2xl p-2 shadow-sm border border-white/20 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0" style={{ height: '60px' }}>
               <img 
                 src="/assets/logo/Q1_Official_Logo.png" 
                 alt="Q1 Konnect Official Logo" 
                 className="h-12 sm:h-14 w-auto object-contain"
+                style={{ maxHeight: '48px', width: 'auto' }}
               />
             </div>
             <div className="hidden sm:flex flex-col">
