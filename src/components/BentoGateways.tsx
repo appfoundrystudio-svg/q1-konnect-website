@@ -157,7 +157,7 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
             </div>
           </div>
 
-          {/* Card 3: Phased Strategy Roadmap (6 cols) */}
+          {/* Card 3: How It Works (6 cols) */}
           <div 
             onClick={() => onOpenModal('roadmap')}
             className="md:col-span-6 group cursor-pointer rounded-3xl card-minimal-dark p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden"
@@ -167,32 +167,32 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
                 <div className="w-12 h-12 rounded-2xl bg-white/5 text-sky-400 border border-white/10 flex items-center justify-center">
                   <Layers className="w-6 h-6" />
                 </div>
-                <span className="text-xs font-mono font-bold text-emerald-400 tracking-wider uppercase">
-                  Phase 1 Active Now
+                <span className="text-xs font-mono font-bold text-sky-400 tracking-wider uppercase">
+                  Simple Operational Flow
                 </span>
               </div>
 
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold font-display text-white group-hover:text-sky-300 transition-colors">
-                  Two-Sided Marketplace Seeding.
+                  How Q1 Konnect Works in 3 Steps.
                 </h3>
                 <p className="text-sm text-slate-400 mt-2 leading-relaxed">
-                  Why neither side works alone: Securing Pioneer Hospital Partner MoAs while establishing a vetted nurse talent pool before pilot shifts go live.
+                  From sudden bedside vacancy to verified shift completion with zero administrative paperwork.
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-mono text-slate-400 pt-1">
-                <span className="text-emerald-400 font-bold">1. Seeding</span>
+              <div className="flex items-center gap-2 text-xs font-mono text-slate-300 pt-1">
+                <span className="text-sky-400 font-bold">1. Broadcast in 60s</span>
                 <span>→</span>
-                <span className="text-sky-400 font-bold">2. PHAPi Exhibit</span>
+                <span className="text-emerald-400 font-bold">2. PRC Match</span>
                 <span>→</span>
-                <span className="text-slate-400">3. Pilot Shifts</span>
+                <span className="text-white font-bold">3. QR Check-In</span>
               </div>
             </div>
 
             <div className="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-sky-400">
               <span className="group-hover:underline flex items-center gap-1.5">
-                <span>Explore rollout strategy & timeline</span>
+                <span>Explore the step-by-step workflow</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </div>

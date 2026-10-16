@@ -70,14 +70,14 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
                 {type === 'hospital' && 'Hospital Command & Workforce Automation'}
                 {type === 'nurse' && 'Nurse Shift Autonomy & Sovereign Career'}
                 {type === 'video' && 'Q1 Konnect Video Explainer Theater'}
-                {type === 'roadmap' && 'Phased Marketplace Strategy & Rollout'}
+                {type === 'roadmap' && 'How Q1 Konnect Works: 3 Simple Steps'}
                 {type === 'phapi' && 'PHAPi Annual Convention 2026 Showcase'}
               </h3>
               <p className="text-xs text-slate-400">
                 {type === 'hospital' && 'Precision staffing engineered for Chief Nursing Officers & Medical Directors'}
                 {type === 'nurse' && 'Flexible per-diem shifts with transparent agreed rates & direct digital wallet pay'}
                 {type === 'video' && 'Official prototype walk-through videos for hospital executives and bedside nurses'}
-                {type === 'roadmap' && 'How we seed both hospital MoAs and nurse talent pool before pilot launch'}
+                {type === 'roadmap' && 'A seamless operational loop connecting hospital vacancy to bedside clinical care'}
                 {type === 'phapi' && 'Open walk-in interactive prototype demos at our exhibit booth this November'}
               </p>
             </div>
@@ -288,63 +288,89 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
             </div>
           )}
 
-          {/* TYPE: ROADMAP */}
+          {/* TYPE: HOW IT WORKS (formerly roadmap) */}
           {type === 'roadmap' && (
             <div className="space-y-6">
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 text-xs leading-relaxed">
-                <strong>Why Network Seeding Precedes Live Shift Deployment:</strong> A healthcare staffing marketplace requires solving the two-sided challenge: hospitals need an active, pre-vetted nurse pool, and nurses need confirmed hospital shift demand. Here is our phased execution plan:
+              <div className="p-4 rounded-2xl bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs leading-relaxed">
+                <strong>Streamlined Operational Flow:</strong> Q1 Konnect creates a frictionless bridge between hospital nursing departments and registered nurses, eliminating endless phone calls, paper logbook disputes, and staffing anxiety.
               </div>
 
               <div className="space-y-4">
                 
-                {/* Phase 1 */}
-                <div className="p-5 rounded-2xl bg-slate-950 border border-sky-500/40 space-y-2">
+                {/* Step 1 */}
+                <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">
-                      Phase 1: Present Day
+                      Step 01: Shift Broadcasting
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30">
+                      Under 60 Seconds
+                    </span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white">Hospital Posts Open Shift</h4>
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    The nursing supervisor defines vacant shifts (ICU, ER, General Ward, Hemodialysis), selects required certifications (BLS, ACLS), and sets the agreed shift compensation. Supports urgent emergency relief or planned roster vacancies.
+                  </p>
+                </div>
+
+                {/* Step 2 */}
+                <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                      Step 02: Automated Matching
                     </span>
                     <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                      ACTIVE NOW
+                      PRC Pre-Verified
                     </span>
                   </div>
-                  <h4 className="text-lg font-bold text-white">Dual-Sided Network Seeding</h4>
+                  <h4 className="text-lg font-bold text-white">Nurse Receives Instant Alert & Claims Shift</h4>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    Onboarding Pioneer Hospital Partners to define clinical shift parameters and sign initial MoAs. Simultaneously pre-registering PRC-verified nurses into the inaugural talent registry.
+                    Qualified registered nurses in the hospital's geographic zone receive push notifications with the facility name, ward, hours, and pay rate displayed transparently. The nurse claims the shift in one tap with credentials already pre-verified.
                   </p>
                 </div>
 
-                {/* Phase 2 */}
+                {/* Step 3 */}
                 <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">
-                      Phase 2: November 2026
+                    <span className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">
+                      Step 03: Geofenced Attendance
                     </span>
-                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
-                      INDUSTRY SHOWCASE
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/10 text-white border border-white/20">
+                      Zero Paperwork
                     </span>
                   </div>
-                  <h4 className="text-lg font-bold text-white">PHAPi Annual Convention Exhibition</h4>
+                  <h4 className="text-lg font-bold text-white">Ward QR Clock-In & Digital Settlement</h4>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    Presenting our live working prototype directly to hospital owners, Medical Directors, and Chief Nursing Officers. Open walk-in booth demonstrations throughout the convention.
+                    The nurse arrives at the medical center and scans the department station QR code to clock in. At shift completion, the supervisor digitally approves completed hours, and timesheets are automatically reconciled to digital wallets.
                   </p>
                 </div>
 
-                {/* Phase 3 */}
-                <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">
-                      Phase 3: Post-Convention
-                    </span>
-                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-800 text-slate-400 border border-slate-700">
-                      CONTROLLED ROLLOUT
-                    </span>
-                  </div>
-                  <h4 className="text-lg font-bold text-white">Controlled Pilot Shift Deployment</h4>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Launching live shift matching in designated high-acuity departments (ICU, ER, Hemodialysis, General Ward) with our pre-registered nurse pool before broad public rollout.
-                  </p>
-                </div>
+              </div>
 
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800">
+                <span className="text-xs text-slate-400">
+                  Ready to test our prototype at the PHAPi convention?
+                </span>
+                <div className="flex gap-2 w-full sm:w-auto">
+                  <button
+                    onClick={() => {
+                      onClose();
+                      onOpenDrawer('hospital_partner');
+                    }}
+                    className="flex-1 sm:flex-none px-5 py-2.5 rounded-full text-xs font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 transition-colors cursor-pointer"
+                  >
+                    Hospital Partner Inquiry
+                  </button>
+                  <button
+                    onClick={() => {
+                      onClose();
+                      onOpenDrawer('nurse_registry');
+                    }}
+                    className="flex-1 sm:flex-none px-5 py-2.5 rounded-full text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 transition-colors border border-slate-700 cursor-pointer"
+                  >
+                    Nurse Pre-Register
+                  </button>
+                </div>
               </div>
             </div>
           )}

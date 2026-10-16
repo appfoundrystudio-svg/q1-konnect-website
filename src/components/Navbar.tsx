@@ -53,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal, onOpenDrawer }) => 
               onClick={() => onOpenModal('roadmap')}
               className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 group"
             >
-              <span>Strategy Roadmap</span>
+              <span>How It Works</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-sky-400 transition-colors" />
             </button>
             <button 

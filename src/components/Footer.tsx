@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal, onOpenDrawer }) => 
                   onClick={() => onOpenModal('roadmap')} 
                   className="hover:text-white transition-colors cursor-pointer text-left"
                 >
-                  Dual-Sided Marketplace Roadmap
+                  How It Works (3 Simple Steps)
                 </button>
               </li>
               <li>
