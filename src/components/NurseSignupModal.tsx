@@ -131,7 +131,7 @@ export const NurseSignupModal: React.FC<NurseSignupModalProps> = ({
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-lg">
             Be part of our founding nurse cohort launching in November. Unlock priority access to 
-            high-paying reliever shifts with guaranteed direct pay and zero nurse deductions.
+            bedside reliever shifts with upfront compensation transparency and direct wallet payouts.
           </p>
         </div>
 

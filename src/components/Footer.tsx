@@ -129,7 +129,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <a href="#nurses" className="hover:text-white transition-colors">
-                  Shift Autonomy & Zero Deductions
+                  Shift Autonomy & Transparent Rates
                 </a>
               </li>
               <li>

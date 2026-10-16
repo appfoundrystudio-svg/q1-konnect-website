@@ -19,27 +19,15 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
   const [facilityTier, setFacilityTier] = useState<string>('secondary');
 
   const calculations = useMemo(() => {
-    const totalGrossShiftSpend = monthlyShifts * shiftRate;
-    
-    // Traditional staffing agency charges ~35% markup on shifts
-    const traditionalAgencyMarkup = totalGrossShiftSpend * 0.35;
-    
-    // Q1 Konnect platform fee is roughly ~10% transparent tech fee
-    const q1PlatformFee = totalGrossShiftSpend * 0.10;
-    
-    // Net Monthly Savings
-    const monthlyNetSavings = traditionalAgencyMarkup - q1PlatformFee;
-    const annualNetSavings = monthlyNetSavings * 12;
+    const totalMonthlyShiftSpend = monthlyShifts * shiftRate;
+    const annualShiftSpend = totalMonthlyShiftSpend * 12;
     
     // Administrative hours saved (eliminating manual nurse phone calling, credentials chasing, timesheet sorting)
     const adminHoursSaved = Math.round(monthlyShifts * 2.2);
 
     return {
-      totalGrossShiftSpend,
-      traditionalAgencyMarkup,
-      q1PlatformFee,
-      monthlyNetSavings,
-      annualNetSavings,
+      totalMonthlyShiftSpend,
+      annualShiftSpend,
       adminHoursSaved,
     };
   }, [monthlyShifts, shiftRate]);
@@ -51,14 +39,14 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-50 text-sky-800 border border-sky-200">
             <Calculator className="w-3.5 h-3.5 text-sky-600" />
-            <span>Projected Staffing Economics</span>
+            <span>Clinical Shift Economics Benchmark</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
-            Benchmark Your Projected Agency & Overtime Savings.
+            Benchmark Your Facility's Shift Management Economics.
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            Traditional agencies quietly mark up shift rates by 35% to 50%. See how much your facility 
-            can recover by adopting Q1 Konnect's transparent technology fee model upon launch.
+            Traditional staffing intermediaries introduce variable markups and heavy manual coordination. 
+            Explore your shift volume budget and see the administrative hours recovered with direct clinical infrastructure.
           </p>
         </div>
 
@@ -162,7 +150,7 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
             <div className="absolute top-4 right-4">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">
                 <Sparkles className="w-3 h-3" />
-                PROJECTED RECOVERY
+                MANAGED SHIFT SPEND
               </span>
             </div>
 
@@ -170,13 +158,13 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
               
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                  Projected Annual Cost Recovery
+                  Projected Annual Bedside Shift Spend
                 </p>
                 <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-white font-heading mt-1">
-                  ₱{Math.round(calculations.annualNetSavings).toLocaleString()}
+                  ₱{Math.round(calculations.annualShiftSpend).toLocaleString()}
                 </div>
                 <p className="text-xs text-slate-400 mt-1">
-                  Potential recovery of ~₱{Math.round(calculations.monthlyNetSavings).toLocaleString()}/month in agency markups.
+                  Transparent shift disbursement for {monthlyShifts} bedside shifts/month @ ₱{shiftRate.toLocaleString()}/shift.
                 </p>
               </div>
 
@@ -184,23 +172,23 @@ export const HospitalRoiCalculator: React.FC<HospitalRoiCalculatorProps> = ({ on
                 <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
                     <Clock className="w-3.5 h-3.5 text-sky-400" />
-                    <span>Admin Hours Saved</span>
+                    <span>Coordination Saved</span>
                   </div>
                   <div className="text-xl font-bold text-white">
                     {calculations.adminHoursSaved} hrs / mo
                   </div>
-                  <div className="text-[10px] text-slate-500">Eliminating phone chains & paper timecards</div>
+                  <div className="text-[10px] text-slate-500">Automated dispatch replaces manual phone trees</div>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
                     <DollarSign className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Projected Margin</span>
+                    <span>Shift Economics</span>
                   </div>
                   <div className="text-xl font-bold text-emerald-400">
-                    25% Net Margin
+                    Transparent
                   </div>
-                  <div className="text-[10px] text-slate-500">Direct peer-to-facility model</div>
+                  <div className="text-[10px] text-slate-500">Direct hospital-to-nurse shift rates</div>
                 </div>
               </div>
 

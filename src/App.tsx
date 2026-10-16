@@ -3,7 +3,6 @@ import { Audience } from './types/landing';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { StatsBanner } from './components/StatsBanner';
-import { NetworkRoadmap } from './components/NetworkRoadmap';
 import { VideoExplainer } from './components/VideoExplainer';
 import { HospitalSection } from './components/HospitalSection';
 import { HospitalRoiCalculator } from './components/HospitalRoiCalculator';
@@ -66,12 +65,6 @@ export const App: React.FC = () => {
         {/* Official Video Explainer Tour */}
         <VideoExplainer
           currentAudience={currentAudience}
-          onOpenScheduleModal={() => setScheduleModalOpen(true)}
-          onOpenNurseModal={() => setNurseModalOpen(true)}
-        />
-
-        {/* Phased Marketplace Strategy Roadmap */}
-        <NetworkRoadmap
           onOpenScheduleModal={() => setScheduleModalOpen(true)}
           onOpenNurseModal={() => setNurseModalOpen(true)}
         />

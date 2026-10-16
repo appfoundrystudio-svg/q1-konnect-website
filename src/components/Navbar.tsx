@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* Navigation Anchors */}
             <div className="hidden xl:flex items-center gap-5 text-xs font-semibold text-slate-600">
-              <a href="#network-roadmap" className="hover:text-sky-600 transition-colors">Our Roadmap</a>
+              <a href="#how-it-works" className="hover:text-sky-600 transition-colors">How It Works</a>
               <a href="#video-explainer" className="hover:text-sky-600 transition-colors flex items-center gap-1">
                 <Play className="w-3 h-3 text-sky-500" />
                 App Demo
@@ -201,11 +201,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <div className="grid grid-cols-2 gap-2 text-xs font-medium text-slate-700 pt-2 border-t border-slate-100">
               <a 
-                href="#network-roadmap" 
+                href="#how-it-works" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2 px-3 rounded-lg hover:bg-slate-50"
               >
-                Our Roadmap
+                How It Works
               </a>
               <a 
                 href="#video-explainer" 

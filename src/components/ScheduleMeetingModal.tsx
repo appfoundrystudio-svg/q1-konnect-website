@@ -114,7 +114,7 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-lg">
             Connect with our founding team to discuss custom hospital staffing parameters, review our 
-            pre-launch roadmap, or coordinate at the <strong>PHAPi National Convention in November</strong>.
+            pilot deployment plans, or coordinate at the <strong>PHAPi National Convention in November</strong>.
           </p>
         </div>
 

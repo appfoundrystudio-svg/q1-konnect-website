@@ -99,7 +99,7 @@ export const AppShowcase: React.FC = () => {
                   },
                   {
                     title: 'Automated Timesheet Invoicing',
-                    desc: 'Itemized, transparent shift billing generated automatically at the end of each shift without agency markups.',
+                    desc: 'Itemized, transparent shift billing generated automatically at the end of each shift with clear, agreed terms.',
                   },
                 ].map((feat) => (
                   <div key={feat.title} className="flex items-start gap-3.5">

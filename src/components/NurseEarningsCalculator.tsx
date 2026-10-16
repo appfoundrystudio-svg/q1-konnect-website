@@ -60,7 +60,7 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
             Whether you plan to pick up 1 shift on your scheduled day off or take on regular per-diem 
-            hospital blocks, see how much you can earn with zero middleman cuts.
+            hospital blocks, see how much you can earn with transparent shift rates.
           </p>
         </div>
 

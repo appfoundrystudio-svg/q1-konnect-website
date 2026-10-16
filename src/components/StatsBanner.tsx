@@ -4,9 +4,9 @@ import { ShieldCheck, Zap, DollarSign, HeartHandshake, QrCode } from 'lucide-rea
 export const StatsBanner: React.FC = () => {
   const pillars = [
     {
-      label: 'Staffing Savings',
-      value: '35–40%',
-      desc: 'Projected savings vs. legacy agency cuts',
+      label: 'Staffing Model',
+      value: 'Direct Connect',
+      desc: 'Direct hospital-to-nurse dispatch',
       icon: DollarSign,
       color: 'text-sky-600',
       bgColor: 'bg-sky-50',
@@ -28,9 +28,9 @@ export const StatsBanner: React.FC = () => {
       bgColor: 'bg-amber-50',
     },
     {
-      label: 'Fair Nurse Pay',
-      value: '0% Deductions',
-      desc: '100% free for nurses — zero cuts',
+      label: 'Shift Compensation',
+      value: 'Transparent Rates',
+      desc: 'Upfront agreed pay & fast wallet payouts',
       icon: HeartHandshake,
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',

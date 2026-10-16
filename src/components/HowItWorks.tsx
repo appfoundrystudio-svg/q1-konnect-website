@@ -44,7 +44,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
       title: 'Geofenced QR Attendance & Seamless Billing',
       desc: 'The nurse checks in on-site using the department QR code. When the shift finishes, timesheets are automatically reconciled with zero paperwork.',
       icon: CalendarCheck2,
-      detail: 'Consolidated, audit-ready hospital invoices with zero agency markups.'
+      detail: 'Consolidated, audit-ready hospital shift invoices with transparent rate reporting.'
     },
   ];
 

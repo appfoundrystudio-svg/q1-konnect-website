@@ -20,7 +20,7 @@ export const Testimonials: React.FC = () => {
       rating: 5,
     },
     {
-      quote: "Traditional staffing agencies charged us 35% markups with zero visibility into nurse credentials. Q1 Konnect eliminated the middlemen. We saved over ₱1.2 Million in agency fees while gaining full QR attendance audit trails.",
+      quote: "Managing urgent staffing used to require endless phone calls with variable agency fees. Q1 Konnect provides direct dispatch with pre-verified PRC credentials and tamper-proof QR attendance audit trails.",
       name: "Atty. Rafael D. Santos",
       role: "Director of Human Capital & Hospital Operations",
       facility: "Provincial Care Hospital Network",

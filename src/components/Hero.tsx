@@ -84,19 +84,18 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Dynamic Headline */}
             {currentAudience === 'hospital' ? (
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12] font-heading">
-                Building the Future of{' '}
+                On-Demand Clinical{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-600 to-blue-700">
-                  Hospital Nursing Workforce
+                  Workforce Infrastructure
                 </span>{' '}
-                in the Philippines.
+                for Healthcare Facilities.
               </h1>
             ) : (
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12] font-heading">
-                Join the Pioneer Registry of{' '}
+                Direct Hospital-to-Nurse Staffing.{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-600 to-slate-900">
-                  Registered Nurses
-                </span>{' '}
-                Preparing for Launch.
+                  Transparent Shift Rates.
+                </span>
               </h1>
             )}
 
@@ -106,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <>
                   We are currently establishing our <strong>Pioneer Hospital Partner Network</strong> and 
                   pre-vetting licensed nurses before commercial shift rollout. 
-                  Collaborate with us to design custom staffing workflows, eliminate 35–40% agency markups, 
+                  Collaborate with us to deploy direct hospital-to-nurse staffing with transparent shift rates, 
                   and visit our exhibit booth at the <strong>PHAPi National Convention in November</strong>.
                 </>
               ) : (
@@ -114,7 +113,7 @@ export const Hero: React.FC<HeroProps> = ({
                   We are building a pre-vetted talent pool of registered nurses ahead of hospital deployment. 
                   Pre-register your PRC license today to get pre-verified, earn priority shift access, 
                   and help us design a healthcare platform that truly respects bedside nurses. 
-                  <strong>100% free with zero wage deductions.</strong>
+                  <strong>Upfront shift transparency with direct digital wallet payouts.</strong>
                 </>
               )}
             </p>
@@ -152,7 +151,7 @@ export const Hero: React.FC<HeroProps> = ({
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Zero agency deductions from your shift pay</span>
+                    <span>Upfront agreed shift rates with zero surprise deductions</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
@@ -270,8 +269,8 @@ export const Hero: React.FC<HeroProps> = ({
                         <span className="text-sky-300 font-bold">Geofenced Station QR</span>
                       </p>
                       <p className="text-slate-400 flex justify-between">
-                        <span>Legacy Agency Fee:</span>
-                        <span className="text-emerald-400 font-bold">₱0.00 (Zero Markup)</span>
+                        <span>Staffing Model:</span>
+                        <span className="text-emerald-400 font-bold">Direct Hospital-to-Nurse</span>
                       </p>
                     </div>
                   </div>

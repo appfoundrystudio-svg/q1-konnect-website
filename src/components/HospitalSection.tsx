@@ -38,10 +38,10 @@ export const HospitalSection: React.FC<HospitalSectionProps> = ({ onOpenSchedule
       badge: 'Audit-Proof',
     },
     {
-      title: 'Eliminate 35%+ Agency Markups',
-      desc: 'Traditional staffing agencies inflate hourly fees by 30-50%. Q1 Konnect operates on a transparent, flat platform fee model with zero lock-in retainers.',
+      title: 'Transparent Shift Economics',
+      desc: 'Bypass opaque agency intermediaries. Hospital administrators set transparent shift rates upfront with direct nurse dispatch and predictable platform infrastructure.',
       icon: BadgePercent,
-      badge: '35–40% Cost Savings',
+      badge: 'Direct Economics',
     },
     {
       title: 'Dual Internal & External Pool',

@@ -25,14 +25,14 @@ export const FaqSection: React.FC = () => {
     },
     {
       q: 'How does attendance tracking and timesheet reconciliation work?',
-      a: 'We eliminate disputed paper timecards. When a nurse arrives on-site, they scan a unique department QR code verified against your hospital’s geofenced GPS coordinates. When the shift concludes, the supervisor digitally signs off, and an itemized invoice is automatically updated with zero agency markups.',
+      a: 'We eliminate disputed paper timecards. When a nurse arrives on-site, they scan a unique department QR code verified against your hospital’s geofenced GPS coordinates. When the shift concludes, the supervisor digitally signs off, and an itemized digital shift record is automatically generated with transparent, agreed terms.',
     },
   ];
 
   const nurseFaqs = [
     {
       q: 'Does it cost anything for nurses to join or accept shifts?',
-      a: 'No. Q1 Konnect is 100% free for nurses and healthcare professionals. We never charge registration fees, subscription costs, or take deductions from your advertised shift compensation.',
+      a: 'No. Creating a profile and joining our nurse talent pool is completely free for nurses. Shift rates are shown upfront with transparent terms, so you always know exactly what you will earn before accepting a shift.',
     },
     {
       q: 'When will hospital shifts become available for nurses?',
@@ -40,7 +40,7 @@ export const FaqSection: React.FC = () => {
     },
     {
       q: 'How does shift pay work once live?',
-      a: 'Once your hospital supervisor signs off on your completed hours via QR, your earnings are credited directly to your digital wallet with zero agency deductions. You can transfer funds directly to GCash, Maya, or any Philippine bank account.',
+      a: 'Once your hospital supervisor signs off on your completed hours via QR, your agreed shift earnings are credited directly to your digital wallet. You can transfer funds directly to GCash, Maya, or any Philippine bank account.',
     },
     {
       q: 'Can I accept reliever shifts if I already work a full-time hospital job?',

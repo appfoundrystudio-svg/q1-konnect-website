@@ -26,7 +26,7 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
     },
     {
       title: 'Competitive, Guaranteed Pay',
-      desc: 'Transparent per-shift compensation visible before you accept. No delayed salaries or predatory commission deductions.',
+      desc: 'Transparent per-shift compensation visible before you accept. Clear terms with direct digital wallet payouts.',
       icon: Wallet,
       tag: 'Fast Payouts',
     },
@@ -114,19 +114,18 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
           })}
         </div>
 
-        {/* 100% Free Banner */}
+        {/* Nurse Partnership Banner */}
         <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-sky-950 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-slate-800">
           <div className="max-w-3xl space-y-4">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30">
               <HeartHandshake className="w-3.5 h-3.5" />
-              100% Free For All Healthcare Professionals
+              Direct Nurse Partnership
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
-              No Sign-Up Fees. No Hidden Commission Deductions.
+              Upfront Shift Transparency. Direct Wallet Payouts.
             </h3>
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              We believe bedside nurses are the heartbeat of healthcare. When a hospital posts an approved 
-              ₱2,800 shift, that advertised rate goes straight to you upon completion. Zero agency take-home cuts.
+              We believe bedside nurses are the heartbeat of healthcare. Every shift clearly displays its ward requirements, schedule, and agreed compensation before you accept—paid directly to your digital wallet upon verified shift completion.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
@@ -135,7 +134,7 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-slate-900 bg-sky-400 hover:bg-sky-300 transition-colors shadow-lg cursor-pointer"
               >
                 <UserPlus className="w-4 h-4 text-slate-900" />
-                <span>Pre-Register for Nurse Pool (Free)</span>
+                <span>Pre-Register as a Pioneer Nurse</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
