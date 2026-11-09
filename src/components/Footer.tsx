@@ -17,15 +17,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal, onOpenDrawer }) => 
           
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="bg-white/95 rounded-2xl p-2 shadow-sm border border-white/20 flex items-center justify-center shrink-0" style={{ height: '56px' }}>
-                <img 
-                  src="/assets/logo/Q1_Official_Logo.png" 
-                  alt="Q1 Konnect Logo" 
-                  className="h-10 sm:h-12 w-auto object-contain"
-                  style={{ maxHeight: '44px', width: 'auto' }}
-                />
-              </div>
+            <div className="flex items-center gap-3.5">
+              <img 
+                src="/brand/logo/q1konnect-logo_reversed.svg" 
+                alt="Q1 Konnect" 
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
               <div>
                 <span className="text-sm font-bold text-white block">Q1 Konnect Platform</span>
                 <span className="text-xs text-sky-400 font-mono">Healthcare Workforce Network</span>

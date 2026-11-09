@@ -1,5 +1,5 @@
 import React from 'react';
-import { DollarSign, ShieldCheck, Zap, HeartHandshake } from 'lucide-react';
+import { Clock, ShieldCheck, Zap, HeartHandshake } from 'lucide-react';
 
 export const StatTicker: React.FC = () => {
   const metrics = [
@@ -21,7 +21,7 @@ export const StatTicker: React.FC = () => {
       value: '< 20 Mins',
       label: 'Urgent Dispatch Target',
       desc: 'Push notifications to verified bedside radius',
-      icon: DollarSign,
+      icon: Clock,
       color: 'text-amber-400',
     },
     {

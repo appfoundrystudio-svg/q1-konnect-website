@@ -74,8 +74,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal, onOpenDrawer }) => {
 
         {/* Subtle Trust Badges */}
         <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
-          <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+          <div className="flex items-center gap-2">
+            <img 
+              src="/brand/badge/q1-verified-chip_app.svg" 
+              alt="Q1 Verified" 
+              className="h-5 w-auto object-contain drop-shadow-xs" 
+            />
             <span>100% PRC License Pre-Verification</span>
           </div>
           <div className="flex items-center gap-1.5">

@@ -14,21 +14,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal, onOpenDrawer }) => 
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="bg-white/95 rounded-2xl p-2 shadow-sm border border-white/20 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0" style={{ height: '60px' }}>
-              <img 
-                src="/assets/logo/Q1_Official_Logo.png" 
-                alt="Q1 Konnect Official Logo" 
-                className="h-12 sm:h-14 w-auto object-contain"
-                style={{ maxHeight: '48px', width: 'auto' }}
-              />
-            </div>
+          <a href="#" className="flex items-center gap-3.5 group">
+            <img 
+              src="/brand/logo/q1konnect-logo_reversed.svg" 
+              alt="Q1 Konnect" 
+              className="h-11 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
             <div className="hidden sm:flex flex-col">
-              <span className="text-xs font-bold text-white tracking-wide uppercase">
-                Q1 Konnect
-              </span>
-              <span className="text-[10px] text-sky-400 font-mono tracking-wider">
-                Health Workforce Network
+              <span className="text-[10px] text-sky-400 font-mono tracking-wider uppercase bg-sky-500/10 px-2.5 py-0.5 rounded-full border border-sky-500/20 w-fit">
+                Healthcare Workforce Network
               </span>
             </div>
           </a>
