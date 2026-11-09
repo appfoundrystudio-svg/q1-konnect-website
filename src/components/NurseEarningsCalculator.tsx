@@ -47,24 +47,24 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
   }, [shiftsPerWeek, activeSpecialty]);
 
   return (
-    <section id="nurse-earnings" className="py-20 bg-slate-50 border-t border-slate-200/80">
+    <section id="nurse-earnings" className="py-20 bg-white border-t border-[#D8E3E3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-50 text-sky-800 border border-sky-200">
-            <Calculator className="w-3.5 h-3.5 text-sky-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#EEF4F3] text-[#0F6B8A] border border-[#D8E3E3]">
+            <Calculator className="w-3.5 h-3.5 text-[#0F6B8A]" />
             <span>Nurse Supplemental Income Estimator</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
-            Estimate Your Monthly Take-Home from Flexible Shifts.
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#123A4A] tracking-tight font-display">
+            Estimate your monthly take-home from flexible shifts.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600">
+          <p className="text-base sm:text-lg text-[#56717C]">
             Whether you plan to pick up 1 shift on your scheduled day off or take on regular per-diem 
             hospital blocks, see how much you can earn with transparent shift rates.
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200/90 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-[#EEF4F3] rounded-[14px] p-6 sm:p-10 shadow-sm border border-[#D8E3E3] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Controls Column */}
           <div className="lg:col-span-6 space-y-6">
@@ -139,26 +139,26 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
           </div>
 
           {/* Result Card */}
-          <div className="lg:col-span-6 bg-gradient-to-br from-slate-950 to-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-800 text-white relative">
+          <div className="lg:col-span-6 bg-[#123A4A] p-6 sm:p-8 rounded-[14px] border border-white/10 text-white relative">
             <div className="space-y-6">
               
               <div>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/10 text-sky-200 border border-white/15">
                   <Sparkles className="w-3 h-3" />
                   PROJECTED MONTHLY SUPPLEMENTAL
                 </span>
-                <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-white font-heading mt-2">
+                <div className="text-4xl sm:text-5xl font-extrabold text-[#00AEFD] font-display mt-2">
                   ₱{calculations.monthlyEarnings.toLocaleString()}
                 </div>
-                <p className="text-xs text-slate-400 mt-1">
+                <p className="text-xs text-slate-300 mt-1">
                   Based on {shiftsPerWeek} {activeSpecialty.name} shifts/week @ ₱{calculations.rate.toLocaleString()} benchmark.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
-                    <Wallet className="w-3.5 h-3.5 text-sky-400" />
+              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                <div className="p-3.5 rounded-[10px] bg-black/20 border border-white/10">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-300 mb-1">
+                    <Wallet className="w-3.5 h-3.5 text-[#00AEFD]" />
                     <span>Weekly Take-Home</span>
                   </div>
                   <div className="text-xl font-bold text-white">
@@ -167,12 +167,12 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
                   <div className="text-[10px] text-slate-400">Paid out directly</div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
-                    <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
+                <div className="p-3.5 rounded-[10px] bg-black/20 border border-white/10">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-300 mb-1">
+                    <TrendingUp className="w-3.5 h-3.5 text-[#1D8A5A]" />
                     <span>Annual Potential</span>
                   </div>
-                  <div className="text-xl font-bold text-emerald-400">
+                  <div className="text-xl font-bold text-[#1D8A5A]">
                     ₱{calculations.annualEarnings.toLocaleString()}
                   </div>
                   <div className="text-[10px] text-slate-400">Supplemental earnings</div>
@@ -182,10 +182,10 @@ export const NurseEarningsCalculator: React.FC<NurseEarningsCalculatorProps> = (
               <div className="pt-2">
                 <button
                   onClick={onOpenNurseModal}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-sm font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 shadow-lg shadow-sky-500/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-sky-600 shadow-md transition-all cursor-pointer transform hover:-translate-y-0.5"
                 >
-                  <UserPlus className="w-4 h-4 text-slate-950" />
-                  <span>Pre-Register to Claim Shifts at Launch</span>
+                  <UserPlus className="w-4 h-4 text-white" />
+                  <span>Pre-register to claim shifts at launch</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

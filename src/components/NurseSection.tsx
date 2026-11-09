@@ -25,7 +25,7 @@ export const NurseSection: React.FC<NurseSectionProps> = ({ onOpenNurseModal }) 
       tag: 'Zero Burnout',
     },
     {
-      title: 'Competitive, Guaranteed Pay',
+      title: 'Competitive, Transparent Pay',
       desc: 'Transparent per-shift compensation visible before you accept. Clear terms with direct digital wallet payouts.',
       icon: Wallet,
       tag: 'Fast Payouts',

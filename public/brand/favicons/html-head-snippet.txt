@@ -1,0 +1,9 @@
+Paste inside <head> of every web page (files from this folder, placed in the site root):
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon_light.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180_light.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#123A4A">
+
+favicon.svg switches by itself: white tile in light mode, Deep teal tile in dark mode.

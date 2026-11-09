@@ -39,27 +39,27 @@ export const Hero: React.FC<HeroProps> = ({
         
         {/* Audience Toggle */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex p-1.5 rounded-2xl bg-white shadow-xl shadow-slate-200/60 border border-slate-200/80">
+          <div className="inline-flex p-1.5 rounded-full bg-[#EEF4F3] border border-[#D8E3E3]">
             <button
               onClick={() => onAudienceChange('hospital')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 currentAudience === 'hospital'
-                  ? 'bg-slate-950 text-white shadow-md'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                  ? 'bg-[#123A4A] text-white shadow-sm'
+                  : 'text-[#56717C] hover:text-[#123A4A]'
               }`}
             >
-              <Building2 className={`w-4 h-4 ${currentAudience === 'hospital' ? 'text-sky-400' : 'text-slate-400'}`} />
+              <Building2 className={`w-4 h-4 ${currentAudience === 'hospital' ? 'text-[#EF7158]' : 'text-[#56717C]'}`} />
               <span>For Hospital & Clinic Partners</span>
             </button>
             <button
               onClick={() => onAudienceChange('nurse')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 currentAudience === 'nurse'
-                  ? 'bg-sky-500 text-white shadow-md shadow-sky-500/25'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                  ? 'bg-[#0F6B8A] text-white shadow-sm'
+                  : 'text-[#56717C] hover:text-[#123A4A]'
               }`}
             >
-              <Stethoscope className={`w-4 h-4 ${currentAudience === 'nurse' ? 'text-white' : 'text-slate-400'}`} />
+              <Stethoscope className={`w-4 h-4 ${currentAudience === 'nurse' ? 'text-white' : 'text-[#56717C]'}`} />
               <span>For Registered Nurses</span>
             </button>
           </div>
@@ -72,8 +72,8 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             
             {/* Stage Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200">
-              <Users2 className="w-3.5 h-3.5 text-sky-600" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#EEF4F3] text-[#0F6B8A] border border-[#D8E3E3]">
+              <Users2 className="w-3.5 h-3.5 text-[#0F6B8A]" />
               <span>
                 {currentAudience === 'hospital' 
                   ? 'Pioneer Hospital Partner Program • Pre-Launch Phase' 
@@ -83,24 +83,24 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* Dynamic Headline */}
             {currentAudience === 'hospital' ? (
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12] font-heading">
-                On-Demand Clinical{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-600 to-blue-700">
-                  Workforce Infrastructure
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#123A4A] tracking-tight leading-[1.12] font-display">
+                On-demand clinical{' '}
+                <span className="text-[#0F6B8A]">
+                  workforce infrastructure
                 </span>{' '}
-                for Healthcare Facilities.
+                for healthcare facilities.
               </h1>
             ) : (
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12] font-heading">
-                Direct Hospital-to-Nurse Staffing.{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-600 to-slate-900">
-                  Transparent Shift Rates.
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#123A4A] tracking-tight leading-[1.12] font-display">
+                Direct hospital-to-nurse staffing.{' '}
+                <span className="text-[#0F6B8A]">
+                  Transparent shift rates.
                 </span>
               </h1>
             )}
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-[#56717C] max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
               {currentAudience === 'hospital' ? (
                 <>
                   We are currently establishing our <strong>Pioneer Hospital Partner Network</strong> and 
@@ -119,42 +119,42 @@ export const Hero: React.FC<HeroProps> = ({
             </p>
 
             {/* Real Pre-Launch Objectives */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-slate-700 max-w-xl mx-auto lg:mx-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-[#123A4A] max-w-xl mx-auto lg:mx-0">
               {currentAudience === 'hospital' ? (
                 <>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0" />
                     <span>Shape surge shift criteria for your specialized units</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0" />
                     <span>Live walk-in prototype demo at PHAPi (Nov 2026)</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Zero onboarding fees for pioneer medical centers</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0" />
+                    <span>Priority onboarding for pioneer medical centers</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
-                    <span>Guaranteed priority pool allocation at pilot launch</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0" />
+                    <span>Priority pool allocation at pilot launch</span>
                   </div>
                 </>
               ) : (
                 <>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0" />
                     <span>Pre-verify your PRC license ahead of launch</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0" />
                     <span>Priority notification for ICU, ER, OR & Ward shifts</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0" />
                     <span>Upfront agreed shift rates with zero surprise deductions</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0" />
                     <span>Direct digital wallet payouts (GCash/Maya/Bank)</span>
                   </div>
                 </>
@@ -167,64 +167,64 @@ export const Hero: React.FC<HeroProps> = ({
                 <>
                   <button
                     onClick={onOpenScheduleModal}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-xl shadow-slate-900/25 transition-all cursor-pointer transform hover:-translate-y-0.5 border border-slate-800"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] shadow-md transition-all cursor-pointer transform hover:-translate-y-0.5"
                   >
-                    <Building2 className="w-4 h-4 text-sky-400" />
-                    <span>Connect With Our Founding Team</span>
+                    <Building2 className="w-4 h-4 text-sky-200" />
+                    <span>Connect with our founding team</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <a
                     href="#video-explainer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-all shadow-sm"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-[#123A4A] bg-[#EEF4F3] border border-[#D8E3E3] hover:bg-[#D8E3E3] transition-all shadow-sm"
                   >
-                    <Play className="w-4 h-4 text-sky-500 fill-sky-500" />
-                    <span>Watch Prototype Demo</span>
+                    <Play className="w-4 h-4 text-[#0F6B8A] fill-[#0F6B8A]" />
+                    <span>Watch prototype demo</span>
                   </a>
                 </>
               ) : (
                 <>
                   <button
                     onClick={onOpenNurseModal}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-sky-500 hover:bg-sky-400 shadow-xl shadow-sky-500/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] shadow-md transition-all cursor-pointer transform hover:-translate-y-0.5"
                   >
                     <UserPlus className="w-4 h-4" />
-                    <span>Pre-Register in Pioneer Nurse Pool</span>
+                    <span>Pre-register in pioneer nurse pool</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <a
                     href="#video-explainer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-all shadow-sm"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-[#123A4A] bg-[#EEF4F3] border border-[#D8E3E3] hover:bg-[#D8E3E3] transition-all shadow-sm"
                   >
-                    <Play className="w-4 h-4 text-sky-500 fill-sky-500" />
-                    <span>Watch Nurse App Demo</span>
+                    <Play className="w-4 h-4 text-[#0F6B8A] fill-[#0F6B8A]" />
+                    <span>Watch nurse app demo</span>
                   </a>
                 </>
               )}
             </div>
 
             {/* Convention Note */}
-            <div className="pt-2 text-xs text-slate-500 flex items-center justify-center lg:justify-start gap-2">
-              <Award className="w-4 h-4 text-amber-500 shrink-0" />
-              <span>Attending PHAPi this November? Drop by our booth for an interactive prototype demo!</span>
+            <div className="pt-2 text-xs text-[#56717C] flex items-center justify-center lg:justify-start gap-2">
+              <Award className="w-4 h-4 text-[#EF7158] shrink-0" />
+              <span>Attending PHAPi this November? Drop by our booth for an interactive prototype demo.</span>
             </div>
 
           </div>
 
           {/* Right Column: Platform Prototype Card */}
           <div className="lg:col-span-5 relative">
-            <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/20 to-blue-500/20 rounded-3xl blur-2xl -z-10" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#0F6B8A]/20 to-sky-500/10 rounded-[14px] blur-2xl -z-10" />
 
-            <div className="relative rounded-3xl bg-slate-950 p-6 shadow-2xl border border-slate-800 text-white">
+            <div className="relative rounded-[14px] bg-[#123A4A] p-6 shadow-2xl border border-white/10 text-white">
               
               {/* Window Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-3 h-3 rounded-full bg-rose-500" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="text-xs font-mono text-slate-400 ml-2">q1-konnect://prototype-mvp</span>
+                  <div className="w-3 h-3 rounded-full bg-[#EF7158]" />
+                  <div className="w-3 h-3 rounded-full bg-[#00AEFD]" />
+                  <div className="w-3 h-3 rounded-full bg-[#1D8A5A]" />
+                  <span className="text-xs font-mono text-slate-300 ml-2">q1-konnect://prototype-mvp</span>
                 </div>
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/10 text-[#00AEFD] border border-white/15">
                   <Sparkles className="w-3 h-3" />
                   PROTOTYPE COMPLETED
                 </span>

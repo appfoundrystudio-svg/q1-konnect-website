@@ -109,27 +109,27 @@ export const NurseSignupModal: React.FC<NurseSignupModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200 overflow-y-auto">
-      <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#123A4A]/60 backdrop-blur-sm animate-in fade-in duration-200 overflow-y-auto">
+      <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-[#D8E3E3] overflow-hidden my-8">
         
         {/* Header */}
-        <div className="bg-slate-950 text-white p-6 sm:p-8 relative border-b border-slate-800">
+        <div className="bg-[#EEF4F3] text-[#123A4A] p-6 sm:p-8 relative border-b border-[#D8E3E3]">
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 p-2 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors cursor-pointer"
+            className="absolute top-6 right-6 p-2 rounded-full bg-white hover:bg-[#D8E3E3] text-[#56717C] hover:text-[#123A4A] border border-[#D8E3E3] transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-400 mb-3 border border-sky-500/30">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#0F6B8A]/10 text-[#0F6B8A] mb-3 border border-[#0F6B8A]/20">
             <Stethoscope className="w-3.5 h-3.5" />
             <span>Nurse Inaugural Pool Pre-Registration</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-black font-heading text-white">
-            Pre-Register for Early Shift Access
+          <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#123A4A]">
+            Pre-register for early shift access
           </h3>
-          <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-lg">
+          <p className="text-xs sm:text-sm text-[#56717C] mt-1 max-w-lg">
             Be part of our founding nurse cohort launching in November. Unlock priority access to 
             bedside reliever shifts with upfront compensation transparency and direct wallet payouts.
           </p>
@@ -138,38 +138,38 @@ export const NurseSignupModal: React.FC<NurseSignupModalProps> = ({
         {submittedNurse ? (
           /* Confirmation Success State */
           <div className="p-8 text-center space-y-6">
-            <div className="w-16 h-16 rounded-full bg-sky-100 text-sky-600 mx-auto flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-[#1D8A5A]/10 text-[#1D8A5A] mx-auto flex items-center justify-center">
               <CheckCircle2 className="w-10 h-10" />
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-2xl font-bold text-slate-900 font-heading">
-                Pre-Registration Received, Nurse {submittedNurse.fullName}!
+              <h4 className="text-2xl font-extrabold text-[#123A4A] font-display">
+                Pre-registration received, Nurse {submittedNurse.fullName}
               </h4>
-              <p className="text-sm text-slate-600 max-w-md mx-auto">
+              <p className="text-sm text-[#56717C] max-w-md mx-auto">
                 Thank you for joining our founding nurse cohort. We are validating your PRC license with 
                 priority status ahead of our November launch.
               </p>
             </div>
 
             {/* Application Code Card */}
-            <div className="p-4 rounded-2xl bg-sky-50 border border-sky-200 text-center max-w-md mx-auto space-y-2">
-              <span className="text-xs font-semibold text-sky-900 uppercase tracking-wider">
+            <div className="p-4 rounded-[14px] bg-[#EEF4F3] border border-[#D8E3E3] text-center max-w-md mx-auto space-y-2">
+              <span className="text-xs font-semibold text-[#123A4A] uppercase tracking-wider">
                 Your Founding Applicant Reference ID
               </span>
               <div className="flex items-center justify-center gap-3">
-                <span className="text-2xl font-extrabold font-mono text-sky-950">
+                <span className="text-2xl font-extrabold font-mono text-[#0F6B8A]">
                   {submittedNurse.applicationCode}
                 </span>
                 <button
                   onClick={() => copyToClipboard(submittedNurse.applicationCode)}
-                  className="p-1.5 rounded-lg bg-sky-200 hover:bg-sky-300 text-sky-900 transition-colors cursor-pointer"
+                  className="p-1.5 rounded-lg bg-white border border-[#D8E3E3] hover:bg-[#D8E3E3] text-[#123A4A] transition-colors cursor-pointer"
                   title="Copy ID"
                 >
-                  {copiedCode ? <Check className="w-4 h-4 text-emerald-700" /> : <Copy className="w-4 h-4" />}
+                  {copiedCode ? <Check className="w-4 h-4 text-[#1D8A5A]" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
-              <p className="text-[11px] text-sky-800">
+              <p className="text-[11px] text-[#56717C]">
                 Save this reference code. It will be used to unlock your Founding Nurse profile badge in the app.
               </p>
             </div>
@@ -208,9 +208,9 @@ export const NurseSignupModal: React.FC<NurseSignupModalProps> = ({
                   setSubmittedNurse(null);
                   onClose();
                 }}
-                className="w-full sm:w-auto px-8 py-3 rounded-xl text-sm font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 transition-colors cursor-pointer"
+                className="w-full sm:w-auto px-8 py-3 rounded-full text-xs font-bold text-white bg-[#123A4A] hover:bg-[#0F6B8A] transition-colors cursor-pointer"
               >
-                Close & Return
+                Close & return
               </button>
             </div>
           </div>
@@ -410,16 +410,16 @@ export const NurseSignupModal: React.FC<NurseSignupModalProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 cursor-pointer"
+                className="px-5 py-2.5 rounded-full text-xs font-semibold text-[#56717C] hover:bg-[#EEF4F3] cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-sm font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 shadow-md cursor-pointer"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] shadow-md cursor-pointer"
               >
-                <UserPlus className="w-4 h-4 text-slate-950" />
-                <span>Submit Pre-Registration</span>
+                <UserPlus className="w-4 h-4 text-white" />
+                <span>Submit pre-registration</span>
               </button>
             </div>
 

@@ -13,7 +13,7 @@ export const AppShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hospital_portal' | 'nurse_mobile'>('hospital_portal');
 
   return (
-    <section id="app-showcase" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
+    <section id="app-showcase" className="py-24 bg-[#123A4A] text-white relative overflow-hidden border-t border-white/10">
       {/* Background Lighting */}
       <div className="absolute top-1/4 left-10 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -38,13 +38,13 @@ export const AppShowcase: React.FC = () => {
 
           {/* Toggle Buttons */}
           <div className="pt-4 flex justify-center">
-            <div className="inline-flex p-1.5 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl">
+            <div className="inline-flex p-1.5 rounded-full bg-white/10 border border-white/15 shadow-xl">
               <button
                 onClick={() => setActiveTab('hospital_portal')}
-                className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                className={`flex items-center gap-2.5 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   activeTab === 'hospital_portal'
-                    ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/25'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'bg-[#0F6B8A] text-white shadow-md'
+                    : 'text-slate-300 hover:text-white'
                 }`}
               >
                 <Monitor className="w-4 h-4" />
@@ -52,14 +52,14 @@ export const AppShowcase: React.FC = () => {
               </button>
               <button
                 onClick={() => setActiveTab('nurse_mobile')}
-                className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                className={`flex items-center gap-2.5 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   activeTab === 'nurse_mobile'
-                    ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/25'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'bg-[#0F6B8A] text-white shadow-md'
+                    : 'text-slate-300 hover:text-white'
                 }`}
               >
                 <Smartphone className="w-4 h-4" />
-                <span>Nurse Mobile Companion (PWA)</span>
+                <span>Nurse Mobile Companion</span>
               </button>
             </div>
           </div>

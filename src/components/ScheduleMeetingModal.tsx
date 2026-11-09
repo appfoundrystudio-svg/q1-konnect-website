@@ -92,27 +92,27 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200 overflow-y-auto">
-      <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#123A4A]/60 backdrop-blur-sm animate-in fade-in duration-200 overflow-y-auto">
+      <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-[#D8E3E3] overflow-hidden my-8">
         
         {/* Modal Top Header */}
-        <div className="bg-slate-950 text-white p-6 sm:p-8 relative border-b border-slate-800">
+        <div className="bg-[#EEF4F3] text-[#123A4A] p-6 sm:p-8 relative border-b border-[#D8E3E3]">
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 p-2 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors cursor-pointer"
+            className="absolute top-6 right-6 p-2 rounded-full bg-white hover:bg-[#D8E3E3] text-[#56717C] hover:text-[#123A4A] border border-[#D8E3E3] transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-400 mb-3 border border-sky-500/30">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#EF7158]/10 text-[#EF7158] mb-3 border border-[#EF7158]/20">
             <Building2 className="w-3.5 h-3.5" />
             <span>Pioneer Hospital Partner Program</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-black font-heading text-white">
-            Hospital Partnership Inquiry
+          <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#123A4A]">
+            Hospital partnership inquiry
           </h3>
-          <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-lg">
+          <p className="text-xs sm:text-sm text-[#56717C] mt-1 max-w-lg">
             Connect with our founding team to discuss custom hospital staffing parameters, review our 
             pilot deployment plans, or coordinate at the <strong>PHAPi National Convention in November</strong>.
           </p>
@@ -121,52 +121,52 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
         {submittedMeeting ? (
           /* Confirmation State */
           <div className="p-8 text-center space-y-6">
-            <div className="w-16 h-16 rounded-full bg-sky-100 text-sky-600 mx-auto flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-[#1D8A5A]/10 text-[#1D8A5A] mx-auto flex items-center justify-center">
               <CheckCircle2 className="w-10 h-10" />
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-2xl font-bold text-slate-900 font-heading">
-                Partnership Inquiry Received for {submittedMeeting.facilityName}!
+              <h4 className="text-2xl font-extrabold text-[#123A4A] font-display">
+                Partnership inquiry received for {submittedMeeting.facilityName}
               </h4>
-              <p className="text-sm text-slate-600 max-w-md mx-auto">
+              <p className="text-sm text-[#56717C] max-w-md mx-auto">
                 Thank you, <strong>{submittedMeeting.contactPerson}</strong>. Our Partnerships Director will contact you to confirm details and share our Pioneer Hospital Prospectus.
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-left max-w-md mx-auto space-y-2 text-xs text-slate-700">
+            <div className="p-4 rounded-[14px] bg-[#EEF4F3] border border-[#D8E3E3] text-left max-w-md mx-auto space-y-2 text-xs text-[#123A4A]">
               <div className="flex justify-between">
-                <span className="font-semibold text-slate-500">Discussion Format:</span>
-                <span className="font-bold text-sky-700">{formatPreferenceText(submittedMeeting.urgency)}</span>
+                <span className="font-semibold text-[#56717C]">Discussion Format:</span>
+                <span className="font-bold text-[#0F6B8A]">{formatPreferenceText(submittedMeeting.urgency)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-semibold text-slate-500">Target Date:</span>
-                <span className="font-bold text-slate-900">{submittedMeeting.preferredDate}</span>
+                <span className="font-semibold text-[#56717C]">Target Date:</span>
+                <span className="font-bold text-[#123A4A]">{submittedMeeting.preferredDate}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-semibold text-slate-500">Preferred Time:</span>
-                <span className="font-bold text-slate-900">{submittedMeeting.preferredTime}</span>
+                <span className="font-semibold text-[#56717C]">Preferred Time:</span>
+                <span className="font-bold text-[#123A4A]">{submittedMeeting.preferredTime}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-semibold text-slate-500">Confirmation Sent To:</span>
-                <span className="font-bold text-sky-700">{submittedMeeting.email}</span>
+                <span className="font-semibold text-[#56717C]">Confirmation Sent To:</span>
+                <span className="font-bold text-[#0F6B8A]">{submittedMeeting.email}</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <button
                 onClick={() => downloadIcsCalendar(submittedMeeting)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 shadow-md cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] shadow-md cursor-pointer"
               >
                 <Download className="w-4 h-4" />
-                <span>Add to Calendar (.ics)</span>
+                <span>Add to calendar (.ics)</span>
               </button>
               <button
                 onClick={() => {
                   setSubmittedMeeting(null);
                   onClose();
                 }}
-                className="w-full sm:w-auto px-6 py-3 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold text-[#123A4A] bg-[#EEF4F3] hover:bg-[#D8E3E3] border border-[#D8E3E3] cursor-pointer"
               >
                 Done
               </button>
@@ -439,16 +439,16 @@ export const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 cursor-pointer"
+                className="px-5 py-2.5 rounded-full text-xs font-semibold text-[#56717C] hover:bg-[#EEF4F3] cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-md cursor-pointer border border-slate-800"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] shadow-md cursor-pointer"
               >
-                <Calendar className="w-4 h-4 text-sky-400" />
-                <span>Submit Partnership Inquiry</span>
+                <Calendar className="w-4 h-4 text-sky-200" />
+                <span>Submit partnership inquiry</span>
               </button>
             </div>
 

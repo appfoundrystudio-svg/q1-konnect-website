@@ -79,15 +79,15 @@ export const PhapiExhibitSection: React.FC<PhapiExhibitSectionProps> = ({ onOpen
               <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
                 <button
                   onClick={onOpenScheduleModal}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-slate-900 bg-sky-400 hover:bg-sky-300 transition-colors shadow-lg cursor-pointer transform hover:-translate-y-0.5"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs font-bold text-white bg-[#EF7158] hover:bg-[#C9452C] transition-colors shadow-lg cursor-pointer transform hover:-translate-y-0.5"
                 >
-                  <Building2 className="w-4 h-4 text-slate-900" />
-                  <span>Can't Attend PHAPi? Connect With Us</span>
+                  <Building2 className="w-4 h-4 text-white" />
+                  <span>Can't attend PHAPi? Connect with us</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
-                <div className="text-xs text-slate-400 flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-sky-400" />
+                <div className="text-xs text-[#56717C] flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#0F6B8A]" />
                   <span>Walk-ins welcome during all exhibit hall hours</span>
                 </div>
               </div>
@@ -96,14 +96,14 @@ export const PhapiExhibitSection: React.FC<PhapiExhibitSectionProps> = ({ onOpen
 
             {/* Right Card: Event Info & Walk-In Invitation */}
             <div className="lg:col-span-5">
-              <div className="p-6 sm:p-8 rounded-2xl bg-slate-950/80 border border-slate-700/80 space-y-5 text-center sm:text-left">
+              <div className="p-6 sm:p-8 rounded-[14px] bg-[#123A4A] border border-white/10 space-y-5 text-center sm:text-left text-white shadow-xl">
                 
                 <div className="flex items-center justify-center sm:justify-start gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 text-amber-300 flex items-center justify-center">
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-semibold text-sky-400 uppercase tracking-wider block">
+                    <span className="text-[11px] font-semibold text-amber-300 uppercase tracking-wider block">
                       Exhibition Showcase
                     </span>
                     <h4 className="text-base font-bold text-white">PHAPi National Convention</h4>
@@ -115,22 +115,22 @@ export const PhapiExhibitSection: React.FC<PhapiExhibitSectionProps> = ({ onOpen
                   and Healthcare Executives discovering next-generation clinical workforce automation.
                 </p>
 
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2 text-xs">
+                <div className="p-4 rounded-[10px] bg-white/5 border border-white/10 space-y-2 text-xs">
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Date:</span>
+                    <span className="text-slate-300">Date:</span>
                     <strong className="text-white">November 2026</strong>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Booth Format:</span>
+                    <span className="text-slate-300">Booth Format:</span>
                     <strong className="text-sky-300">Open Walk-In Demonstrations</strong>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Target Audience:</span>
+                    <span className="text-slate-300">Target Audience:</span>
                     <strong className="text-white">Private Hospital Leadership</strong>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Current Phase:</span>
-                    <strong className="text-emerald-400">Pre-Launch • Network Seeding</strong>
+                    <span className="text-slate-300">Current Phase:</span>
+                    <strong className="text-[#1D8A5A]">Pre-Launch • Network Seeding</strong>
                   </div>
                 </div>
 

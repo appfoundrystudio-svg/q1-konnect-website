@@ -36,7 +36,7 @@ export const FaqSection: React.FC = () => {
   const nurseFaqs = [
     {
       q: 'Does it cost anything for nurses to join or accept shifts?',
-      a: 'No. Creating a profile and joining our nurse talent pool is completely free for nurses. Shift rates are shown upfront with transparent terms, so you always know exactly what you will earn before accepting a shift.',
+      a: 'No. Creating a profile and joining our nurse talent pool involves zero sign-up costs or membership charges for nurses. Shift rates are shown upfront with transparent terms, so you always know exactly what you will earn before accepting a shift.',
     },
     {
       q: 'When will hospital shifts become available for nurses?',

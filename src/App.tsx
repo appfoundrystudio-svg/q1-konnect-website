@@ -38,7 +38,7 @@ export const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen bg-white text-[#123A4A] flex flex-col font-sans selection:bg-[#00AEFD] selection:text-white">
       
       {/* Navigation */}
       <Navbar
@@ -111,19 +111,17 @@ export const App: React.FC = () => {
         <FaqSection />
 
         {/* Final Conversion Banner */}
-        <section className="py-20 bg-gradient-to-r from-slate-950 via-slate-900 to-sky-950 text-white relative overflow-hidden border-t border-slate-800">
-          <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
-          
+        <section className="py-20 bg-white text-[#123A4A] relative overflow-hidden border-t border-[#D8E3E3]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-500/20 text-sky-300 border border-sky-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#EEF4F3] text-[#0F6B8A] border border-[#D8E3E3]">
               Industry Showcase • November 2026
             </span>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight text-white">
-              Ready to Shape the Future of Healthcare Staffing?
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display tracking-tight text-[#123A4A]">
+              Partners, professionals connected.
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-[#56717C] max-w-2xl mx-auto">
               Whether you represent a hospital executive team preparing for the PHAPi convention 
               or a licensed nurse seeking shift autonomy, join our founding community.
             </p>
@@ -131,19 +129,19 @@ export const App: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <button
                 onClick={() => setScheduleModalOpen(true)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 shadow-xl transition-all cursor-pointer transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] shadow-md transition-all cursor-pointer transform hover:-translate-y-0.5"
               >
-                <Building2 className="w-5 h-5 text-slate-950" />
-                <span>Hospital: Connect With Founding Team</span>
+                <Building2 className="w-5 h-5 text-sky-200" />
+                <span>Hospital: Connect with founding team</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <button
                 onClick={() => setNurseModalOpen(true)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-xl transition-all cursor-pointer transform hover:-translate-y-0.5 border border-slate-700"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-[#123A4A] bg-[#EEF4F3] hover:bg-[#D8E3E3] transition-all cursor-pointer border border-[#D8E3E3] transform hover:-translate-y-0.5"
               >
-                <Stethoscope className="w-5 h-5 text-sky-400" />
-                <span>Nurse: Pre-Register for Inaugural Pool</span>
+                <Stethoscope className="w-5 h-5 text-[#0F6B8A]" />
+                <span>Nurse: Pre-register in talent pool</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

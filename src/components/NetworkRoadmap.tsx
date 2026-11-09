@@ -53,7 +53,7 @@ export const NetworkRoadmap: React.FC<NetworkRoadmapProps> = ({
   ];
 
   return (
-    <section id="network-roadmap" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
+    <section id="network-roadmap" className="py-24 bg-[#123A4A] text-white relative overflow-hidden border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
@@ -78,15 +78,15 @@ export const NetworkRoadmap: React.FC<NetworkRoadmapProps> = ({
           {phases.map((item) => (
             <div
               key={item.phase}
-              className={`rounded-3xl p-8 border flex flex-col justify-between transition-all ${
+              className={`rounded-[14px] p-8 border flex flex-col justify-between transition-all ${
                 item.active 
-                  ? 'bg-slate-900 border-sky-500/50 shadow-xl shadow-sky-500/10 ring-1 ring-sky-500/20' 
-                  : 'bg-slate-900/60 border-slate-800'
+                  ? 'bg-white/10 border-sky-400/50 shadow-xl shadow-sky-500/10 ring-1 ring-sky-400/20' 
+                  : 'bg-white/5 border-white/10'
               }`}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono font-bold text-slate-400">
+                  <span className="text-xs font-mono font-bold text-slate-300">
                     {item.phase}
                   </span>
                   <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border ${item.badgeColor}`}>
@@ -94,7 +94,7 @@ export const NetworkRoadmap: React.FC<NetworkRoadmapProps> = ({
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold font-heading text-white mb-3">
+                <h3 className="text-xl font-bold font-display text-white mb-3">
                   {item.title}
                 </h3>
 
@@ -102,34 +102,34 @@ export const NetworkRoadmap: React.FC<NetworkRoadmapProps> = ({
                   {item.desc}
                 </p>
 
-                <div className="space-y-2.5 pt-4 border-t border-slate-800 text-xs text-slate-300">
+                <div className="space-y-2.5 pt-4 border-t border-white/10 text-xs text-slate-200">
                   {item.bullets.map((bullet, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
                       <span>{bullet}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-slate-800">
+              <div className="pt-6 mt-6 border-t border-white/10">
                 {item.active ? (
                   <div className="flex gap-2">
                     <button
                       onClick={onOpenScheduleModal}
-                      className="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold text-slate-950 bg-sky-400 hover:bg-sky-300 text-center transition-colors cursor-pointer"
+                      className="flex-1 py-2.5 px-3 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-sky-600 text-center transition-colors cursor-pointer"
                     >
-                      Hospital Partner Inquiry
+                      Hospital partner inquiry
                     </button>
                     <button
                       onClick={onOpenNurseModal}
-                      className="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 text-center transition-colors cursor-pointer border border-slate-700"
+                      className="flex-1 py-2.5 px-3 rounded-full text-xs font-bold text-white bg-white/10 hover:bg-white/20 text-center transition-colors cursor-pointer border border-white/20"
                     >
-                      Pre-Register as Nurse
+                      Pre-register as nurse
                     </button>
                   </div>
                 ) : (
-                  <span className="text-[11px] text-slate-500 font-semibold block text-center">
+                  <span className="text-[11px] text-slate-300 font-semibold block text-center">
                     Scheduled Milestone
                   </span>
                 )}

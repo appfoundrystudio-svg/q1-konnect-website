@@ -33,19 +33,19 @@ export const FoundingPartners: React.FC<FoundingPartnersProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Card 1: For Hospital Early Adopters */}
-          <div className="bg-slate-950 rounded-3xl p-8 sm:p-10 border border-slate-800 text-white flex flex-col justify-between shadow-xl relative overflow-hidden">
+          <div className="bg-[#123A4A] rounded-[14px] p-8 sm:p-10 border border-white/10 text-white flex flex-col justify-between shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
             
             <div>
               <div className="flex items-center justify-between mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30">
-                  <Building2 className="w-3.5 h-3.5" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-sky-300 border border-white/15">
+                  <Building2 className="w-3.5 h-3.5 text-[#EF7158]" />
                   For Hospital Leadership
                 </span>
-                <span className="text-xs font-bold text-slate-400">Pre-Launch Cohort</span>
+                <span className="text-xs font-bold text-slate-300">Pre-Launch Cohort</span>
               </div>
 
-              <h3 className="text-2xl font-bold font-heading text-white mb-4">
+              <h3 className="text-2xl font-bold font-display text-white mb-4">
                 Founding Hospital Partner Benefits
               </h3>
 
@@ -56,83 +56,83 @@ export const FoundingPartners: React.FC<FoundingPartnersProps> = ({
 
               <div className="space-y-3 pt-2 text-xs text-slate-300">
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                  <span><strong>Zero Onboarding Setup Fees</strong> — Free initial configuration for your nursing service.</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
+                  <span><strong>Priority Onboarding</strong> — Dedicated initial configuration for your nursing service.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                  <span><strong>Priority Shift Broadcast Allocation</strong> — Guaranteed priority matching from our clinical talent pool.</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
+                  <span><strong>Priority Shift Broadcast Allocation</strong> — Direct matching from our clinical talent pool.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
                   <span><strong>Custom EMR / Hospital Workflow Alignment</strong> — Tailor shift approval hierarchies to your unit needs.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
                   <span><strong>Walk-In or Executive Briefing at PHAPi</strong> — Connect directly with our founding leadership at our booth.</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8 mt-6 border-t border-slate-800">
+            <div className="pt-8 mt-6 border-t border-white/10">
               <button
                 onClick={onOpenScheduleModal}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl text-xs font-bold text-slate-900 bg-sky-400 hover:bg-sky-300 transition-colors shadow-md cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-sky-600 transition-colors shadow-md cursor-pointer"
               >
-                <Calendar className="w-4 h-4 text-slate-900" />
-                <span>Apply as a Founding Hospital Partner</span>
+                <Calendar className="w-4 h-4 text-sky-200" />
+                <span>Apply as a founding hospital partner</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
 
           {/* Card 2: For Nurse Pre-Registrants */}
-          <div className="bg-slate-50 rounded-3xl p-8 sm:p-10 border border-slate-200/90 flex flex-col justify-between shadow-sm relative overflow-hidden">
+          <div className="bg-white rounded-[14px] p-8 sm:p-10 border border-[#D8E3E3] flex flex-col justify-between shadow-sm relative overflow-hidden">
             <div>
               <div className="flex items-center justify-between mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-800 border border-sky-200">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#EEF4F3] text-[#0F6B8A] border border-[#D8E3E3]">
                   <Stethoscope className="w-3.5 h-3.5" />
                   For Registered Nurses
                 </span>
-                <span className="text-xs font-bold text-slate-500">Inaugural Pool</span>
+                <span className="text-xs font-bold text-[#56717C]">Inaugural Pool</span>
               </div>
 
-              <h3 className="text-2xl font-bold font-heading text-slate-900 mb-4">
+              <h3 className="text-2xl font-bold font-display text-[#123A4A] mb-4">
                 Inaugural Nurse Cohort Privileges
               </h3>
 
-              <p className="text-sm text-slate-600 leading-relaxed mb-6">
+              <p className="text-sm text-[#56717C] leading-relaxed mb-6">
                 Nurses who pre-register today gain verified status ahead of pilot shift deployment, 
                 putting you first in line as partner hospitals begin broadcasting shifts.
               </p>
 
-              <div className="space-y-3 pt-2 text-xs text-slate-700">
+              <div className="space-y-3 pt-2 text-xs text-[#123A4A]">
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
                   <span><strong>Fast-Track PRC Verification</strong> — Priority review by our clinical credentials desk.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
                   <span><strong>First Access to High-Paying Shifts</strong> — Be notified of ICU, ER, and ward shifts before general release.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
                   <span><strong>Founding Nurse Profile Badge</strong> — Distinguish yourself to hospital supervisors from day one.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1D8A5A] shrink-0 mt-0.5" />
                   <span><strong>Direct Input on Mobile App UX</strong> — Help our engineers build the ultimate nurse-friendly tool.</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8 mt-6 border-t border-slate-200">
+            <div className="pt-8 mt-6 border-t border-[#D8E3E3]">
               <button
                 onClick={onOpenNurseModal}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl text-xs font-bold text-white bg-slate-950 hover:bg-black transition-colors shadow-md cursor-pointer border border-slate-800"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] transition-colors shadow-md cursor-pointer"
               >
-                <UserPlus className="w-4 h-4 text-sky-400" />
-                <span>Pre-Register for Inaugural Pool (Free)</span>
+                <UserPlus className="w-4 h-4" />
+                <span>Pre-register for inaugural nurse pool</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

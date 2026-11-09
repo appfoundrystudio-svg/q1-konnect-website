@@ -2,45 +2,120 @@
 
 @layer base {
   :root {
-    --brand-blue: 0 163 255;       /* Electric Blue #00A3FF */
-    --brand-blue-hover: 0 130 204; /* Darker Blue #0082CC */
-    --brand-dark: 10 14 23;        /* Pitch Charcoal Black #0A0E17 */
-    --brand-slate: 15 23 42;       /* Slate 900 */
-    --brand-cyan: 56 189 248;      /* Sky 400 */
+    /* Q1 Konnect Official Brand Palette */
+    --q1-deep-teal: #123A4A;     /* RGB 18 58 74 - Dominant Primary Dark */
+    --q1-network-blue: #0F6B8A;  /* RGB 15 107 138 - Secondary Brand Blue */
+    --q1-logo-sky: #00AEFD;      /* RGB 0 174 253 - Electric Accent Cyan */
+    --q1-warm-coral: #EF7158;    /* RGB 239 113 88 - Vitality / Alert */
+    --q1-coral-deep: #C9452C;    /* RGB 201 69 44 */
+    --q1-soft-neutral: #EEF4F3;  /* RGB 238 244 243 */
+    --q1-white: #FFFFFF;
+    --q1-logo-black: #000000;
+    --q1-matched-green: #1D8A5A; /* RGB 29 138 90 - Verification / Success */
+    --q1-muted-text: #56717C;    /* RGB 86 113 124 */
+    --q1-line-grey: #D8E3E3;     /* RGB 216 227 227 */
+
+    /* Legacy Brand Variable Mappings redirected to Official Brand */
+    --brand-blue: 15 107 138;       /* Network Blue #0F6B8A */
+    --brand-blue-hover: 18 58 74;  /* Deep Teal #123A4A */
+    --brand-dark: 18 58 74;        /* Deep Teal #123A4A */
+    --brand-slate: 18 58 74;       /* Deep Teal */
+    --brand-cyan: 0 174 253;       /* Logo Sky #00AEFD */
   }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+    background-color: #FFFFFF;
+    color: #123A4A;
   }
 
-  h1, h2, h3, h4, h5, h6, .font-heading {
-    font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  h1, h2, h3, h4, h5, h6, .font-heading, .font-display {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
   }
+}
+
+/* Q1 Brand Theme Utilities */
+.bg-q1-deep-teal { background-color: var(--q1-deep-teal); }
+.bg-q1-network-blue { background-color: var(--q1-network-blue); }
+.bg-q1-logo-sky { background-color: var(--q1-logo-sky); }
+.bg-q1-soft-neutral { background-color: var(--q1-soft-neutral); }
+.bg-q1-warm-coral { background-color: var(--q1-warm-coral); }
+.bg-q1-matched-green { background-color: var(--q1-matched-green); }
+
+.text-q1-deep-teal { color: var(--q1-deep-teal); }
+.text-q1-network-blue { color: var(--q1-network-blue); }
+.text-q1-logo-sky { color: var(--q1-logo-sky); }
+.text-q1-muted-text { color: var(--q1-muted-text); }
+.text-q1-warm-coral { color: var(--q1-warm-coral); }
+.text-q1-matched-green { color: var(--q1-matched-green); }
+
+.border-q1-line-grey { border-color: var(--q1-line-grey); }
+.border-q1-network-blue { border-color: var(--q1-network-blue); }
+.border-q1-deep-teal { border-color: var(--q1-deep-teal); }
+
+/* Glass Navigation */
+.glass-nav-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #D8E3E3;
+}
+
+.glass-nav-dark {
+  background: rgba(18, 58, 74, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 14px Card Corner Rules */
+.card-q1-dark {
+  background-color: #123A4A;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.card-q1-light {
+  background-color: #FFFFFF;
+  color: #123A4A;
+  border: 1px solid #D8E3E3;
+  border-radius: 14px;
+}
+
+.card-q1-neutral {
+  background-color: #EEF4F3;
+  color: #123A4A;
+  border: 1px solid #D8E3E3;
+  border-radius: 14px;
 }
 
 /* Custom background patterns and gradients */
 .bg-grid-pattern {
-  background-image: radial-gradient(rgba(0, 163, 255, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(15, 107, 138, 0.10) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 .bg-dot-pattern {
-  background-image: radial-gradient(rgba(0, 163, 255, 0.15) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(15, 107, 138, 0.12) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid #D8E3E3;
+  border-radius: 14px;
 }
 
 .glass-card-dark {
-  background: rgba(10, 14, 23, 0.92);
+  background: rgba(18, 58, 74, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(51, 65, 85, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
 }
 
 /* Animations */

@@ -54,50 +54,50 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden bg-slate-950/60 backdrop-blur-xs flex justify-end animate-in fade-in duration-200">
-      <div className="bg-white w-full max-w-xl h-full shadow-2xl flex flex-col border-l border-slate-200 animate-in slide-in-from-right duration-300">
+    <div className="fixed inset-0 z-50 overflow-hidden bg-[#123A4A]/60 backdrop-blur-xs flex justify-end animate-in fade-in duration-200">
+      <div className="bg-white w-full max-w-xl h-full shadow-2xl flex flex-col border-l border-[#D8E3E3] animate-in slide-in-from-right duration-300">
         
         {/* Drawer Header */}
-        <div className="p-6 bg-slate-950 text-white flex items-center justify-between border-b border-slate-800">
+        <div className="p-6 bg-[#123A4A] text-white flex items-center justify-between border-b border-white/10">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-sky-500/20 text-sky-400">
+            <div className="p-2 rounded-xl bg-white/10 text-sky-300">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-bold text-base text-white font-heading">Lead & Application Manager</h3>
-              <p className="text-xs text-slate-400">Captured locally in browser storage</p>
+              <h3 className="font-bold text-base text-white font-display">Lead & Application Manager</h3>
+              <p className="text-xs text-slate-300">Captured locally in browser storage</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900 transition-colors cursor-pointer"
+            className="p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex border-b border-slate-200 bg-slate-50 p-2 gap-2">
+        <div className="flex border-b border-[#D8E3E3] bg-[#EEF4F3] p-2 gap-2">
           <button
             onClick={() => setActiveTab('hospitals')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
               activeTab === 'hospitals'
-                ? 'bg-white text-slate-950 shadow-sm border border-slate-200'
-                : 'text-slate-600 hover:text-slate-900'
+                ? 'bg-white text-[#123A4A] shadow-sm border border-[#D8E3E3]'
+                : 'text-[#56717C] hover:text-[#123A4A]'
             }`}
           >
-            <Building2 className="w-4 h-4 text-sky-600" />
+            <Building2 className="w-4 h-4 text-[#EF7158]" />
             <span>Hospital Meetings ({hospitalLeads.length})</span>
           </button>
           <button
             onClick={() => setActiveTab('nurses')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
               activeTab === 'nurses'
-                ? 'bg-white text-sky-800 shadow-sm border border-slate-200'
-                : 'text-slate-600 hover:text-slate-900'
+                ? 'bg-white text-[#0F6B8A] shadow-sm border border-[#D8E3E3]'
+                : 'text-[#56717C] hover:text-[#123A4A]'
             }`}
           >
-            <Stethoscope className="w-4 h-4 text-sky-600" />
+            <Stethoscope className="w-4 h-4 text-[#0F6B8A]" />
             <span>Nurse Applications ({nurseLeads.length})</span>
           </button>
         </div>
