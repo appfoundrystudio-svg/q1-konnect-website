@@ -11,9 +11,9 @@ export const StatTicker: React.FC = () => {
       color: 'text-q1-network-blue',
     },
     {
-      value: '100% Pre-Check',
-      label: 'PRC License Verified',
-      desc: 'Automated clinical credential validation',
+      value: 'PRC Verified',
+      label: 'Clinical Credential Check',
+      desc: 'Automated verification against official registry',
       icon: ShieldCheck,
       color: 'text-q1-matched-green',
     },

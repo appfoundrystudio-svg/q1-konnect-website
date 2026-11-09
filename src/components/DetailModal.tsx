@@ -116,10 +116,10 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
                 <div className="p-5 rounded-2xl bg-[#EEF4F3] border border-[#D8E3E3] space-y-2">
                   <div className="flex items-center gap-2 text-[#123A4A] font-bold">
                     <ShieldCheck className="w-4 h-4 text-[#1D8A5A]" />
-                    <span>100% PRC Database Checks</span>
+                    <span>Verified PRC credentials</span>
                   </div>
                   <p className="text-xs text-[#56717C] leading-relaxed">
-                    Zero compliance liability. Every candidate is checked against official PRC databases for active licenses, BLS, ACLS, and specialized unit tenure.
+                    Zero compliance liability. Every candidate is verified against official PRC records for active licenses, BLS, ACLS, and specialized unit tenure.
                   </p>
                 </div>
 
@@ -136,10 +136,10 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
                 <div className="p-5 rounded-2xl bg-[#EEF4F3] border border-[#D8E3E3] space-y-2">
                   <div className="flex items-center gap-2 text-[#123A4A] font-bold">
                     <Building2 className="w-4 h-4 text-[#EF7158]" />
-                    <span>Zero Setup Fees for Pioneer Partners</span>
+                    <span>Dedicated onboarding for pioneer partners</span>
                   </div>
                   <p className="text-xs text-[#56717C] leading-relaxed">
-                    Join our founding cohort to receive free ward configuration, priority clinical roster allocation, and direct input into feature roadmaps.
+                    Join our founding cohort to receive priority ward configuration, clinical roster allocation, and direct input into feature roadmaps.
                   </p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
                   }}
                   className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] transition-colors shadow-md cursor-pointer"
                 >
-                  Submit Hospital Partner Inquiry →
+                  Submit hospital partner inquiry →
                 </button>
               </div>
             </div>
@@ -221,7 +221,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
                   }}
                   className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] transition-colors shadow-md cursor-pointer"
                 >
-                  Pre-Register Your PRC Profile →
+                  Pre-register your PRC profile →
                 </button>
               </div>
             </div>
@@ -360,7 +360,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
                     }}
                     className="flex-1 sm:flex-none px-5 py-2.5 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] transition-colors cursor-pointer shadow-sm"
                   >
-                    Hospital Partner Inquiry
+                    Hospital partner inquiry
                   </button>
                   <button
                     onClick={() => {
@@ -369,7 +369,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
                     }}
                     className="flex-1 sm:flex-none px-5 py-2.5 rounded-full text-xs font-bold text-[#123A4A] bg-white hover:bg-[#EEF4F3] border border-[#D8E3E3] transition-colors cursor-pointer"
                   >
-                    Nurse Pre-Register
+                    Nurse pre-register
                   </button>
                 </div>
               </div>
@@ -436,7 +436,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ type, onClose, onOpenD
                   }}
                   className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold text-white bg-[#EF7158] hover:bg-[#C9452C] transition-colors shadow-md cursor-pointer"
                 >
-                  Request Dedicated Online Briefing →
+                  Request dedicated online briefing →
                 </button>
               </div>
             </div>

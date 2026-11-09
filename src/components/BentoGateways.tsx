@@ -80,7 +80,7 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
                     <ShieldCheck className="w-3.5 h-3.5" />
                     <span>PRC Verification</span>
                   </div>
-                  <p className="text-slate-300 text-[11px]">100% automated license validation</p>
+                  <p className="text-slate-300 text-[11px]">Automated license validation</p>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
                 }}
                 className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 hover:bg-white/25 text-white transition-colors"
               >
-                Inquire Now
+                Inquire now
               </button>
             </div>
           </div>
@@ -152,7 +152,7 @@ export const BentoGateways: React.FC<BentoGatewaysProps> = ({ onOpenModal, onOpe
                 }}
                 className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-q1-network-blue hover:bg-q1-deep-teal text-white transition-colors"
               >
-                Pre-Register
+                Pre-register
               </button>
             </div>
           </div>

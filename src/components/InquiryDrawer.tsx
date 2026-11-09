@@ -111,12 +111,12 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ type, onClose }) =
                 <CheckCircle2 className="w-10 h-10" />
               </div>
               <h4 className="text-2xl font-extrabold font-display text-[#123A4A]">
-                Submission Received!
+                Submission received
               </h4>
               <p className="text-xs sm:text-sm text-[#56717C] max-w-xs mx-auto leading-relaxed">
                 {type === 'hospital_partner' 
-                  ? 'Thank you! Our partnerships team will reach out with our Pioneer Hospital Prospectus.' 
-                  : 'Thank you! Your applicant reference has been created. We will notify you as soon as credential review concludes.'}
+                  ? 'Thank you. Our partnerships team will reach out with our Pioneer Hospital Prospectus.' 
+                  : 'Thank you. Your applicant reference has been created. We will notify you as soon as credential review concludes.'}
               </p>
               
               <div className="pt-2">
@@ -281,7 +281,7 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ type, onClose }) =
                   type="submit"
                   className="w-full py-3.5 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] transition-colors shadow-md cursor-pointer"
                 >
-                  Submit Hospital Partner Inquiry →
+                  Submit hospital partner inquiry →
                 </button>
               </div>
 
@@ -367,7 +367,7 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ type, onClose }) =
                   type="submit"
                   className="w-full py-3.5 rounded-full text-xs font-bold text-white bg-[#0F6B8A] hover:bg-[#123A4A] transition-colors shadow-md cursor-pointer"
                 >
-                  Pre-Register for Pioneer Pool (Free) →
+                  Pre-register for pioneer roster →
                 </button>
               </div>
 

@@ -79,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal, onOpenDrawer }) => 
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-q1-network-blue hover:bg-q1-deep-teal transition-all cursor-pointer shadow-md shadow-sky-900/10 transform hover:-translate-y-0.5"
             >
               <Sparkles className="w-3.5 h-3.5 text-q1-logo-sky" />
-              <span>Let's Connect</span>
+              <span>Let's connect</span>
             </button>
           </div>
 

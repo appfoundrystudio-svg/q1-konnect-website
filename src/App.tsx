@@ -69,7 +69,7 @@ export const App: React.FC = () => {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white bg-q1-network-blue hover:bg-q1-deep-teal transition-all cursor-pointer shadow-lg shadow-sky-900/10 transform hover:-translate-y-0.5"
               >
                 <Building2 className="w-4 h-4 text-q1-logo-sky" />
-                <span>Hospital: Pioneer Partner Inquiry</span>
+                <span>Hospital: Pioneer partner inquiry</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
@@ -78,7 +78,7 @@ export const App: React.FC = () => {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-q1-deep-teal bg-[#EEF4F3] hover:bg-[#D8E3E3] transition-all cursor-pointer border border-[#D8E3E3] transform hover:-translate-y-0.5"
               >
                 <Stethoscope className="w-4 h-4 text-q1-network-blue" />
-                <span>Nurse: Pre-Register in Talent Pool</span>
+                <span>Nurse: Pre-register in talent pool</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

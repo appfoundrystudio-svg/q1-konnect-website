@@ -49,7 +49,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal, onOpenDrawer }) => {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white bg-q1-network-blue hover:bg-q1-deep-teal transition-all cursor-pointer shadow-lg shadow-sky-900/10 transform hover:-translate-y-0.5"
           >
             <Building2 className="w-4 h-4 text-q1-logo-sky" />
-            <span>Hospital: Pioneer Partner Inquiry</span>
+            <span>Hospital: Pioneer partner inquiry</span>
             <ArrowRight className="w-4 h-4" />
           </button>
 
@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal, onOpenDrawer }) => {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-q1-deep-teal bg-[#EEF4F3] hover:bg-[#D8E3E3] transition-all cursor-pointer border border-[#D8E3E3] transform hover:-translate-y-0.5"
           >
             <Stethoscope className="w-4 h-4 text-q1-network-blue" />
-            <span>Nurse: Pre-Register in Talent Pool</span>
+            <span>Nurse: Pre-register in talent pool</span>
             <ArrowRight className="w-4 h-4" />
           </button>
 
@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal, onOpenDrawer }) => {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-sm font-semibold text-q1-deep-teal hover:bg-[#EEF4F3] transition-all cursor-pointer border border-[#D8E3E3]"
           >
             <Play className="w-4 h-4 text-q1-network-blue fill-q1-network-blue" />
-            <span>Watch Explainer</span>
+            <span>Watch explainer</span>
           </button>
         </div>
 
@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal, onOpenDrawer }) => {
                 <span className="text-xs font-mono text-slate-300 ml-2">q1-konnect://command-portal</span>
               </div>
               <span className="text-xs font-bold text-q1-logo-sky flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                <span>Explore Interactive Prototype</span>
+                <span>Explore interactive prototype</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </div>

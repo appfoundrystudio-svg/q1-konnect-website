@@ -46,7 +46,7 @@ export const VideoTeaser: React.FC<VideoTeaserProps> = ({ onOpenModal }) => {
             </div>
 
             <p className="text-xs font-mono text-slate-300 tracking-wider uppercase pt-2">
-              Launch Video Theater (Hospital & Nurse Walkthroughs)
+              Launch video theater (hospital & nurse walkthroughs)
             </p>
 
           </div>

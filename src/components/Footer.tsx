@@ -9,7 +9,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenModal, onOpenDrawer }) => {
   return (
-    <footer className="bg-slate-950 text-white pt-20 pb-12 border-t border-white/5">
+    <footer className="bg-[#123A4A] text-white pt-20 pb-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Row */}
@@ -119,9 +119,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal, onOpenDrawer }) => 
         </div>
 
         {/* Bottom Credits */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
           <p>© {new Date().getFullYear()} Q1 Konnect Platform Inc. All rights reserved.</p>
-          <p>Modern Minimalist Edition • Built for Philippine Healthcare</p>
+          <p className="font-semibold text-white">Partners, professionals connected. • Be connected.</p>
         </div>
 
       </div>
